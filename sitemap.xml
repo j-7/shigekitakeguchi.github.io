@@ -614,19 +614,25 @@
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/2015/07/26/2.html</loc>
-    <lastmod>2015-07-28</lastmod>
+    <lastmod>2015-08-02</lastmod>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/2015/07/26/3.html</loc>
-    <lastmod>2015-07-28</lastmod>
+    <lastmod>2015-08-02</lastmod>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/2015/07/28/1.html</loc>
-    <lastmod>2015-07-29</lastmod>
+    <lastmod>2015-08-02</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2015/08/02/1.html</loc>
+    <lastmod>2015-08-05</lastmod>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -844,6 +850,18 @@
     <loc>http://shigekitakeguchi.com/2015.html</loc>
     <lastmod>2015-07-28</lastmod>
     <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2015/08.html</loc>
+    <lastmod>2015-07-28</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2015/08/02.html</loc>
+    <lastmod>2015-07-28</lastmod>
+    <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
