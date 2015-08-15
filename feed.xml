@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>shigeki.takeguchi.log</title>
-  <subtitle></subtitle>
+  <subtitle>newsfeed from shigeki.takeguchi. : digital artist and designer located in tokyo.</subtitle>
   <id>http://shigekitakeguchi.com</id>
   <link href="http://shigekitakeguchi.com"/>
   <link href="http://shigekitakeguchi.com/feed.xml" rel="self"/>
