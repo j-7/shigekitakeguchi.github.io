@@ -613,24 +613,6 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://shigekitakeguchi.com/2015/07/26/2.html</loc>
-    <lastmod>2015-08-12</lastmod>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/2015/07/26/3.html</loc>
-    <lastmod>2015-08-10</lastmod>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/2015/07/28/1.html</loc>
-    <lastmod>2015-08-10</lastmod>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>http://shigekitakeguchi.com/2015/08/02/1.html</loc>
     <lastmod>2015-08-05</lastmod>
     <priority>0.7</priority>
@@ -639,12 +621,6 @@
   <url>
     <loc>http://shigekitakeguchi.com/2015/08/05/1.html</loc>
     <lastmod>2015-08-05</lastmod>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/2015/08/08/1.html</loc>
-    <lastmod>2015-08-12</lastmod>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -829,42 +805,6 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://shigekitakeguchi.com/tags/star-wars.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/tags/映画.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/tags/コメディ映画.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/tags/ミュージック・ビデオ.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/tags/映像.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/tags/恋愛映画.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>http://shigekitakeguchi.com/2015.html</loc>
     <lastmod>2015-07-28</lastmod>
     <priority>1.0</priority>
@@ -877,12 +817,6 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://shigekitakeguchi.com/2015/08/08.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.8</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>http://shigekitakeguchi.com/2015/08/05.html</loc>
     <lastmod>2015-07-28</lastmod>
     <priority>0.8</priority>
@@ -890,24 +824,6 @@
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/2015/08/02.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.8</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/2015/07.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/2015/07/28.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.8</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/2015/07/26.html</loc>
     <lastmod>2015-07-28</lastmod>
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
@@ -1531,12 +1447,6 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>http://shigekitakeguchi.com/page/9/</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.8</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>http://shigekitakeguchi.com/tags/log/page/2.html</loc>
     <lastmod>2015-07-28</lastmod>
     <priority>0.7</priority>
@@ -1558,12 +1468,6 @@
     <loc>http://shigekitakeguchi.com/tags/travel/page/2.html</loc>
     <lastmod>2015-07-28</lastmod>
     <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>http://shigekitakeguchi.com/2015/page/2.html</loc>
-    <lastmod>2015-07-28</lastmod>
-    <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
