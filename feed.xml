@@ -5,10 +5,47 @@
   <id>http://shigekitakeguchi.com</id>
   <link href="http://shigekitakeguchi.com"/>
   <link href="http://shigekitakeguchi.com/feed.xml" rel="self"/>
-  <updated>2015-08-05T00:00:00Z</updated>
+  <updated>2015-08-23T00:00:00Z</updated>
   <author>
     <name>shigeki.takeguchi</name>
   </author>
+  <entry>
+    <title>信州は小諸市に行った</title>
+    <link rel="alternate" href="http://shigekitakeguchi.com/2015/08/23/1.html"/>
+    <id>http://shigekitakeguchi.com/2015/08/23/1.html</id>
+    <published>2015-08-23T00:00:00Z</published>
+    <updated>2015-08-23T23:46:42+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/20192792464/in/dateposted-public/" title="Untitled"&gt;&lt;img src="https://farm1.staticflickr.com/666/20192792464_3a9ff687a4_z.jpg" width="640" height="480" alt="Untitled"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;家族旅行に行くとちょくちょく伊東園ホテルズのホテルに泊まることがある。&lt;br&gt;
+季節による値段変動がなくてクオリティがまぁ値段相応といった感じなので安心して泊まれる。&lt;br&gt;
+また朝、夕のご飯が食べ放題でこれが大きな理由なんだけど飲み放題ってところが気に入ってる。  &lt;/p&gt;
+
+&lt;p&gt;今回の夏休みは小諸と秩父に泊まった。&lt;br&gt;
+秩父は買い物にも困らない感じでお店も多くて思ったよりも&lt;br&gt;
+ずっと大きな街で観光で来る人も多いのか栄えているような印象。&lt;br&gt;
+小諸は懐古園という小諸城趾となる公園の隣にあるホテル。&lt;br&gt;
+これが伊東園ホテルズのグループとなるホテルなんだけど&lt;br&gt;
+昔は街にあるちょっとしたステータスもあったであろうホテル。&lt;br&gt;
+結婚式、会食などにも利用されていたんだろうなと思う。  &lt;/p&gt;
+
+&lt;p&gt;Wikipediaによると人口は2015年には42,898人。&lt;br&gt;
+1970年では39,093人だったのでその頃からみると増えているけど&lt;br&gt;
+ピークは2000年の46,158人でどうやら減少トレンド。  &lt;/p&gt;
+
+&lt;p&gt;今回は観光をまったくできなかった。&lt;br&gt;
+懐古園は小諸城跡で城はもともと山本勘助が築いたとなっている。&lt;br&gt;
+そういえば山本勘助って実在していたかどうかわからないとも言われていたような。  &lt;/p&gt;
+
+&lt;p&gt;しかしこれといった観光名所もないように思えるし産業もないように思える。&lt;br&gt;
+街の風景は昭和で止まったかのような感じでインフラ整備は今後どうなるんだろう。&lt;br&gt;
+しかしこの街から見る浅間山は何とも言えない風格があって美しい。&lt;br&gt;
+日本中にあるこれくらいの規模の美しい街のこれからのことを考えると何とも気が重くもある。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>熊本の住み心地</title>
     <link rel="alternate" href="http://shigekitakeguchi.com/2015/08/05/1.html"/>
@@ -247,40 +284,6 @@ Gem::ConflictErrorとからしく調べてみたけど今ひとつわからん�
 &lt;/ul&gt;
 
 &lt;p&gt;これでエラーなしに初期化できた。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>戸倉上山田温泉へ（地方の街）。</title>
-    <link rel="alternate" href="http://shigekitakeguchi.com/2015/04/06/1.html"/>
-    <id>http://shigekitakeguchi.com/2015/04/06/1.html</id>
-    <published>2015-04-06T00:00:00Z</published>
-    <updated>2015-07-28T23:03:15+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;春休みということもあって１泊で旅行。&lt;br&gt;
-次の日は東京へ戻らないといけないのでその範囲で決めたのが信州は長野県、戸倉上山田温泉。&lt;/p&gt;
-
-&lt;p&gt;ここのところ今日割、明日割で直前に評価の高いところから行ける範囲で選ぶ。&lt;br&gt;
-あたりはずれがあるが、はずれははずれで楽しかったりする。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.flickr.com/photos/shigeki_takeguchi/16774598160" title="Untitled by shigeki takeguchi, on Flickr"&gt;&lt;img src="https://farm8.staticflickr.com/7610/16774598160_585d8c7b2b_z.jpg" width="640" height="480" alt="戸倉上山田温泉 ほろよい銀座" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;戸倉上山田温泉は東京から車で3時間強。&lt;br&gt;
-長野出身のひとなら知っているって感じの知名度らしい。&lt;br&gt;
-調べると歴史は百数十年。しかし寂れてるなと街に入る前からわかる。&lt;br&gt;
-賑わっていたころの名残りが街のそこかしこにあってなかなか過ぎ去った昭和感が強い。 &lt;br&gt;
-こういう一時かなり栄えたであろう温泉街はバブル後の古びていく寂れ感がより強調されているように思える。&lt;br&gt;
-バブルというのが、「戦後の昭和」というスキームというかの最後の象徴だったというのがこういう温泉街に来るとよくわかる。&lt;br&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.flickr.com/photos/shigeki_takeguchi/16774374218" title="Untitled by shigeki takeguchi, on Flickr"&gt;&lt;img src="https://farm8.staticflickr.com/7641/16774374218_ebbcd40f4b_z.jpg" width="640" height="480" alt="信州観光ホテル 廃墟ホテル" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;これは信州観光ホテルという有名な廃墟ホテルらしい。&lt;br&gt;
-長野市からと首都圏からのこの絶妙な距離が一時は栄えさせまた急速に寂れさせているかと思うと&lt;br&gt;
-地理というのが都市や街にとって重要なんだということがよくわかる。&lt;br&gt;
-風景はとても信州らしい綺麗なところで温泉も良かった。&lt;br&gt;
-だけど見所となる旧所名跡がなくてなかなか人がこれから大勢くるって感じではない。&lt;br&gt;
-まぁ、こういうところが日本にはたくさんあってそれを巡るというのもそれはそれで楽しめるので心配しながらも楽しもうと思う。&lt;/p&gt;
 </content>
   </entry>
 </feed>
