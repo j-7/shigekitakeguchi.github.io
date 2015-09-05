@@ -5,24 +5,10 @@
   <id>http://shigekitakeguchi.com</id>
   <link href="http://shigekitakeguchi.com"/>
   <link href="http://shigekitakeguchi.com/feed.xml" rel="self"/>
-  <updated>2015-09-01T00:00:00Z</updated>
+  <updated>2015-08-26T00:00:00Z</updated>
   <author>
     <name>shigeki.takeguchi</name>
   </author>
-  <entry>
-    <title>地方都市が何かを発信することについてあれこれ</title>
-    <link rel="alternate" href="http://shigekitakeguchi.com/2015/09/01/1.html"/>
-    <id>http://shigekitakeguchi.com/2015/09/01/1.html</id>
-    <published>2015-09-01T00:00:00Z</published>
-    <updated>2015-09-05T16:41:35+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;東京と岡山を往復して生活しているとき、この人と同じように地域活性化や地方都市を盛り上げることに何か貢献できないのかと考えた。  &lt;/p&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/20627372340/in/dateposted-public/" title="Untitled"&gt;&lt;img src="https://farm6.staticflickr.com/5788/20627372340_3bde7431cc_z.jpg" width="640" height="480" alt="Untitled"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-</content>
-  </entry>
   <entry>
     <title>小諸についてちょっと調べてみた</title>
     <link rel="alternate" href="http://shigekitakeguchi.com/2015/08/26/1.html"/>
@@ -225,6 +211,59 @@
 &lt;/ul&gt;
 
 &lt;p&gt;東京はコストをかけて運用されていて、またコストをかけるだけの人がいるということだなと思う。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>GitHub Pagesでサイト作ってみる（Middlemanで）初期設定、Github編。</title>
+    <link rel="alternate" href="http://shigekitakeguchi.com/2015/04/15/1.html"/>
+    <id>http://shigekitakeguchi.com/2015/04/15/1.html</id>
+    <published>2015-04-15T00:00:00Z</published>
+    <updated>2015-07-28T23:03:15+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;無事初期化できるようになったので初期化。&lt;br&gt;
+その前にGithub Pagesで公開するための準備を。&lt;/p&gt;
+
+&lt;p&gt;あたらしくレポジトリを作くる。&lt;br&gt;
+そう言う場合はちょっと設定が必要らしくレポジトリ名もアカウント名+「.github.io」にする。&lt;br&gt;
+ということで自分の場合はshigekitakeguchi.github.ioで作成する。&lt;/p&gt;
+
+&lt;p&gt;次にブランチを作るんだけどmasterブランチは公開用のファイルを置くことになる。&lt;br&gt;
+例えばindex.htmlを作ってコミットすると&lt;/p&gt;
+
+&lt;p&gt;http://shigekitakeguchi.github.io&lt;/p&gt;
+
+&lt;p&gt;でホスティングされる。
+Middlemanのローカルでのファイル構成はというとこんな感じ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/shigeki_takeguchi/16978635348" title="スクリーンショット 2015-04-16 20.28.19 by shigeki takeguchi, on Flickr"&gt;&lt;img src="https://farm8.staticflickr.com/7694/16978635348_778a77fae5.jpg" width="430" height="500" alt="スクリーンショット 2015-04-16 20.28.19" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;buildフォルダの直下がドキュメントルートになるようにmasterブランチでコミットする。&lt;br&gt;
+masterブランチはこんな感じになる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/shigeki_takeguchi/16978923670" title="スクリーンショット 2015-04-16 20.38.02 by shigeki takeguchi, on Flickr"&gt;&lt;img src="https://farm9.staticflickr.com/8706/16978923670_eb76d343da.jpg" width="500" height="458" alt="スクリーンショット 2015-04-16 20.38.02" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;設定ファイルやらテンプレートファイルやらもGithubで管理したい。&lt;br&gt;
+なのでmiddlemanの初期化をdevelopブランチで行い&lt;br&gt;
+ローカルでの編集やレイアウトの調整などなどもこのブランチでやる。&lt;br&gt;
+ちなみにこれがdevelopブランチ。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.flickr.com/photos/shigeki_takeguchi/16978698188" title="スクリーンショット 2015-04-16 20.37.41 by shigeki takeguchi, on Flickr"&gt;&lt;img src="https://farm9.staticflickr.com/8795/16978698188_4bcebb5b4a.jpg" width="500" height="292" alt="スクリーンショット 2015-04-16 20.37.41" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;bundle &lt;span class="nb"&gt;exec &lt;/span&gt;middleman deploy
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;とコマンドを入力すると&lt;br&gt;
+config.rbに記述した以下が実行される。&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:deploy&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;build_before&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt;
+  &lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;method&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="ss"&gt;:git&lt;/span&gt;
+  &lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;branch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'master'&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;コマンドひとつでGithubへ公開されるということ。
+最終的には&lt;a href="http://shigekitakeguchi.com/"&gt;shigekitakeguchi.com&lt;/a&gt;で公開してるんだけど、今回はここまで&lt;br&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
