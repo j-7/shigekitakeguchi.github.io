@@ -5,10 +5,101 @@
   <id>http://shigekitakeguchi.com</id>
   <link href="http://shigekitakeguchi.com"/>
   <link href="http://shigekitakeguchi.com/feed.xml" rel="self"/>
-  <updated>2015-08-26T00:00:00Z</updated>
+  <updated>2015-09-01T00:00:00Z</updated>
   <author>
     <name>shigeki.takeguchi</name>
   </author>
+  <entry>
+    <title>Middlemanで作った静的サイトをAmazon S3で公開してみる</title>
+    <link rel="alternate" href="http://shigekitakeguchi.com/2015/09/01/1.html"/>
+    <id>http://shigekitakeguchi.com/2015/09/01/1.html</id>
+    <published>2015-09-01T00:00:00Z</published>
+    <updated>2015-09-06T23:06:10+09:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;ちょっと久しぶりになりますが技術のことを書く。&lt;/p&gt;
+
+&lt;h3&gt;Amazon S3とは？&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="http://aws.amazon.com/jp/"&gt;アマゾン ウェブ サービス&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://aws.amazon.com/jp/" title="Amazon Web Service"&gt;&lt;img src="https://farm6.staticflickr.com/5617/21148105172_291c1cf641_z.jpg" width="640" height="506" alt="Amazon Web Service" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ブログもちょっとしたサイトもほとんどMiddlemanを使って構築しているわけだけど、&lt;br&gt;
+Github Pagesだけじゃなくアマゾン ウェブ サービス（Amazon Web Services）もべっりだったりする。&lt;/p&gt;
+
+&lt;p&gt;以前に比べると日本語化もかなり進んでいたり無料利用枠があるのではじめるのにそこまでハードルは高くない。&lt;br&gt;
+ただクレジットカード登録と電話でのPIN番号認証があるのでやたらめったらとアカウント作るってわけにはいかないだろう。&lt;/p&gt;
+
+&lt;p&gt;日本語のドキュメントも充実している。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://aws.amazon.com/jp/documentation/gettingstarted/"&gt;AWS の使用開始ドキュメント&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://aws.amazon.com/jp/documentation/gettingstarted/" title="AWS の使用開始ドキュメント"&gt;&lt;img src="https://farm6.staticflickr.com/5815/21186659561_fc322623c3_z.jpg" width="640" height="611" alt="AWS の使用開始ドキュメント" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://aws.amazon.com/jp/s3/"&gt;Amazon S3 (クラウドストレージサービス)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true"  href="http://aws.amazon.com/jp/s3/https://www.flickr.com/photos/shigeki_takeguchi/21186729121/in/dateposted-public/" title="Amazon S3 (クラウドストレージサービス)"&gt;&lt;img src="https://farm6.staticflickr.com/5640/21186729121_4d069ea410_z.jpg" width="640" height="586" alt="Amazon S3 (クラウドストレージサービス)" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;S3というと負荷分散のために画像や映像ファイルを置いておく場所のイメージがあったと思うんだけど&lt;br&gt;
+もちろんそういう使い方が主流だと思うけど今はちょっと違うように思う。  &lt;/p&gt;
+
+&lt;h3&gt;Amazon S3のバケットを作る&lt;/h3&gt;
+
+&lt;p&gt;AWSのサービスからS3を選んでS3 Management Cosole画面へ。&lt;br&gt;
+左上の「バケットを作成」を押す。&lt;br&gt;
+バケット名とリージョンを選択して右下の「作成」を押すとバケットが作成される。&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/21188809535/in/dateposted-public/" title="AWS S3"&gt;&lt;img src="https://farm1.staticflickr.com/714/21188809535_3bb0265c08_z.jpg" width="640" height="549" alt="AWS S3" class="image-border"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;バケットのプロパティで静的ウェブサイトホスティングを有効にすることができる。&lt;br&gt;
+インデックスドキュメント、エラードキュメントそれぞれを設定して「保存」を押して設定を反映させる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/21178487372/in/dateposted-public/" title="AWS S3"&gt;&lt;img src="https://farm1.staticflickr.com/575/21178487372_de8cb6a738_z.jpg" width="640" height="549" alt="AWS S3" class="image-border"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;このままではアクセス件がなくアップロードしたファイルを見ることができないので「さらにアクセス許可を追加する」を押す。&lt;br&gt;
+被付与者を全員、「リスト」にチェックをいれて「保存」を押して設定を反映させる。&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/21000673820/in/dateposted-public/" title="AWS S3"&gt;&lt;img src="https://farm6.staticflickr.com/5770/21000673820_2d2905ba86_z.jpg" width="640" height="549" alt="AWS S3" class="image-border"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;AWS S3の設定は以上となる。&lt;br&gt;
+またアクセスキーとシークレットキーが必要になるがAWS マネジメントコンソールのアカウント名のプルダウンから「認証情報」を選択して「セキュリティ認証情報」からアクセスキーを作成するなどして入手しておく。&lt;/p&gt;
+
+&lt;h3&gt;Middlemanでプロジェクト作成とその設定&lt;/h3&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$ middleman init some_project
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/middleman-contrib/middleman-sync"&gt;Middleman Sync&lt;/a&gt;というパッケージを使うと静的ファイルのビルドとファイルのアップロードがコマンドひとつでできる。&lt;br&gt;
+Gemfileを開いて以下を追記する。&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'middleman-sync'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;bundle installでパッケージのインストール。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;config.rbを開いて以下を追記する。&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:sync&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;fog_provider&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'AWS'&lt;/span&gt; &lt;span class="c1"&gt;#ストレージプロバイダ（AWS, Rackspace, Google）&lt;/span&gt;
+  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;fog_directory&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'bucket-name'&lt;/span&gt; &lt;span class="c1"&gt;#バケット名&lt;/span&gt;
+  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;fog_region&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'bucket-region-name'&lt;/span&gt; &lt;span class="c1"&gt;#バケットの地域名（AWSの場合us-east-1, us-west-1, eu-west-1, ap-southeast-1）&lt;/span&gt;
+  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;aws_access_key_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'super'&lt;/span&gt; &lt;span class="c1"&gt;#アクセスキー&lt;/span&gt;
+  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;aws_secret_access_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'secret'&lt;/span&gt; &lt;span class="c1"&gt;#シークレットキー&lt;/span&gt;
+  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;existing_remote_files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'keep'&lt;/span&gt; &lt;span class="c1"&gt;#既存のリモートファイルを消すのかそのままなのか（keep, delete）&lt;/span&gt;
+  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;gzip_compression&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt; &lt;span class="c1"&gt;#gzip圧縮したもので置き換えるかどうか（true, false）&lt;/span&gt;
+  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;after_build&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt; &lt;span class="c1"&gt;#ビルド後に自動でアップロードするかどうか（true, false）&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;設定は完了したのでソースをビルドしてS3に反映させる。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$ middleman build
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;完了したらS3に反映されているので確認する。
+S3 Management Cosoleのバケットのプロパティ「静的ウェブサイトホスティング」のエンドポイントがURLとなり、それで確認できる。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>小諸についてちょっと調べてみた</title>
     <link rel="alternate" href="http://shigekitakeguchi.com/2015/08/26/1.html"/>
@@ -213,59 +304,6 @@
 &lt;/ul&gt;
 
 &lt;p&gt;東京はコストをかけて運用されていて、またコストをかけるだけの人がいるということだなと思う。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>GitHub Pagesでサイト作ってみる（Middlemanで）初期設定、Github編。</title>
-    <link rel="alternate" href="http://shigekitakeguchi.com/2015/04/15/1.html"/>
-    <id>http://shigekitakeguchi.com/2015/04/15/1.html</id>
-    <published>2015-04-15T00:00:00Z</published>
-    <updated>2015-07-28T23:03:15+09:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;無事初期化できるようになったので初期化。&lt;br&gt;
-その前にGithub Pagesで公開するための準備を。&lt;/p&gt;
-
-&lt;p&gt;あたらしくレポジトリを作くる。&lt;br&gt;
-そう言う場合はちょっと設定が必要らしくレポジトリ名もアカウント名+「.github.io」にする。&lt;br&gt;
-ということで自分の場合はshigekitakeguchi.github.ioで作成する。&lt;/p&gt;
-
-&lt;p&gt;次にブランチを作るんだけどmasterブランチは公開用のファイルを置くことになる。&lt;br&gt;
-例えばindex.htmlを作ってコミットすると&lt;/p&gt;
-
-&lt;p&gt;http://shigekitakeguchi.github.io&lt;/p&gt;
-
-&lt;p&gt;でホスティングされる。
-Middlemanのローカルでのファイル構成はというとこんな感じ。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.flickr.com/photos/shigeki_takeguchi/16978635348" title="スクリーンショット 2015-04-16 20.28.19 by shigeki takeguchi, on Flickr"&gt;&lt;img src="https://farm8.staticflickr.com/7694/16978635348_778a77fae5.jpg" width="430" height="500" alt="スクリーンショット 2015-04-16 20.28.19" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;buildフォルダの直下がドキュメントルートになるようにmasterブランチでコミットする。&lt;br&gt;
-masterブランチはこんな感じになる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.flickr.com/photos/shigeki_takeguchi/16978923670" title="スクリーンショット 2015-04-16 20.38.02 by shigeki takeguchi, on Flickr"&gt;&lt;img src="https://farm9.staticflickr.com/8706/16978923670_eb76d343da.jpg" width="500" height="458" alt="スクリーンショット 2015-04-16 20.38.02" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;設定ファイルやらテンプレートファイルやらもGithubで管理したい。&lt;br&gt;
-なのでmiddlemanの初期化をdevelopブランチで行い&lt;br&gt;
-ローカルでの編集やレイアウトの調整などなどもこのブランチでやる。&lt;br&gt;
-ちなみにこれがdevelopブランチ。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.flickr.com/photos/shigeki_takeguchi/16978698188" title="スクリーンショット 2015-04-16 20.37.41 by shigeki takeguchi, on Flickr"&gt;&lt;img src="https://farm9.staticflickr.com/8795/16978698188_4bcebb5b4a.jpg" width="500" height="292" alt="スクリーンショット 2015-04-16 20.37.41" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;pre class="highlight shell"&gt;&lt;code&gt;bundle &lt;span class="nb"&gt;exec &lt;/span&gt;middleman deploy
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;とコマンドを入力すると&lt;br&gt;
-config.rbに記述した以下が実行される。&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:deploy&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-  &lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;build_before&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt;
-  &lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;method&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="ss"&gt;:git&lt;/span&gt;
-  &lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;branch&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'master'&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;コマンドひとつでGithubへ公開されるということ。
-最終的には&lt;a href="http://shigekitakeguchi.com/"&gt;shigekitakeguchi.com&lt;/a&gt;で公開してるんだけど、今回はここまで&lt;br&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>

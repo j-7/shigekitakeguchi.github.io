@@ -1,0 +1,340 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible" />
+    <title>Middlemanで作った静的サイトをAmazon S3で公開してみる | shigeki.takeguchi.log</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport" />
+    <meta content="Middlemanで作った静的サイトをmiddleman-syncパッケージを使ってAmazon S3で公開してみる" name="description" />
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <meta content="1PeiHaq_mDiuRL5xVm8MudEecmLupcJyJUBGIvqUbVs" name="google-site-verification" />
+    <!--[if lt IE 9]><script src="../../../js/ie8.js" type="text/javascript"></script><![endif]--><link href="../../../css/all.css" media="screen" rel="stylesheet" type="text/css" /><script type="text/javascript">
+      (function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-21820122-1", location.hostname);ga("send","pageview");
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">shigeki.takeguchi.log</a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-9">
+          <h1>
+            Middlemanで作った静的サイトをAmazon S3で公開してみる
+          </h1>
+          <small class="label label-default">Middleman</small>
+          <small class="label label-default">Amazon Web Service</small>
+          <small class="label label-default">Amazon S3</small>
+          <small class="label label-default">AWS</small>
+          <hr />
+          <p>
+            <span class="glyphicon glyphicon-time"></span> Posted on 2015-09-01
+          </p>
+          <hr /><p>ちょっと久しぶりになりますが技術のことを書く。</p>
+
+<h3>Amazon S3とは？</h3>
+
+<p><a href="http://aws.amazon.com/jp/">アマゾン ウェブ サービス</a></p>
+
+<p><a href="http://aws.amazon.com/jp/" title="Amazon Web Service"><img src="https://farm6.staticflickr.com/5617/21148105172_291c1cf641_z.jpg" width="640" height="506" alt="Amazon Web Service" class="image-border"></a></p>
+
+<p>ブログもちょっとしたサイトもほとんどMiddlemanを使って構築しているわけだけど、<br>
+Github Pagesだけじゃなくアマゾン ウェブ サービス（Amazon Web Services）もべっりだったりする。</p>
+
+<p>以前に比べると日本語化もかなり進んでいたり無料利用枠があるのではじめるのにそこまでハードルは高くない。<br>
+ただクレジットカード登録と電話でのPIN番号認証があるのでやたらめったらとアカウント作るってわけにはいかないだろう。</p>
+
+<p>日本語のドキュメントも充実している。</p>
+
+<p><a href="https://aws.amazon.com/jp/documentation/gettingstarted/">AWS の使用開始ドキュメント</a></p>
+
+<p><a href="https://aws.amazon.com/jp/documentation/gettingstarted/" title="AWS の使用開始ドキュメント"><img src="https://farm6.staticflickr.com/5815/21186659561_fc322623c3_z.jpg" width="640" height="611" alt="AWS の使用開始ドキュメント" class="image-border"></a></p>
+
+<p><a href="http://aws.amazon.com/jp/s3/">Amazon S3 (クラウドストレージサービス)</a></p>
+
+<p><a data-flickr-embed="true"  href="http://aws.amazon.com/jp/s3/https://www.flickr.com/photos/shigeki_takeguchi/21186729121/in/dateposted-public/" title="Amazon S3 (クラウドストレージサービス)"><img src="https://farm6.staticflickr.com/5640/21186729121_4d069ea410_z.jpg" width="640" height="586" alt="Amazon S3 (クラウドストレージサービス)" class="image-border"></a></p>
+
+<p>S3というと負荷分散のために画像や映像ファイルを置いておく場所のイメージがあったと思うんだけど<br>
+もちろんそういう使い方が主流だと思うけど今はちょっと違うように思う。  </p>
+
+<h3>Amazon S3のバケットを作る</h3>
+
+<p>AWSのサービスからS3を選んでS3 Management Cosole画面へ。<br>
+左上の「バケットを作成」を押す。<br>
+バケット名とリージョンを選択して右下の「作成」を押すとバケットが作成される。</p>
+
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/21188809535/in/dateposted-public/" title="AWS S3"><img src="https://farm1.staticflickr.com/714/21188809535_3bb0265c08_z.jpg" width="640" height="549" alt="AWS S3" class="image-border"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>バケットのプロパティで静的ウェブサイトホスティングを有効にすることができる。<br>
+インデックスドキュメント、エラードキュメントそれぞれを設定して「保存」を押して設定を反映させる。</p>
+
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/21178487372/in/dateposted-public/" title="AWS S3"><img src="https://farm1.staticflickr.com/575/21178487372_de8cb6a738_z.jpg" width="640" height="549" alt="AWS S3" class="image-border"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>このままではアクセス件がなくアップロードしたファイルを見ることができないので「さらにアクセス許可を追加する」を押す。<br>
+被付与者を全員、「リスト」にチェックをいれて「保存」を押して設定を反映させる。</p>
+
+<p><a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/21000673820/in/dateposted-public/" title="AWS S3"><img src="https://farm6.staticflickr.com/5770/21000673820_2d2905ba86_z.jpg" width="640" height="549" alt="AWS S3" class="image-border"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+
+<p>AWS S3の設定は以上となる。<br>
+またアクセスキーとシークレットキーが必要になるがAWS マネジメントコンソールのアカウント名のプルダウンから「認証情報」を選択して「セキュリティ認証情報」からアクセスキーを作成するなどして入手しておく。</p>
+
+<h3>Middlemanでプロジェクト作成とその設定</h3>
+<pre class="highlight plaintext"><code>$ middleman init some_project
+</code></pre>
+
+<p><a href="https://github.com/middleman-contrib/middleman-sync">Middleman Sync</a>というパッケージを使うと静的ファイルのビルドとファイルのアップロードがコマンドひとつでできる。<br>
+Gemfileを開いて以下を追記する。</p>
+<pre class="highlight ruby"><code><span class="n">gem</span> <span class="s1">'middleman-sync'</span>
+</code></pre>
+
+<p>bundle installでパッケージのインストール。</p>
+<pre class="highlight plaintext"><code>$ bundle install
+</code></pre>
+
+<p>config.rbを開いて以下を追記する。</p>
+<pre class="highlight ruby"><code><span class="n">activate</span> <span class="ss">:sync</span> <span class="k">do</span> <span class="o">|</span><span class="n">sync</span><span class="o">|</span>
+  <span class="n">sync</span><span class="p">.</span><span class="nf">fog_provider</span> <span class="o">=</span> <span class="s1">'AWS'</span> <span class="c1">#ストレージプロバイダ（AWS, Rackspace, Google）</span>
+  <span class="n">sync</span><span class="p">.</span><span class="nf">fog_directory</span> <span class="o">=</span> <span class="s1">'bucket-name'</span> <span class="c1">#バケット名</span>
+  <span class="n">sync</span><span class="p">.</span><span class="nf">fog_region</span> <span class="o">=</span> <span class="s1">'bucket-region-name'</span> <span class="c1">#バケットの地域名（AWSの場合us-east-1, us-west-1, eu-west-1, ap-southeast-1）</span>
+  <span class="n">sync</span><span class="p">.</span><span class="nf">aws_access_key_id</span> <span class="o">=</span> <span class="s1">'super'</span> <span class="c1">#アクセスキー</span>
+  <span class="n">sync</span><span class="p">.</span><span class="nf">aws_secret_access_key</span> <span class="o">=</span> <span class="s1">'secret'</span> <span class="c1">#シークレットキー</span>
+  <span class="n">sync</span><span class="p">.</span><span class="nf">existing_remote_files</span> <span class="o">=</span> <span class="s1">'keep'</span> <span class="c1">#既存のリモートファイルを消すのかそのままなのか（keep, delete）</span>
+  <span class="n">sync</span><span class="p">.</span><span class="nf">gzip_compression</span> <span class="o">=</span> <span class="kp">false</span> <span class="c1">#gzip圧縮したもので置き換えるかどうか（true, false）</span>
+  <span class="n">sync</span><span class="p">.</span><span class="nf">after_build</span> <span class="o">=</span> <span class="kp">true</span> <span class="c1">#ビルド後に自動でアップロードするかどうか（true, false）</span>
+<span class="k">end</span>
+</code></pre>
+
+<p>設定は完了したのでソースをビルドしてS3に反映させる。</p>
+<pre class="highlight plaintext"><code>$ middleman build
+</code></pre>
+
+<p>完了したらS3に反映されているので確認する。
+S3 Management Cosoleのバケットのプロパティ「静的ウェブサイトホスティング」のエンドポイントがURLとなり、それで確認できる。</p>
+
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div class="well">
+            <h4>
+              Twitter
+            </h4>
+            <ul class="list-unstyled">
+              <li>
+                <span class="glyphicon glyphicon-new-window"></span><a href="https://twitter.com/watchmovi_es" target="_blank"> Twitter - watchmovi.es</a>
+              </li>
+              <li>
+                <span class="glyphicon glyphicon-new-window"></span><a href="https://twitter.com/shigektakeguchi" target="_blank"> Twitter - shigeki.takeguchi</a>
+              </li>
+            </ul>
+          </div>
+          <div class="well">
+            <ul class="list-unstyled">
+              <li>
+                <span class="glyphicon glyphicon-new-window"></span><a href="http://blog.watchmovi.es" target="_blank"> iTunesで映画を観よう</a>
+              </li>
+              <li>
+                <span class="glyphicon glyphicon-new-window"></span><a href="http://watchmovi.es" target="_blank"> Watch Movies on iTunes</a>
+              </li>
+            </ul>
+          </div>
+          <div class="well">
+            <h4>
+              Tags
+            </h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="/tags/log.html">log</a> (36)
+              </li>
+              <li>
+                <a href="/tags/okayama.html">okayama</a> (7)
+              </li>
+              <li>
+                <a href="/tags/ios-app.html">ios-app</a> (13)
+              </li>
+              <li>
+                <a href="/tags/javascript.html">javascript</a> (3)
+              </li>
+              <li>
+                <a href="/tags/jquery.html">jquery</a> (2)
+              </li>
+              <li>
+                <a href="/tags/travel.html">travel</a> (13)
+              </li>
+              <li>
+                <a href="/tags/ad.html">ad</a> (1)
+              </li>
+              <li>
+                <a href="/tags/objective-c.html">objective-c</a> (11)
+              </li>
+              <li>
+                <a href="/tags/htmlcss.html">htmlcss</a> (2)
+              </li>
+              <li>
+                <a href="/tags/tohoku.html">tohoku</a> (3)
+              </li>
+              <li>
+                <a href="/tags/web-designing.html">web-designing</a> (1)
+              </li>
+              <li>
+                <a href="/tags/about-programing.html">about-programing</a> (3)
+              </li>
+              <li>
+                <a href="/tags/book.html">book</a> (5)
+              </li>
+              <li>
+                <a href="/tags/kindle.html">kindle</a> (4)
+              </li>
+              <li>
+                <a href="/tags/cocoa-touch.html">cocoa-touch</a> (9)
+              </li>
+              <li>
+                <a href="/tags/xcode.html">xcode</a> (10)
+              </li>
+              <li>
+                <a href="/tags/ebook.html">ebook</a> (1)
+              </li>
+              <li>
+                <a href="/tags/user-interface.html">user-interface</a> (1)
+              </li>
+              <li>
+                <a href="/tags/swift.html">swift</a> (1)
+              </li>
+              <li>
+                <a href="/tags/餃子.html">餃子</a> (1)
+              </li>
+              <li>
+                <a href="/tags/新橋.html">新橋</a> (1)
+              </li>
+              <li>
+                <a href="/tags/github-pages.html">GitHub Pages</a> (4)
+              </li>
+              <li>
+                <a href="/tags/middleman.html">Middleman</a> (5)
+              </li>
+              <li>
+                <a href="/tags/温泉街.html">温泉街</a> (1)
+              </li>
+              <li>
+                <a href="/tags/温泉.html">温泉</a> (1)
+              </li>
+              <li>
+                <a href="/tags/戸倉上山田温泉.html">戸倉上山田温泉</a> (1)
+              </li>
+              <li>
+                <a href="/tags/地方都市.html">地方都市</a> (5)
+              </li>
+              <li>
+                <a href="/tags/岡山.html">岡山</a> (1)
+              </li>
+              <li>
+                <a href="/tags/生活.html">生活</a> (5)
+              </li>
+              <li>
+                <a href="/tags/暮らす.html">暮らす</a> (5)
+              </li>
+              <li>
+                <a href="/tags/amazon-web-service.html">Amazon Web Service</a> (1)
+              </li>
+              <li>
+                <a href="/tags/amazon-s3.html">Amazon S3</a> (1)
+              </li>
+              <li>
+                <a href="/tags/aws.html">AWS</a> (1)
+              </li>
+            </ul>
+          </div>
+          <div class="well">
+            <h4>
+              By year
+            </h4>
+            <ol>
+              <li>
+                <a href="/2015.html">2015</a> (13)
+              </li>
+              <li>
+                <a href="/2013.html">2013</a> (15)
+              </li>
+              <li>
+                <a href="/2012.html">2012</a> (21)
+              </li>
+              <li>
+                <a href="/2011.html">2011</a> (34)
+              </li>
+            </ol>
+          </div>
+          <div class="banner">
+            <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!--aside_banner_2--><ins class="adsbygoogle" data-ad-client="ca-pub-9198003416420881" data-ad-format="auto" data-ad-slot="7805065970" style="display:block"></ins>
+            <script type="text/javascript">
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+      </div>
+      <aside>
+        <h3>
+          Recent Articles
+        </h3>
+        <ol>
+          <li>
+            <a href="/2015/09/01/1.html">Middlemanで作った静的サイトをAmazon S3で公開してみる</a> <span>2015-09-01</span> 
+          </li>
+          <li>
+            <a href="/2015/08/26/1.html">小諸についてちょっと調べてみた</a> <span>2015-08-26</span> 
+          </li>
+          <li>
+            <a href="/2015/08/23/1.html">信州は小諸市に行った</a> <span>2015-08-23</span> 
+          </li>
+          <li>
+            <a href="/2015/08/05/1.html">熊本の住み心地</a> <span>2015-08-05</span> 
+          </li>
+          <li>
+            <a href="/2015/08/02/1.html">結婚式で福岡、そこから熊本へ</a> <span>2015-08-02</span> 
+          </li>
+          <li>
+            <a href="/2015/04/20/1.html">地方都市で生活してみてわかったこと。</a> <span>2015-04-20</span> 
+          </li>
+          <li>
+            <a href="/2015/04/15/1.html">GitHub Pagesでサイト作ってみる（Middlemanで）初期設定、Github編。</a> <span>2015-04-15</span> 
+          </li>
+          <li>
+            <a href="/2015/04/09/1.html">GitHub Pagesでサイト作ってみる（Middlemanで）なぜかエラー編。</a> <span>2015-04-09</span> 
+          </li>
+          <li>
+            <a href="/2015/04/06/1.html">戸倉上山田温泉へ（地方の街）。</a> <span>2015-04-06</span> 
+          </li>
+          <li>
+            <a href="/2015/04/03/1.html">GitHub Pagesでサイト作ってみる（Middlemanで）インストール編。</a> <span>2015-04-03</span> 
+          </li>
+        </ol>
+        <hr />
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'shigekitakeguchilog';
+          (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0]
+            || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>
+          <p>
+            <Please>enable JavaScript to view the</Please><a>href: "http://disqus.com/?ref_noscript" comments powered by Disqus.</a>
+          </p>
+        </noscript>
+      </aside>
+      <hr>
+        <p class="text-center">
+          &copy; 2012 shigeki.takeguchi
+        </p>
+      </hr>
+    </div>
+    <script src="../../../js/all.js" type="text/javascript"></script>
+  </body>
+</html>
