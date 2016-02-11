@@ -23,6 +23,31 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9 col-md-9"><h1>
+  <a href="/2016/02/11/1.html">StoryboardなしでiOSアプリケーションをSwiftを使って作る（コード編）</a>
+</h1>
+<p>
+  <small class="label label-default">iOS</small>
+  <small class="label label-default">Swift</small>
+  <small class="label label-default">Storyboard</small>
+  <small class="label label-default">Single View Application</small>
+  <small class="label label-default">Objective-C</small>
+  <small class="label label-default">AppDelegate</small>
+</p>
+<hr />
+<p class="posted">
+  <span class="glyphicon glyphicon-time"></span> Posted on 2016-02-11
+</p>
+<hr /><p>9月から更新してませんでしたね。。。
+過去に作ったアプリケーションをSwiftに書きかえいます。ただそろそろStoryboard使った方が良いと思いつつ、今まで使ってなかったので頑張ってStoryboard使わずに頑張ります。</p>
+
+<h3>【Objective-C】AppDelegate.hとAppDelegate.m</h3>
+
+<p>まずはObjective-Cの時はこう書いてました的な。<br>
+AppDelegate.h</p>
+<pre class="highlight objective_c"><code><span class="cp">#import &lt;UIKit/UIKit.h&gt;
+</span>
+<span class="k">@class</span> <span class="nc">ViewController</span><span class="p">;</span></code></pre><a class="btn btn-primary" href="/2016/02/11/1.html">もっと読む</a>
+<hr /><h1>
   <a href="/2015/09/01/1.html">Middlemanで作った静的サイトをAmazon S3で公開してみる</a>
 </h1>
 <p>
@@ -256,27 +281,6 @@ Gem::ConflictErrorとからしく調べてみたけど今ひとつわからん�
 長野出身のひとなら知っているって感じの知名度らしい。<br>
 調べると歴史は百数十年。しかし寂れてるなと街に入る前からわかる。<br>
 賑わっていたころの名残りが街のそこかしこにあってなかなか過ぎ去った昭...</p><a class="btn btn-primary" href="/2015/04/06/1.html">もっと読む</a>
-<hr /><h1>
-  <a href="/2015/04/03/1.html">GitHub Pagesでサイト作ってみる（Middlemanで）インストール編。</a>
-</h1>
-<p>
-  <small class="label label-default">GitHub Pages</small>
-  <small class="label label-default">Middleman</small>
-</p>
-<hr />
-<p class="posted">
-  <span class="glyphicon glyphicon-time"></span> Posted on 2015-04-03
-</p>
-<hr /><p>まずはMiddlemanのインストール。<br>
-Mac OSX YosemiteのRubyのバージョン。2.0.0になってる。たしかMavericksは1.9.3だったような。<br>
-だいたいMiddlemanのインストールページの手順でやれば大丈夫なはず。<br></p>
-
-<p><a href="https://middlemanapp.com/jp/basics/install/">Middleman: インストール</a></p>
-<pre class="highlight shell"><code>ruby -v
-ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">)</span> <span class="o">[</span>universal.x86_64-darwin14]
-</code></pre>
-
-<p>初期状態でのgem（RubyGems）のバージ...</p><a class="btn btn-primary" href="/2015/04/03/1.html">もっと読む</a>
 <hr />
 <div class="well-sm">
   <ul class="pager">
@@ -415,6 +419,24 @@ ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">
               <li>
                 <a href="/tags/aws.html">AWS</a> (1)
               </li>
+              <li>
+                <a href="/tags/ios.html">iOS</a> (1)
+              </li>
+              <li>
+                <a href="/tags/swift.html">Swift</a> (1)
+              </li>
+              <li>
+                <a href="/tags/storyboard.html">Storyboard</a> (1)
+              </li>
+              <li>
+                <a href="/tags/single-view-application.html">Single View Application</a> (1)
+              </li>
+              <li>
+                <a href="/tags/objective-c.html">Objective-C</a> (1)
+              </li>
+              <li>
+                <a href="/tags/appdelegate.html">AppDelegate</a> (1)
+              </li>
             </ul>
           </div>
           <div class="well">
@@ -422,6 +444,9 @@ ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">
               By year
             </h4>
             <ol>
+              <li>
+                <a href="/2016.html">2016</a> (1)
+              </li>
               <li>
                 <a href="/2015.html">2015</a> (13)
               </li>
@@ -451,6 +476,9 @@ ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">
         </h3>
         <ol>
           <li>
+            <a href="/2016/02/11/1.html">StoryboardなしでiOSアプリケーションをSwiftを使って作る（コード編）</a> <span>2016-02-11</span> 
+          </li>
+          <li>
             <a href="/2015/09/01/1.html">Middlemanで作った静的サイトをAmazon S3で公開してみる</a> <span>2015-09-01</span> 
           </li>
           <li>
@@ -476,9 +504,6 @@ ruby 2.0.0p481 <span class="o">(</span>2014-05-08 revision 45883<span class="o">
           </li>
           <li>
             <a href="/2015/04/06/1.html">戸倉上山田温泉へ（地方の街）。</a> <span>2015-04-06</span> 
-          </li>
-          <li>
-            <a href="/2015/04/03/1.html">GitHub Pagesでサイト作ってみる（Middlemanで）インストール編。</a> <span>2015-04-03</span> 
           </li>
         </ol>
         <hr />

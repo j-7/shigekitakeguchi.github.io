@@ -643,6 +643,12 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>http://shigekitakeguchi.com/2016/02/11/1.html</loc>
+    <lastmod>2016-02-11</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>http://shigekitakeguchi.com/tags/log.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
@@ -838,6 +844,60 @@
     <loc>http://shigekitakeguchi.com/tags/aws.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/tags/ios.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/tags/swift.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/tags/storyboard.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/tags/single-view-application.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/tags/objective-c.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/tags/appdelegate.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2016.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2016/02.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2016/02/11.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>

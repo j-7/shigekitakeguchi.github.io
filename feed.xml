@@ -5,10 +5,125 @@
   <id>http://shigekitakeguchi.com</id>
   <link href="http://shigekitakeguchi.com"/>
   <link href="http://shigekitakeguchi.com/feed.xml" rel="self"/>
-  <updated>2015-09-01T00:00:00Z</updated>
+  <updated>2016-02-11T00:00:00Z</updated>
   <author>
     <name>shigeki.takeguchi</name>
   </author>
+  <entry>
+    <title>StoryboardなしでiOSアプリケーションをSwiftを使って作る（コード編）</title>
+    <link rel="alternate" href="http://shigekitakeguchi.com/2016/02/11/1.html"/>
+    <id>http://shigekitakeguchi.com/2016/02/11/1.html</id>
+    <published>2016-02-11T00:00:00Z</published>
+    <updated>2016-02-11T23:51:53+09:00</updated>
+    <author>
+      <name>shigeki.takeguchi</name>
+    </author>
+    <content type="html">&lt;p&gt;9月から更新してませんでしたね。。。
+過去に作ったアプリケーションをSwiftに書きかえいます。ただそろそろStoryboard使った方が良いと思いつつ、今まで使ってなかったので頑張ってStoryboard使わずに頑張ります。&lt;/p&gt;
+
+&lt;h3&gt;【Objective-C】AppDelegate.hとAppDelegate.m&lt;/h3&gt;
+
+&lt;p&gt;まずはObjective-Cの時はこう書いてました的な。&lt;br&gt;
+AppDelegate.h&lt;/p&gt;
+&lt;pre class="highlight objective_c"&gt;&lt;code&gt;&lt;span class="cp"&gt;#import &amp;lt;UIKit/UIKit.h&amp;gt;
+&lt;/span&gt;
+&lt;span class="k"&gt;@class&lt;/span&gt; &lt;span class="nc"&gt;ViewController&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;@interface&lt;/span&gt; &lt;span class="nc"&gt;AppDelegate&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nc"&gt;UIResponder&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;UIApplicationDelegate&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="k"&gt;@property&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;strong&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nonatomic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;UIWindow&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;@property&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;strong&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nonatomic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;ViewController&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;viewController&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="k"&gt;@end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;AppDelegate.m&lt;/p&gt;
+&lt;pre class="highlight objective_c"&gt;&lt;code&gt;&lt;span class="cp"&gt;#import "AppDelegate.h"
+#import "ViewController.h"
+&lt;/span&gt;
+&lt;span class="k"&gt;@interface&lt;/span&gt; &lt;span class="nc"&gt;AppDelegate&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;@end&lt;/span&gt;
+
+&lt;span class="k"&gt;@implementation&lt;/span&gt; &lt;span class="nc"&gt;AppDelegate&lt;/span&gt;
+
+
+&lt;span class="k"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BOOL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;application&lt;/span&gt;&lt;span class="p"&gt;:(&lt;/span&gt;&lt;span class="n"&gt;UIApplication&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt; &lt;span class="nf"&gt;didFinishLaunchingWithOptions&lt;/span&gt;&lt;span class="p"&gt;:(&lt;/span&gt;&lt;span class="n"&gt;NSDictionary&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;launchOptions&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="n"&gt;UIWindow&lt;/span&gt; &lt;span class="nf"&gt;alloc&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="nf"&gt;initWithFrame&lt;/span&gt;&lt;span class="p"&gt;:[[&lt;/span&gt;&lt;span class="n"&gt;UIScreen&lt;/span&gt; &lt;span class="nf"&gt;mainScreen&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="nf"&gt;bounds&lt;/span&gt;&lt;span class="p"&gt;]];&lt;/span&gt;
+  &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;viewController&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="n"&gt;ViewController&lt;/span&gt; &lt;span class="nf"&gt;alloc&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="nf"&gt;init&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+  &lt;span class="n"&gt;UINavigationController&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;navigationController&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="n"&gt;UINavigationController&lt;/span&gt; &lt;span class="nf"&gt;alloc&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="nf"&gt;initWithRootViewController&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;viewController&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;navigationController&lt;/span&gt; &lt;span class="nf"&gt;setNavigationBarHidden&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;YES&lt;/span&gt; &lt;span class="nf"&gt;animated&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;NO&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;navigationController&lt;/span&gt; &lt;span class="nf"&gt;setToolbarHidden&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;YES&lt;/span&gt; &lt;span class="nf"&gt;animated&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="nb"&gt;NO&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+  &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rootViewController&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;navigationController&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="nf"&gt;makeKeyAndVisible&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;YES&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;applicationWillResignActive&lt;/span&gt;&lt;span class="p"&gt;:(&lt;/span&gt;&lt;span class="n"&gt;UIApplication&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;applicationDidEnterBackground&lt;/span&gt;&lt;span class="p"&gt;:(&lt;/span&gt;&lt;span class="n"&gt;UIApplication&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;applicationWillEnterForeground&lt;/span&gt;&lt;span class="p"&gt;:(&lt;/span&gt;&lt;span class="n"&gt;UIApplication&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;applicationDidBecomeActive&lt;/span&gt;&lt;span class="p"&gt;:(&lt;/span&gt;&lt;span class="n"&gt;UIApplication&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nf"&gt;applicationWillTerminate&lt;/span&gt;&lt;span class="p"&gt;:(&lt;/span&gt;&lt;span class="n"&gt;UIApplication&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;@end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;【Swift】AppDelegate.swift&lt;/h3&gt;
+
+&lt;p&gt;じゃあこれをSwiftで書き直すと。&lt;/p&gt;
+&lt;pre class="highlight swift"&gt;&lt;code&gt;&lt;span class="kd"&gt;import&lt;/span&gt; &lt;span class="kt"&gt;UIKit&lt;/span&gt;
+
+&lt;span class="k"&gt;@UIApplicationMain&lt;/span&gt;
+&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="kt"&gt;AppDelegate&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;UIResponder&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;UIApplicationDelegate&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+
+  &lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;window&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;UIWindow&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt;
+  &lt;span class="k"&gt;var&lt;/span&gt; &lt;span class="nv"&gt;navigationController&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;UINavigationController&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt;
+
+  &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;application&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;UIApplication&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;didFinishLaunchingWithOptions&lt;/span&gt; &lt;span class="nv"&gt;launchOptions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="kt"&gt;NSObject&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;AnyObject&lt;/span&gt;&lt;span class="p"&gt;]?)&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="kt"&gt;Bool&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;window&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;UIWindow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;frame&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;UIScreen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;mainScreen&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;bounds&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;makeKeyAndVisible&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;viewController&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;ViewController&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;navigationController&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;UINavigationController&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;rootViewController&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;viewController&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;?&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rootViewController&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;navigationController&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+
+  &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;applicationWillResignActive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;UIApplication&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+
+  &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;applicationDidEnterBackground&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;UIApplication&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+
+  &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;applicationWillEnterForeground&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;UIApplication&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+
+  &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;applicationDidBecomeActive&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;UIApplication&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+
+  &lt;span class="kd"&gt;func&lt;/span&gt; &lt;span class="nf"&gt;applicationWillTerminate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;application&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kt"&gt;UIApplication&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ひとつのファイルに記述するだけってのは見通しがよい。&lt;br&gt;
+このあたりの記述はObjective-Cに比べてもそこまで変更はないというのが第一印象。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Middlemanで作った静的サイトをAmazon S3で公開してみる</title>
     <link rel="alternate" href="http://shigekitakeguchi.com/2015/09/01/1.html"/>
@@ -267,43 +382,6 @@ S3 Management Cosoleのバケットのプロパティ「静的ウェブサイト
 
 &lt;p&gt;これだけ乗る人が少ないってのは関西の景気ってのに左右されてるってことなのか。。。&lt;br&gt;
 とりあえずそんなことを思いながら外を眺めていたら寝てしまった。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>地方都市で生活してみてわかったこと。</title>
-    <link rel="alternate" href="http://shigekitakeguchi.com/2015/04/20/1.html"/>
-    <id>http://shigekitakeguchi.com/2015/04/20/1.html</id>
-    <published>2015-04-20T00:00:00Z</published>
-    <updated>2015-07-28T23:03:15+09:00</updated>
-    <author>
-      <name>shigeki.takeguchi</name>
-    </author>
-    <content type="html">&lt;p&gt;ちょうど今から4年前、会社を辞めた。&lt;br&gt;
-今となっては辞めた理由が思い出せないけどいろいろと挑戦したかったんだろう。&lt;br&gt;
-フリーランスになって地方都市に住んでみた。&lt;br&gt;
-約２年ほど東京と地方都市を月に数度往復する生活をしていたわけだけど、&lt;br&gt;
-その時に選んだ街が岡山だった。&lt;br&gt;
-引き上げて2年になるんだけどたまに懐かしくなる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.flickr.com/photos/shigeki_takeguchi/6098598127" title="Untitled by shigeki takeguchi, on Flickr"&gt;&lt;img src="https://farm7.staticflickr.com/6196/6098598127_224b309292_z.jpg" width="640" height="480" alt="Untitled"&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;その2年間はとにかく地方都市に家を借り、&lt;br&gt;
-また毎月のように岡山以外の地方都市を旅行して地方都市のこと見てまわった。&lt;br&gt;
-そうやってあちこちと旅行したり生活してみて地方都市ってのを実感してみたかった。&lt;br&gt;
-また日本ってのがどういうことになっているのか知りたかった。&lt;/p&gt;
-
-&lt;p&gt;で、けっきょくのところ地方都市で住んだら何かわかったかというとよくわからないことだらけのままな気がする。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;歩道はメンテナンスが行き届いている。&lt;/li&gt;
-&lt;li&gt;どこの駅前でも人通りがある。&lt;/li&gt;
-&lt;li&gt;電車がひんぱんにくる。&lt;/li&gt;
-&lt;li&gt;高層な建物がたくさんある。&lt;/li&gt;
-&lt;li&gt;外観がきれいな建物が多い。&lt;/li&gt;
-&lt;li&gt;お店が混んでる。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;東京はコストをかけて運用されていて、またコストをかけるだけの人がいるということだなと思う。&lt;/p&gt;
 </content>
   </entry>
 </feed>
