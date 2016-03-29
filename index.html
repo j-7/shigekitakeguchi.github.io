@@ -98,86 +98,6 @@
 </ul>
 <a class="btn btn-primary" href="/2016/03/23/1.html">もっと読む</a>
 <hr /><h1>
-  <a href="/2016/02/15/1.html"></a>
-</h1>
-<p>
-  <small class="label label-default">iOS</small>
-  <small class="label label-default">Swift</small>
-  <small class="label label-default">Storyboard</small>
-  <small class="label label-default">Single View Application</small>
-  <small class="label label-default">Objective-C</small>
-  <small class="label label-default">AppDelegate</small>
-</p>
-<hr />
-<p class="posted">
-  <span class="glyphicon glyphicon-time"></span> Posted on 2016-02-15
-</p>
-<hr /><p>9月から更新してませんでしたね。。。
-過去に作ったアプリケーションをSwiftに書きかえいます。ただそろそろStoryboard使った方が良いと思いつつ、今まで使ってなかったので頑張ってStoryboard使わずに頑張ります。</p>
-
-<h3>【Objective-C】AppDelegate.hとAppDelegate.m</h3>
-
-<p>まずはObjective-Cの時はこう書いてました的な。<br>
-AppDelegate.h</p>
-<pre class="highlight objective_c"><code><span class="cp">#import &lt;UIKit/UIKit.h&gt;
-</span>
-<span class="k">@class</span> <span class="nc">ViewController</span><span class="p">;</span></code></pre>
-<ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2016/02/15/1.html" title="このエントリーをはてなブックマークに追加"></a>
-  </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2016/02/15/1.html" data-layout="box_count"></div>
-  </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2016/02/15/1.html" data-size="tall"></div>
-  </li>
-  <li class="twitter">
-    <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
-  </li>
-</ul>
-<a class="btn btn-primary" href="/2016/02/15/1.html">もっと読む</a>
-<hr /><h1>
-  <a href="/2016/02/11/1.html">StoryboardなしでiOSアプリケーションをSwiftを使って作る（コード編）</a>
-</h1>
-<p>
-  <small class="label label-default">iOS</small>
-  <small class="label label-default">Swift</small>
-  <small class="label label-default">Storyboard</small>
-  <small class="label label-default">Single View Application</small>
-  <small class="label label-default">Objective-C</small>
-  <small class="label label-default">AppDelegate</small>
-</p>
-<hr />
-<p class="posted">
-  <span class="glyphicon glyphicon-time"></span> Posted on 2016-02-11
-</p>
-<hr /><p>9月から更新してませんでしたね。。。
-過去に作ったアプリケーションをSwiftに書きかえいます。ただそろそろStoryboard使った方が良いと思いつつ、今まで使ってなかったので頑張ってStoryboard使わずに頑張ります。</p>
-
-<h3>【Objective-C】AppDelegate.hとAppDelegate.m</h3>
-
-<p>まずはObjective-Cの時はこう書いてました的な。<br>
-AppDelegate.h</p>
-<pre class="highlight objective_c"><code><span class="cp">#import &lt;UIKit/UIKit.h&gt;
-</span>
-<span class="k">@class</span> <span class="nc">ViewController</span><span class="p">;</span></code></pre>
-<ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2016/02/11/1.html" title="このエントリーをはてなブックマークに追加"></a>
-  </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2016/02/11/1.html" data-layout="box_count"></div>
-  </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2016/02/11/1.html" data-size="tall"></div>
-  </li>
-  <li class="twitter">
-    <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
-  </li>
-</ul>
-<a class="btn btn-primary" href="/2016/02/11/1.html">もっと読む</a>
-<hr /><h1>
   <a href="/2015/09/01/1.html">Middlemanで作った静的サイトをAmazon S3で公開してみる</a>
 </h1>
 <p>
@@ -427,6 +347,85 @@ Github Pagesだけじゃなくアマゾン ウェブ サービス（Amazon Web S
   </li>
 </ul>
 <a class="btn btn-primary" href="/2015/04/20/1.html">もっと読む</a>
+<hr /><h1>
+  <a href="/2015/04/15/1.html">GitHub Pagesでサイト作ってみる（Middlemanで）初期設定、Github編。</a>
+</h1>
+<p>
+  <small class="label label-default">GitHub Pages</small>
+  <small class="label label-default">Middleman</small>
+</p>
+<hr />
+<p class="posted">
+  <span class="glyphicon glyphicon-time"></span> Posted on 2015-04-15
+</p>
+<hr />
+<p>無事初期化できるようになったので初期化。<br>
+その前にGithub Pagesで公開するための準備を。</p>
+
+<p>あたらしくレポジトリを作くる。<br>
+そう言う場合はちょっと設定が必要らしくレポジトリ名もアカウント名+「.github.io」にする。<br>
+ということで自分の場合はshigekitakeguchi.github.ioで作成する。</p>
+
+<p>次にブランチを作るんだけどmasterブランチは公開用のファイルを置くことになる。<br>
+例えばindex.htmlを作ってコミットすると</p>
+
+<p>http://shigekitakeguchi...</p>
+<ul class="social-buttons">
+  <li>
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2015/04/15/1.html" title="このエントリーをはてなブックマークに追加"></a>
+  </li>
+  <li>
+    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2015/04/15/1.html" data-layout="box_count"></div>
+  </li>
+  <li>
+    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2015/04/15/1.html" data-size="tall"></div>
+  </li>
+  <li class="twitter">
+    <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
+  </li>
+</ul>
+<a class="btn btn-primary" href="/2015/04/15/1.html">もっと読む</a>
+<hr /><h1>
+  <a href="/2015/04/09/1.html">GitHub Pagesでサイト作ってみる（Middlemanで）なぜかエラー編。</a>
+</h1>
+<p>
+  <small class="label label-default">GitHub Pages</small>
+  <small class="label label-default">Middleman</small>
+</p>
+<hr />
+<p class="posted">
+  <span class="glyphicon glyphicon-time"></span> Posted on 2015-04-09
+</p>
+<hr /><p>初期化しようとするといろいろとMiddlemanでエラーでた。<br>
+Gem::ConflictErrorとからしく調べてみたけど今ひとつわからん。<br>
+エラーをみてみるとactivemodelというのとactivesupportというがどうもあやしい。</p>
+<pre class="highlight shell"><code>middleman init my_example
+</code></pre>
+
+<p>2.2.1というのが最新みたいなのでアップデートしても直らない。</p>
+
+<ul>
+<li><a href="https://rubygems.org/gems/activesupport/">activesupport</a></li>
+<li><a href="https://rubygems.org/gems/activemodel">activemodel</a></li>
+</ul>
+
+<p>ということでアンインストールして入れなおしてみる。<br>
+バージョン指定...</p>
+<ul class="social-buttons">
+  <li>
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2015/04/09/1.html" title="このエントリーをはてなブックマークに追加"></a>
+  </li>
+  <li>
+    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2015/04/09/1.html" data-layout="box_count"></div>
+  </li>
+  <li>
+    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2015/04/09/1.html" data-size="tall"></div>
+  </li>
+  <li class="twitter">
+    <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
+  </li>
+</ul>
+<a class="btn btn-primary" href="/2015/04/09/1.html">もっと読む</a>
 <hr />
 <div class="well-sm">
   <ul class="pager">
@@ -567,24 +566,6 @@ Github Pagesだけじゃなくアマゾン ウェブ サービス（Amazon Web S
                 <a href="/tags/aws.html">AWS</a> (1)
               </li>
               <li>
-                <a href="/tags/ios.html">iOS</a> (2)
-              </li>
-              <li>
-                <a href="/tags/swift.html">Swift</a> (2)
-              </li>
-              <li>
-                <a href="/tags/storyboard.html">Storyboard</a> (2)
-              </li>
-              <li>
-                <a href="/tags/single-view-application.html">Single View Application</a> (2)
-              </li>
-              <li>
-                <a href="/tags/objective-c.html">Objective-C</a> (2)
-              </li>
-              <li>
-                <a href="/tags/appdelegate.html">AppDelegate</a> (2)
-              </li>
-              <li>
                 <a href="/tags/松山.html">松山</a> (1)
               </li>
               <li>
@@ -607,7 +588,7 @@ Github Pagesだけじゃなくアマゾン ウェブ サービス（Amazon Web S
             </h4>
             <ol>
               <li>
-                <a href="/2016.html">2016</a> (4)
+                <a href="/2016.html">2016</a> (2)
               </li>
               <li>
                 <a href="/2015.html">2015</a> (13)
@@ -644,12 +625,6 @@ Github Pagesだけじゃなくアマゾン ウェブ サービス（Amazon Web S
             <a href="/2016/03/23/1.html">松山で食べたラーメンもうどんも甘かった話。</a> <span>2016-03-23</span> 
           </li>
           <li>
-            <a href="/2016/02/15/1.html"></a> <span>2016-02-15</span> 
-          </li>
-          <li>
-            <a href="/2016/02/11/1.html">StoryboardなしでiOSアプリケーションをSwiftを使って作る（コード編）</a> <span>2016-02-11</span> 
-          </li>
-          <li>
             <a href="/2015/09/01/1.html">Middlemanで作った静的サイトをAmazon S3で公開してみる</a> <span>2015-09-01</span> 
           </li>
           <li>
@@ -666,6 +641,12 @@ Github Pagesだけじゃなくアマゾン ウェブ サービス（Amazon Web S
           </li>
           <li>
             <a href="/2015/04/20/1.html">地方都市で生活してみてわかったこと。</a> <span>2015-04-20</span> 
+          </li>
+          <li>
+            <a href="/2015/04/15/1.html">GitHub Pagesでサイト作ってみる（Middlemanで）初期設定、Github編。</a> <span>2015-04-15</span> 
+          </li>
+          <li>
+            <a href="/2015/04/09/1.html">GitHub Pagesでサイト作ってみる（Middlemanで）なぜかエラー編。</a> <span>2015-04-09</span> 
           </li>
         </ol>
         <hr />
