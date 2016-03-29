@@ -140,7 +140,7 @@
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/</loc>
-    <lastmod>2015-09-05</lastmod>
+    <lastmod>2016-03-24</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
@@ -649,6 +649,24 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>http://shigekitakeguchi.com/2016/02/15/1.html</loc>
+    <lastmod>2016-02-15</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2016/03/23/1.html</loc>
+    <lastmod>2016-03-29</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2016/03/29/1.html</loc>
+    <lastmod>2016-03-29</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>http://shigekitakeguchi.com/tags/log.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
@@ -883,15 +901,69 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>http://shigekitakeguchi.com/tags/松山.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/tags/ラーメン.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/tags/うどん.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/tags/二郎インスパイア系.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/tags/食べる.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>http://shigekitakeguchi.com/2016.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>http://shigekitakeguchi.com/2016/03.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2016/03/29.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2016/03/23.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>http://shigekitakeguchi.com/2016/02.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>http://shigekitakeguchi.com/2016/02/15.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -1526,49 +1598,49 @@
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/page/2/</loc>
-    <lastmod>2015-09-05</lastmod>
+    <lastmod>2016-03-24</lastmod>
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/page/3/</loc>
-    <lastmod>2015-09-05</lastmod>
+    <lastmod>2016-03-24</lastmod>
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/page/4/</loc>
-    <lastmod>2015-09-05</lastmod>
+    <lastmod>2016-03-24</lastmod>
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/page/5/</loc>
-    <lastmod>2015-09-05</lastmod>
+    <lastmod>2016-03-24</lastmod>
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/page/6/</loc>
-    <lastmod>2015-09-05</lastmod>
+    <lastmod>2016-03-24</lastmod>
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/page/7/</loc>
-    <lastmod>2015-09-05</lastmod>
+    <lastmod>2016-03-24</lastmod>
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/page/8/</loc>
-    <lastmod>2015-09-05</lastmod>
+    <lastmod>2016-03-24</lastmod>
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
     <loc>http://shigekitakeguchi.com/page/9/</loc>
-    <lastmod>2015-09-05</lastmod>
+    <lastmod>2016-03-24</lastmod>
     <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
