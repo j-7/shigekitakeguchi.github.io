@@ -655,6 +655,12 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>http://shigekitakeguchi.com/2016/03/29/2.html</loc>
+    <lastmod>2016-03-29</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>http://shigekitakeguchi.com/tags/log.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
