@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://shigekitakeguchi.com/sitemap.xml
+Sitemap: https://shigekitakeguchi.com/sitemap.xml

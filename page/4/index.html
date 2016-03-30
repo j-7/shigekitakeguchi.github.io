@@ -23,6 +23,54 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9 col-md-9"><h1>
+  <a href="/2013/01/04/cocoapodsxcode.html">CocoaPodsを使ったXcodeプロジェクトの作り方（３）</a>
+</h1>
+<p>
+  <small class="label label-default">about-programing</small>
+  <small class="label label-default">cocoa-touch</small>
+  <small class="label label-default">ios-app</small>
+  <small class="label label-default">objective-c</small>
+  <small class="label label-default">xcode</small>
+</p>
+<hr />
+<p class="posted">
+  <span class="glyphicon glyphicon-time"></span> Posted on 2013-01-04
+</p>
+<hr />
+<p>３回目ですね。前回からの続きです。<br>
+アプリの方のプロジェクトを開いていき「Frameworks」内に「libPods.a」という静的ライブラリが赤字で表示されています。<br>
+赤字になっているということは参照として定義されてるけどファイルが「ない」ということです。</p>
+
+<p><img src="http://farm9.staticflickr.com/8213/8340695197_94a186e587_o.png" alt=""></p>
+
+<p>今回はこの「libPods.a」という静的ライブラリのファイルをビルドして作ります。</p>
+
+<p><img src="http://farm9.staticflickr.com/8500/8349673938_2d232b3862.jpg" alt=""></p>
+
+<p>Xcodeの「Preferences…」を開きます（メニューバーの「Xcode」からいけます）。</p>
+
+<p><img src="http://farm9.staticflickr.com/8215/8340721573_29256da6ce.jpg" alt=""></p>
+
+<p>次にツールバーの「Locations...</p>
+<ul class="social-buttons">
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2013/01/04/cocoapodsxcode.html" title="このエントリーをはてなブックマークに追加"></a>
+  </li>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2013/01/04/cocoapodsxcode.html" data-layout="box_count"></div>
+  </li>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2013/01/04/cocoapodsxcode.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2013/01/04/cocoapodsxcode.html"></a>
+  </li>
+  <li class="twitter">
+    <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
+  </li>
+</ul>
+<a class="btn btn-primary" href="/2013/01/04/cocoapodsxcode.html">もっと読む</a>
+<hr /><h1>
   <a href="/2013/01/03/cocoapodsxcode.html">CocoaPodsを使ったXcodeプロジェクトの作り方（２）</a>
 </h1>
 <p>
@@ -44,14 +92,17 @@ Updating spec repositories
 Resolving dependencies for target `default'</span> <span class="o">(</span>iOS 5.0<span class="o">)</span>
 Downloading...</code></pre>
 <ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2013/01/03/cocoapodsxcode.html" title="このエントリーをはてなブックマークに追加"></a>
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2013/01/03/cocoapodsxcode.html" title="このエントリーをはてなブックマークに追加"></a>
   </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2013/01/03/cocoapodsxcode.html" data-layout="box_count"></div>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2013/01/03/cocoapodsxcode.html" data-layout="box_count"></div>
   </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2013/01/03/cocoapodsxcode.html" data-size="tall"></div>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2013/01/03/cocoapodsxcode.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2013/01/03/cocoapodsxcode.html"></a>
   </li>
   <li class="twitter">
     <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
@@ -80,14 +131,17 @@ Downloading...</code></pre>
 インストールはGithubの<br>
 <a href="https://github.com/CocoaPods/CocoaPods">CocoaPods/CocoaPods</a>のページ...</p>
 <ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2012/12/26/cocoapodsxcode.html" title="このエントリーをはてなブックマークに追加"></a>
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2012/12/26/cocoapodsxcode.html" title="このエントリーをはてなブックマークに追加"></a>
   </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2012/12/26/cocoapodsxcode.html" data-layout="box_count"></div>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2012/12/26/cocoapodsxcode.html" data-layout="box_count"></div>
   </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2012/12/26/cocoapodsxcode.html" data-size="tall"></div>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2012/12/26/cocoapodsxcode.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2012/12/26/cocoapodsxcode.html"></a>
   </li>
   <li class="twitter">
     <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
@@ -118,14 +172,17 @@ Downloading...</code></pre>
 <p>あとは雪を撮りに行きたいです。どこで撮影するのがいいのかってのがまったくわかってませんが探してみます。</p>
 
 <ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2012/12/25/1.html" title="このエントリーをはてなブックマークに追加"></a>
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2012/12/25/1.html" title="このエントリーをはてなブックマークに追加"></a>
   </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2012/12/25/1.html" data-layout="box_count"></div>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2012/12/25/1.html" data-layout="box_count"></div>
   </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2012/12/25/1.html" data-size="tall"></div>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2012/12/25/1.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2012/12/25/1.html"></a>
   </li>
   <li class="twitter">
     <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
@@ -173,14 +230,17 @@ Kindle版を見つけて最初から読んでいくのがいいか読んでい�
 </p>
 </div>
 <ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2012/11/29/kindle_.html" title="このエントリーをはてなブックマークに追加"></a>
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2012/11/29/kindle_.html" title="このエントリーをはてなブックマークに追加"></a>
   </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2012/11/29/kindle_.html" data-layout="box_count"></div>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2012/11/29/kindle_.html" data-layout="box_count"></div>
   </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2012/11/29/kindle_.html" data-size="tall"></div>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2012/11/29/kindle_.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2012/11/29/kindle_.html"></a>
   </li>
   <li class="twitter">
     <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
@@ -220,14 +280,17 @@ Kindle版を見つけて最初から読んでいくのがいいか読んでい�
 
 
 <ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2012/11/24/oreilly_ebook.html" title="このエントリーをはてなブックマークに追加"></a>
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2012/11/24/oreilly_ebook.html" title="このエントリーをはてなブックマークに追加"></a>
   </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2012/11/24/oreilly_ebook.html" data-layout="box_count"></div>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2012/11/24/oreilly_ebook.html" data-layout="box_count"></div>
   </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2012/11/24/oreilly_ebook.html" data-size="tall"></div>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2012/11/24/oreilly_ebook.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2012/11/24/oreilly_ebook.html"></a>
   </li>
   <li class="twitter">
     <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
@@ -260,14 +323,17 @@ Kindle版を見つけて最初から読んでいくのがいいか読んでい�
 </div>
 
 <ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2012/11/22/kindleceo_of_the_internet_wired_single_stories_010_.html" title="このエントリーをはてなブックマークに追加"></a>
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2012/11/22/kindleceo_of_the_internet_wired_single_stories_010_.html" title="このエントリーをはてなブックマークに追加"></a>
   </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2012/11/22/kindleceo_of_the_internet_wired_single_stories_010_.html" data-layout="box_count"></div>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2012/11/22/kindleceo_of_the_internet_wired_single_stories_010_.html" data-layout="box_count"></div>
   </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2012/11/22/kindleceo_of_the_internet_wired_single_stories_010_.html" data-size="tall"></div>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2012/11/22/kindleceo_of_the_internet_wired_single_stories_010_.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2012/11/22/kindleceo_of_the_internet_wired_single_stories_010_.html"></a>
   </li>
   <li class="twitter">
     <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
@@ -299,14 +365,17 @@ iPhoneとは少し違うところがあります。</p>
 「Supported Interface Orientations」はiPhoneにもありますがデバイスのどの向きをサポートするかの設定です。<br>
 気づいてるかもしれませんがiPhoneのアプ...</p>
 <ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2012/11/22/xcodeipad.html" title="このエントリーをはてなブックマークに追加"></a>
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2012/11/22/xcodeipad.html" title="このエントリーをはてなブックマークに追加"></a>
   </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2012/11/22/xcodeipad.html" data-layout="box_count"></div>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2012/11/22/xcodeipad.html" data-layout="box_count"></div>
   </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2012/11/22/xcodeipad.html" data-size="tall"></div>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2012/11/22/xcodeipad.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2012/11/22/xcodeipad.html"></a>
   </li>
   <li class="twitter">
     <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
@@ -342,14 +411,17 @@ iPhoneとは少し違うところがあります。</p>
 
 <p>そういうのが面倒なのでPCで検索して購入してます...</p>
 <ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2012/11/19/kindle.html" title="このエントリーをはてなブックマークに追加"></a>
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2012/11/19/kindle.html" title="このエントリーをはてなブックマークに追加"></a>
   </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2012/11/19/kindle.html" data-layout="box_count"></div>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2012/11/19/kindle.html" data-layout="box_count"></div>
   </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2012/11/19/kindle.html" data-size="tall"></div>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2012/11/19/kindle.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2012/11/19/kindle.html"></a>
   </li>
   <li class="twitter">
     <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
@@ -381,55 +453,23 @@ iPhoneとは少し違うところがあります。</p>
 <p>「Bundle Identifier」「Version」「Build」は指定があればそれを入力するってのでいいと思います。<br>
 「Devices」はここで変更できます。「iPhone」を選ぶと...</p>
 <ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2012/11/19/xcodeiphone.html" title="このエントリーをはてなブックマークに追加"></a>
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2012/11/19/xcodeiphone.html" title="このエントリーをはてなブックマークに追加"></a>
   </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2012/11/19/xcodeiphone.html" data-layout="box_count"></div>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2012/11/19/xcodeiphone.html" data-layout="box_count"></div>
   </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2012/11/19/xcodeiphone.html" data-size="tall"></div>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2012/11/19/xcodeiphone.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2012/11/19/xcodeiphone.html"></a>
   </li>
   <li class="twitter">
     <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
   </li>
 </ul>
 <a class="btn btn-primary" href="/2012/11/19/xcodeiphone.html">もっと読む</a>
-<hr /><h1>
-  <a href="/2012/11/14/xcode.html">デザイナー・ノンプログラマーのためのXcode入門。（２）設定編</a>
-</h1>
-<p>
-  <small class="label label-default">cocoa-touch</small>
-  <small class="label label-default">ios-app</small>
-  <small class="label label-default">objective-c</small>
-  <small class="label label-default">xcode</small>
-</p>
-<hr />
-<p class="posted">
-  <span class="glyphicon glyphicon-time"></span> Posted on 2012-11-14
-</p>
-<hr />
-<p>今回はXcodeを起動して仕様に沿ったプロジェクト（Project）の作るところまでを説明していきます。</p>
-
-<p>アプリケーションフォルダにXcodeがインストールされていると思います。インストールに成功していたらですね。<br>
-起動したらこんな画面が出ます。ま、英語です。右側の枠内は最近使ったプロジェクトのリストが出ます。<br>
-左側の上から「新規でXcode projectを作る」「レポジトリに接続する」「Xcodeの使い方を学ぶ」「アップルの開発者ポータルに行く」ですね。<br>
-もちろん「新規でXcode project...</p>
-<ul class="social-buttons">
-  <li>
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/http://shigekitakeguchi.com/2012/11/14/xcode.html" title="このエントリーをはてなブックマークに追加"></a>
-  </li>
-  <li>
-    <div class="fb-share-button" data-href="http://shigekitakeguchi.com/2012/11/14/xcode.html" data-layout="box_count"></div>
-  </li>
-  <li>
-    <div class="g-plusone" data-href="http://shigekitakeguchi.com/2012/11/14/xcode.html" data-size="tall"></div>
-  </li>
-  <li class="twitter">
-    <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
-  </li>
-</ul>
-<a class="btn btn-primary" href="/2012/11/14/xcode.html">もっと読む</a>
 <hr />
 <div class="well-sm">
   <ul class="pager">
@@ -576,16 +616,16 @@ iPhoneとは少し違うところがあります。</p>
                 <a href="/tags/松山.html">松山</a> (1)
               </li>
               <li>
-                <a href="/tags/ラーメン.html">ラーメン</a> (3)
+                <a href="/tags/ラーメン.html">ラーメン</a> (4)
               </li>
               <li>
                 <a href="/tags/うどん.html">うどん</a> (1)
               </li>
               <li>
-                <a href="/tags/二郎インスパイア系.html">二郎インスパイア系</a> (2)
+                <a href="/tags/二郎インスパイア系.html">二郎インスパイア系</a> (3)
               </li>
               <li>
-                <a href="/tags/食べる.html">食べる</a> (2)
+                <a href="/tags/食べる.html">食べる</a> (3)
               </li>
             </ul>
           </div>
@@ -595,7 +635,7 @@ iPhoneとは少し違うところがあります。</p>
             </h4>
             <ol>
               <li>
-                <a href="/2016.html">2016</a> (3)
+                <a href="/2016.html">2016</a> (4)
               </li>
               <li>
                 <a href="/2015.html">2015</a> (13)
@@ -626,6 +666,9 @@ iPhoneとは少し違うところがあります。</p>
         </h3>
         <ol>
           <li>
+            <a href="/2016/03/30/1.html">東京、二郎インスパイア系をあれこれ食べた（３）。</a> <span>2016-03-30</span> 
+          </li>
+          <li>
             <a href="/2016/03/29/2.html">東京、二郎インスパイア系をあれこれ食べた（２）。</a> <span>2016-03-29</span> 
           </li>
           <li>
@@ -651,9 +694,6 @@ iPhoneとは少し違うところがあります。</p>
           </li>
           <li>
             <a href="/2015/04/20/1.html">地方都市で生活してみてわかったこと。</a> <span>2015-04-20</span> 
-          </li>
-          <li>
-            <a href="/2015/04/15/1.html">GitHub Pagesでサイト作ってみる（Middlemanで）初期設定、Github編。</a> <span>2015-04-15</span> 
           </li>
         </ol>
         <hr />
@@ -698,6 +738,9 @@ iPhoneとは少し違うところがあります。</p>
     </script>
     <script type="text/javascript">
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    </script>
+    <script type="text/javascript">
+      !function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");
     </script>
   </body>
 </html>
