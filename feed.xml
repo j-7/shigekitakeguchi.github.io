@@ -5,10 +5,133 @@
   <id>https://shigekitakeguchi.com</id>
   <link href="https://shigekitakeguchi.com"/>
   <link href="https://shigekitakeguchi.com/feed.xml" rel="self"/>
-  <updated>2016-03-30T00:00:00Z</updated>
+  <updated>2016-04-18T00:00:00Z</updated>
   <author>
     <name>shigeki.takeguchi</name>
   </author>
+  <entry>
+    <title>Jetstarで東京と神戸を往復した。</title>
+    <link rel="alternate" href="https://shigekitakeguchi.com/2016/04/18/1.html"/>
+    <id>https://shigekitakeguchi.com/2016/04/18/1.html</id>
+    <published>2016-04-18T00:00:00Z</published>
+    <updated>2016-04-19T00:37:39+09:00</updated>
+    <author>
+      <name>shigeki.takeguchi</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/24178068794/in/dateposted-public/" title="Untitled"&gt;&lt;img src="https://farm2.staticflickr.com/1558/24178068794_47612f6e42_z.jpg" width="640" height="480" alt="Untitled"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;今年の２月になるけどJetstarを利用して神戸へ帰郷した。&lt;br&gt;
+まずは利用し慣れているということもあって人形町、箱崎の東京シティエアターミナルから成田へリムジンバスに乗った。&lt;br&gt;
+これは2,800円もする！うっかりしてた。&lt;br&gt;
+いろいろ調べると銀座や東京駅から1,000円くらいで行けるバスがけっこうある。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.keiseibus.co.jp/kousoku/nrt16.html"&gt;京成高速バス 東京駅～成田空港900円（東京シャトル）&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このバスは予約だと900円、予約なしで行くと1,000円。&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/24798872642/in/dateposted-public/" title="Untitled"&gt;&lt;img src="https://farm2.staticflickr.com/1645/24798872642_3c9c7dab31_z.jpg" width="640" height="480" alt="Untitled"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;そしてはじめての成田第3ターミナル。&lt;br&gt;
+LCC専用というだけあってかなり削ぎ落とした感じがいいですね。&lt;br&gt;
+倉庫っぽいけど空港の案内板などのサインはPARTYが作ったらしく簡潔でわかりやすいです。&lt;br&gt;
+空港は歩くものですが動く歩道などもないためかなり歩く印象です。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.muji.com/jp/narita-terminal3/"&gt;成田空港　ターミナル3 | 無印良品&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;平日でしたが飛行機も満席とのことでゲートラウンジも雑然と混み合っていました。  &lt;/p&gt;
+
+&lt;p&gt;Jetstarの運賃は席予約料、支払手数料、旅客施設使用料などを含めて往復で12,020円でした。&lt;br&gt;
+シートも狭いと言われてますがまあ国内で利用するくらいなら問題ないくらいだと思いました。&lt;/p&gt;
+
+&lt;p&gt;そして問題もなく関空へ着陸。問題はここから神戸までどうやったら安く行けるかです。&lt;br&gt;
+リムジンバスに乗ると1,950円ですがもっと安く行く方法はないかと探してみましたがなかなかないですね。&lt;br&gt;
+電車を乗り継いでいくと1,330円。しかしこれはつらい。&lt;br&gt;
+高速艇もポートライナーとセットで1,850円。&lt;br&gt;
+東京と大阪間が高速バスで3,000円とかがあるらしいのにもう少し安くならないかと思いました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.kansai-airport.or.jp/otoku-access/"&gt;関西国際空港｜ご存じですか？安くて近い関西空港アクセス&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;日帰り往復のバスだとたしかに安いんですけどね。。。&lt;/p&gt;
+
+&lt;p&gt;ということでいろいろ頑張って往復17,000円前後って感じですね。&lt;br&gt;
+それくらいで往復できたらまぁいいですかね。新幹線で往復すると24,000円くらいしますからね。
+時間的には新幹線のが楽なような気もしますが、次も使ってみようと思います。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>FontAwesomeKitを使うときにハマったこと。</title>
+    <link rel="alternate" href="https://shigekitakeguchi.com/2016/04/04/1.html"/>
+    <id>https://shigekitakeguchi.com/2016/04/04/1.html</id>
+    <published>2016-04-04T00:00:00Z</published>
+    <updated>2016-04-07T22:45:40+09:00</updated>
+    <author>
+      <name>shigeki.takeguchi</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/25618827744/in/dateposted-public/" title="スクリーンショット 2016-04-04 11.53.40"&gt;&lt;img src="https://farm2.staticflickr.com/1652/25618827744_a3a83b83bb_z.jpg" width="640" height="593" alt="スクリーンショット 2016-04-04 11.53.40" class="image-border"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3&gt;&lt;a href="https://github.com/PrideChung/FontAwesomeKit"&gt;FontAwesomeKit&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;FontAwesomeKitはiOSでのFont Awesomeをはじめとしてアイコンの利用を簡単にしてくれます。
+Webフォント化したアイコンをCSSを使って表示しているツールをiOSでも利用できるようにしたものになります。
+iOSではCocoaPodsで設定して利用するのでがう、そのフォントデータをUIImageに変換して利用します。
+今回はswiftで利用するのでPodfileにuse_frameworks!を記述してFontAwesomeKitを設定。&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="n"&gt;platform&lt;/span&gt; &lt;span class="ss"&gt;:ios&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'8.0'&lt;/span&gt;
+&lt;span class="n"&gt;use_frameworks!&lt;/span&gt;
+
+&lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="s1"&gt;'someProject'&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;pod&lt;/span&gt; &lt;span class="s1"&gt;'FontAwesomeKit'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'~&amp;gt; 2.2.0'&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$ pod install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これでインストールすればいいはず。&lt;/p&gt;
+&lt;pre class="highlight swift"&gt;&lt;code&gt;&lt;span class="kd"&gt;import&lt;/span&gt; &lt;span class="kt"&gt;FontAwesomeKit&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Build PhasesのCopy Bundle Resourcesに利用するフォントファイルを設定、インポートして利用ってところで気付きました。&lt;/p&gt;
+&lt;pre class="highlight swift"&gt;&lt;code&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;icon&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;FAKIonIcons&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;gearAIconWithSize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;iconSize&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こっちは通る&lt;/p&gt;
+&lt;pre class="highlight swift"&gt;&lt;code&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="nv"&gt;icon&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;FAKMaterialIcons&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;accountIconWithSize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;けどマテリアルアイコン（Material Icons）は使えない？っぽい。  &lt;/p&gt;
+
+&lt;p&gt;GithubのREADMEでは  以下のアイコンが利用できるってなってます。&lt;br&gt;
+Githubのソースみても入っているのにCocoaPodsで落としてきたソースには入っていない。。。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://fontawesome.io/"&gt;Font Awesome&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://zurb.com/playground/foundation-icon-fonts-3"&gt;Foundation Icon Fonts 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://zocial.smcllns.com/"&gt;Zocial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ionicons.com/"&gt;ionicons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://octicons.github.com/"&gt;Github Octicons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://google.github.io/material-design-icons/"&gt;Material Icons&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;最新（2.2.1）だと利用できる？ってことでPodfileを書き換えてみると&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="n"&gt;platform&lt;/span&gt; &lt;span class="ss"&gt;:ios&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'8.0'&lt;/span&gt;
+&lt;span class="n"&gt;use_frameworks!&lt;/span&gt;
+
+&lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="s1"&gt;'someProject'&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;pod&lt;/span&gt; &lt;span class="s1"&gt;'FontAwesomeKit'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'~&amp;gt; 2.2.1'&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;CocoaPosにはそんなバージョンねえよってことでエラーがでる。&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="n"&gt;platform&lt;/span&gt; &lt;span class="ss"&gt;:ios&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'8.0'&lt;/span&gt;
+ &lt;span class="n"&gt;use_frameworks!&lt;/span&gt;
+
+&lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="s1"&gt;'someProject'&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="n"&gt;pod&lt;/span&gt; &lt;span class="s1"&gt;'FontAwesomeKit'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="ss"&gt;:git&lt;/span&gt; &lt;span class="o"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'https://github.com/PrideChung/FontAwesomeKit.git'&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こっちだと通った。無事GithubのOcticonsとMaterial Iconsが利用できるようになりました。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>東京、二郎インスパイア系をあれこれ食べた（３）。</title>
     <link rel="alternate" href="https://shigekitakeguchi.com/2016/03/30/1.html"/>
@@ -53,80 +176,6 @@
 
 &lt;p&gt;すっかり会社ではラーメンな人扱いでよくラーメンランチに誘われる。&lt;br&gt;
 すでになん店舗かまわっているので次は渋谷のラーメンでも記事にしてみようと思う。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>東京、二郎インスパイア系をあれこれ食べた（２）。</title>
-    <link rel="alternate" href="https://shigekitakeguchi.com/2016/03/29/2.html"/>
-    <id>https://shigekitakeguchi.com/2016/03/29/2.html</id>
-    <published>2016-03-29T00:00:00Z</published>
-    <updated>2016-03-29T23:49:20+09:00</updated>
-    <author>
-      <name>shigeki.takeguchi</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/25511899293/in/dateposted-public/" title="52BB7E80-A4C0-458B-A202-33808635FD16"&gt;&lt;img src="https://farm2.staticflickr.com/1579/25511899293_0f1dd4518d_z.jpg" width="640" height="480" alt="52BB7E80-A4C0-458B-A202-33808635FD16"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;きっかけはここのポン酢ラーメン。渋谷の二郎インスパイア系。&lt;br&gt;
-東急ハンズの近くにあって会社から行くにはちょっと距離があるけどたまに行きたくなる。&lt;br&gt;
-ただしこの「凛」の盛りはかなり多いので麺少なめを頼むのがいいらしい。&lt;br&gt;
-とか言いながら毎度麺を普通のにしてしまい麺をすくう手がだるくなり腹は圧迫感でぐっとくるけどスープまで飲んでしまう。&lt;br&gt;
-このこってりでしょっぱい（関西では塩っ辛い）けどポン酢のさっぱり感と酸っぱさがなんとも言えず癖になる。&lt;/p&gt;
-
-&lt;div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="http://tabelog.com/tokyo/A1303/A130301/13121071/" target="_blank"&gt;凛 渋谷店&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;script src="http://tabelog.com/badge/google_badge?escape=false&amp;rcd=13121071" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p style="color:#444444; font-size:12px;"&gt;
-&lt;strong&gt;関連ランキング：&lt;/strong&gt;&lt;a href="http://tabelog.com/rstLst/ramen/"&gt;ラーメン&lt;/a&gt; | &lt;a href="http://tabelog.com/tokyo/A1303/A130301/R5207/rstLst/"&gt;神泉駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1303/A130301/R4698/rstLst/"&gt;渋谷駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1306/A130601/R9951/rstLst/"&gt;明治神宮前駅&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/25841667520/in/dateposted-public/" title="IMG_0392"&gt;&lt;img src="https://farm2.staticflickr.com/1712/25841667520_9c53a04746_z.jpg" width="640" height="480" alt="IMG_0392"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="http://tabelog.com/tokyo/A1312/A131202/13146287/" target="_blank"&gt;ラーメン凛 砂町店&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;script src="http://tabelog.com/badge/google_badge?escape=false&amp;rcd=13146287" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p style="color:#444444; font-size:12px;"&gt;
-&lt;strong&gt;関連ランキング：&lt;/strong&gt;&lt;a href="http://tabelog.com/rstLst/ramen/"&gt;ラーメン&lt;/a&gt; | &lt;a href="http://tabelog.com/tokyo/A1312/A131202/R1731/rstLst/"&gt;大島駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1312/A131202/R8156/rstLst/"&gt;東大島駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1312/A131202/R7349/rstLst/"&gt;西大島駅&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;こちらは砂町の「凛」。あまりのポン酢ラーメン食べたさに自転車で20分かけて行ってしまった。&lt;br&gt;
-小さな商店街の中にあって車は前に停めれないし電車で行くとかなり駅から遠いという地元の人しか行けないんじゃないかと思うような立地。
-でも昼前に行くともう２席しか空きがないくらい混んでる。&lt;br&gt;
-味は渋谷とどっちが美味しいという感じではないと思う。
-&lt;hr&gt;
-&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/26114519125/in/dateposted-public/" title="IMG_0384"&gt;&lt;img src="https://farm2.staticflickr.com/1457/26114519125_d6ce251605_z.jpg" width="640" height="480" alt="IMG_0384"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="http://tabelog.com/tokyo/A1310/A131003/13085246/" target="_blank"&gt;用心棒&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;script src="http://tabelog.com/badge/google_badge?escape=false&amp;rcd=13085246" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p style="color:#444444; font-size:12px;"&gt;
-&lt;strong&gt;関連ランキング：&lt;/strong&gt;&lt;a href="http://tabelog.com/rstLst/ramen/"&gt;ラーメン&lt;/a&gt; | &lt;a href="http://tabelog.com/tokyo/A1310/A131003/R5294/rstLst/"&gt;神保町駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1309/A130906/R3470/rstLst/"&gt;九段下駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1302/A130201/R5921/rstLst/"&gt;竹橋駅&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ラーメン二郎の神保町店の目の前にあるというなんとも面白い立地。&lt;br&gt;
-二郎の行列に諦めた人狙いなのか、それとも挑戦なのか。。。&lt;br&gt;
-味は二郎を少しあっさりした感じと言われているようだがインスパイア系の中でもかなり二郎に近いと思う。
-写真をこうやってみると盛りがきれいですな。
-&lt;hr&gt;
-&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/26088587006/in/dateposted-public/" title="IMG_0283"&gt;&lt;img src="https://farm2.staticflickr.com/1510/26088587006_7c96d33fb7_z.jpg" width="640" height="480" alt="IMG_0283"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;div&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href="http://tabelog.com/tokyo/A1302/A130204/13003042/" target="_blank"&gt;ぽっぽっ屋 本店&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;script src="http://tabelog.com/badge/google_badge?escape=false&amp;rcd=13003042" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p style="color:#444444; font-size:12px;"&gt;
-&lt;strong&gt;関連ランキング：&lt;/strong&gt;&lt;a href="http://tabelog.com/rstLst/ramen/"&gt;ラーメン&lt;/a&gt; | &lt;a href="http://tabelog.com/tokyo/A1302/A130204/R4034/rstLst/"&gt;小伝馬町駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1302/A130202/R5260/rstLst/"&gt;新日本橋駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1302/A130204/R7848/rstLst/"&gt;馬喰横山駅&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;二郎インスパイア系の中では老舗の部類らしい小伝馬町にある「ぽっぽっ屋」。&lt;br&gt;
-車を前に停めやすいので車で行く方におすすめです。&lt;br&gt;
-味はインスパイア系の中でもあっさりしていると思う。&lt;br&gt;
-その代わりに本格派には物足りないかもしれないがアラフィフおやじにはちょうどいい感じ。&lt;br&gt;
-優しめの二郎ってところかもしれない。テレビがあったりいつ行っても座れたりとサラリーマンのランチにもちょうどいい。&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -205,6 +254,80 @@
 どうも二郎系はスープと麺が熱いのをふうふうわしわしと食うのがうまいんだ。&lt;/p&gt;
 
 &lt;hr&gt;
+</content>
+  </entry>
+  <entry>
+    <title>東京、二郎インスパイア系をあれこれ食べた（２）。</title>
+    <link rel="alternate" href="https://shigekitakeguchi.com/2016/03/29/2.html"/>
+    <id>https://shigekitakeguchi.com/2016/03/29/2.html</id>
+    <published>2016-03-29T00:00:00Z</published>
+    <updated>2016-03-29T23:49:20+09:00</updated>
+    <author>
+      <name>shigeki.takeguchi</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/25511899293/in/dateposted-public/" title="52BB7E80-A4C0-458B-A202-33808635FD16"&gt;&lt;img src="https://farm2.staticflickr.com/1579/25511899293_0f1dd4518d_z.jpg" width="640" height="480" alt="52BB7E80-A4C0-458B-A202-33808635FD16"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;きっかけはここのポン酢ラーメン。渋谷の二郎インスパイア系。&lt;br&gt;
+東急ハンズの近くにあって会社から行くにはちょっと距離があるけどたまに行きたくなる。&lt;br&gt;
+ただしこの「凛」の盛りはかなり多いので麺少なめを頼むのがいいらしい。&lt;br&gt;
+とか言いながら毎度麺を普通のにしてしまい麺をすくう手がだるくなり腹は圧迫感でぐっとくるけどスープまで飲んでしまう。&lt;br&gt;
+このこってりでしょっぱい（関西では塩っ辛い）けどポン酢のさっぱり感と酸っぱさがなんとも言えず癖になる。&lt;/p&gt;
+
+&lt;div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://tabelog.com/tokyo/A1303/A130301/13121071/" target="_blank"&gt;凛 渋谷店&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;script src="http://tabelog.com/badge/google_badge?escape=false&amp;rcd=13121071" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p style="color:#444444; font-size:12px;"&gt;
+&lt;strong&gt;関連ランキング：&lt;/strong&gt;&lt;a href="http://tabelog.com/rstLst/ramen/"&gt;ラーメン&lt;/a&gt; | &lt;a href="http://tabelog.com/tokyo/A1303/A130301/R5207/rstLst/"&gt;神泉駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1303/A130301/R4698/rstLst/"&gt;渋谷駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1306/A130601/R9951/rstLst/"&gt;明治神宮前駅&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/25841667520/in/dateposted-public/" title="IMG_0392"&gt;&lt;img src="https://farm2.staticflickr.com/1712/25841667520_9c53a04746_z.jpg" width="640" height="480" alt="IMG_0392"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://tabelog.com/tokyo/A1312/A131202/13146287/" target="_blank"&gt;ラーメン凛 砂町店&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;script src="http://tabelog.com/badge/google_badge?escape=false&amp;rcd=13146287" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p style="color:#444444; font-size:12px;"&gt;
+&lt;strong&gt;関連ランキング：&lt;/strong&gt;&lt;a href="http://tabelog.com/rstLst/ramen/"&gt;ラーメン&lt;/a&gt; | &lt;a href="http://tabelog.com/tokyo/A1312/A131202/R1731/rstLst/"&gt;大島駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1312/A131202/R8156/rstLst/"&gt;東大島駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1312/A131202/R7349/rstLst/"&gt;西大島駅&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらは砂町の「凛」。あまりのポン酢ラーメン食べたさに自転車で20分かけて行ってしまった。&lt;br&gt;
+小さな商店街の中にあって車は前に停めれないし電車で行くとかなり駅から遠いという地元の人しか行けないんじゃないかと思うような立地。
+でも昼前に行くともう２席しか空きがないくらい混んでる。&lt;br&gt;
+味は渋谷とどっちが美味しいという感じではないと思う。
+&lt;hr&gt;
+&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/26114519125/in/dateposted-public/" title="IMG_0384"&gt;&lt;img src="https://farm2.staticflickr.com/1457/26114519125_d6ce251605_z.jpg" width="640" height="480" alt="IMG_0384"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://tabelog.com/tokyo/A1310/A131003/13085246/" target="_blank"&gt;用心棒&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;script src="http://tabelog.com/badge/google_badge?escape=false&amp;rcd=13085246" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p style="color:#444444; font-size:12px;"&gt;
+&lt;strong&gt;関連ランキング：&lt;/strong&gt;&lt;a href="http://tabelog.com/rstLst/ramen/"&gt;ラーメン&lt;/a&gt; | &lt;a href="http://tabelog.com/tokyo/A1310/A131003/R5294/rstLst/"&gt;神保町駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1309/A130906/R3470/rstLst/"&gt;九段下駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1302/A130201/R5921/rstLst/"&gt;竹橋駅&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ラーメン二郎の神保町店の目の前にあるというなんとも面白い立地。&lt;br&gt;
+二郎の行列に諦めた人狙いなのか、それとも挑戦なのか。。。&lt;br&gt;
+味は二郎を少しあっさりした感じと言われているようだがインスパイア系の中でもかなり二郎に近いと思う。
+写真をこうやってみると盛りがきれいですな。
+&lt;hr&gt;
+&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/26088587006/in/dateposted-public/" title="IMG_0283"&gt;&lt;img src="https://farm2.staticflickr.com/1510/26088587006_7c96d33fb7_z.jpg" width="640" height="480" alt="IMG_0283"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href="http://tabelog.com/tokyo/A1302/A130204/13003042/" target="_blank"&gt;ぽっぽっ屋 本店&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;script src="http://tabelog.com/badge/google_badge?escape=false&amp;rcd=13003042" type="text/javascript" charset="utf-8"&gt;&lt;/script&gt;
+&lt;/div&gt;
+
+&lt;p style="color:#444444; font-size:12px;"&gt;
+&lt;strong&gt;関連ランキング：&lt;/strong&gt;&lt;a href="http://tabelog.com/rstLst/ramen/"&gt;ラーメン&lt;/a&gt; | &lt;a href="http://tabelog.com/tokyo/A1302/A130204/R4034/rstLst/"&gt;小伝馬町駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1302/A130202/R5260/rstLst/"&gt;新日本橋駅&lt;/a&gt;、&lt;a href="http://tabelog.com/tokyo/A1302/A130204/R7848/rstLst/"&gt;馬喰横山駅&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;二郎インスパイア系の中では老舗の部類らしい小伝馬町にある「ぽっぽっ屋」。&lt;br&gt;
+車を前に停めやすいので車で行く方におすすめです。&lt;br&gt;
+味はインスパイア系の中でもあっさりしていると思う。&lt;br&gt;
+その代わりに本格派には物足りないかもしれないがアラフィフおやじにはちょうどいい感じ。&lt;br&gt;
+優しめの二郎ってところかもしれない。テレビがあったりいつ行っても座れたりとサラリーマンのランチにもちょうどいい。&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -287,134 +410,6 @@
 &lt;strong&gt;関連ランキング：&lt;/strong&gt;&lt;a href="http://tabelog.com/rstLst/udon/"&gt;うどん&lt;/a&gt; | &lt;a href="http://tabelog.com/ehime/A3801/A380101/R1664/rstLst/"&gt;大街道駅&lt;/a&gt;、&lt;a href="http://tabelog.com/ehime/A3801/A380101/R4871/rstLst/"&gt;市役所前駅&lt;/a&gt;、&lt;a href="http://tabelog.com/ehime/A3801/A380101/R660/rstLst/"&gt;石手川公園駅&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Middlemanで作った静的サイトをAmazon S3で公開してみる</title>
-    <link rel="alternate" href="https://shigekitakeguchi.com/2015/09/01/1.html"/>
-    <id>https://shigekitakeguchi.com/2015/09/01/1.html</id>
-    <published>2015-09-01T00:00:00Z</published>
-    <updated>2015-09-06T23:06:10+09:00</updated>
-    <author>
-      <name>shigeki.takeguchi</name>
-    </author>
-    <content type="html">&lt;p&gt;ちょっと久しぶりになりますが技術のことを書く。&lt;/p&gt;
-
-&lt;h3&gt;Amazon S3とは？&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href="http://aws.amazon.com/jp/"&gt;アマゾン ウェブ サービス&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://aws.amazon.com/jp/" title="Amazon Web Service"&gt;&lt;img src="https://farm6.staticflickr.com/5617/21148105172_291c1cf641_z.jpg" width="640" height="506" alt="Amazon Web Service" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ブログもちょっとしたサイトもほとんどMiddlemanを使って構築しているわけだけど、&lt;br&gt;
-Github Pagesだけじゃなくアマゾン ウェブ サービス（Amazon Web Services）もべっりだったりする。&lt;/p&gt;
-
-&lt;p&gt;以前に比べると日本語化もかなり進んでいたり無料利用枠があるのではじめるのにそこまでハードルは高くない。&lt;br&gt;
-ただクレジットカード登録と電話でのPIN番号認証があるのでやたらめったらとアカウント作るってわけにはいかないだろう。&lt;/p&gt;
-
-&lt;p&gt;日本語のドキュメントも充実している。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://aws.amazon.com/jp/documentation/gettingstarted/"&gt;AWS の使用開始ドキュメント&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://aws.amazon.com/jp/documentation/gettingstarted/" title="AWS の使用開始ドキュメント"&gt;&lt;img src="https://farm6.staticflickr.com/5815/21186659561_fc322623c3_z.jpg" width="640" height="611" alt="AWS の使用開始ドキュメント" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://aws.amazon.com/jp/s3/"&gt;Amazon S3 (クラウドストレージサービス)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed="true"  href="http://aws.amazon.com/jp/s3/https://www.flickr.com/photos/shigeki_takeguchi/21186729121/in/dateposted-public/" title="Amazon S3 (クラウドストレージサービス)"&gt;&lt;img src="https://farm6.staticflickr.com/5640/21186729121_4d069ea410_z.jpg" width="640" height="586" alt="Amazon S3 (クラウドストレージサービス)" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;S3というと負荷分散のために画像や映像ファイルを置いておく場所のイメージがあったと思うんだけど&lt;br&gt;
-もちろんそういう使い方が主流だと思うけど今はちょっと違うように思う。  &lt;/p&gt;
-
-&lt;h3&gt;Amazon S3のバケットを作る&lt;/h3&gt;
-
-&lt;p&gt;AWSのサービスからS3を選んでS3 Management Cosole画面へ。&lt;br&gt;
-左上の「バケットを作成」を押す。&lt;br&gt;
-バケット名とリージョンを選択して右下の「作成」を押すとバケットが作成される。&lt;/p&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/21188809535/in/dateposted-public/" title="AWS S3"&gt;&lt;img src="https://farm1.staticflickr.com/714/21188809535_3bb0265c08_z.jpg" width="640" height="549" alt="AWS S3" class="image-border"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;バケットのプロパティで静的ウェブサイトホスティングを有効にすることができる。&lt;br&gt;
-インデックスドキュメント、エラードキュメントそれぞれを設定して「保存」を押して設定を反映させる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/21178487372/in/dateposted-public/" title="AWS S3"&gt;&lt;img src="https://farm1.staticflickr.com/575/21178487372_de8cb6a738_z.jpg" width="640" height="549" alt="AWS S3" class="image-border"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;このままではアクセス件がなくアップロードしたファイルを見ることができないので「さらにアクセス許可を追加する」を押す。&lt;br&gt;
-被付与者を全員、「リスト」にチェックをいれて「保存」を押して設定を反映させる。&lt;/p&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/21000673820/in/dateposted-public/" title="AWS S3"&gt;&lt;img src="https://farm6.staticflickr.com/5770/21000673820_2d2905ba86_z.jpg" width="640" height="549" alt="AWS S3" class="image-border"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;AWS S3の設定は以上となる。&lt;br&gt;
-またアクセスキーとシークレットキーが必要になるがAWS マネジメントコンソールのアカウント名のプルダウンから「認証情報」を選択して「セキュリティ認証情報」からアクセスキーを作成するなどして入手しておく。&lt;/p&gt;
-
-&lt;h3&gt;Middlemanでプロジェクト作成とその設定&lt;/h3&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$ middleman init some_project
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/middleman-contrib/middleman-sync"&gt;Middleman Sync&lt;/a&gt;というパッケージを使うと静的ファイルのビルドとファイルのアップロードがコマンドひとつでできる。&lt;br&gt;
-Gemfileを開いて以下を追記する。&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="n"&gt;gem&lt;/span&gt; &lt;span class="s1"&gt;'middleman-sync'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;bundle installでパッケージのインストール。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$ bundle install
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;config.rbを開いて以下を追記する。&lt;/p&gt;
-&lt;pre class="highlight ruby"&gt;&lt;code&gt;&lt;span class="n"&gt;activate&lt;/span&gt; &lt;span class="ss"&gt;:sync&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
-  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;fog_provider&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'AWS'&lt;/span&gt; &lt;span class="c1"&gt;#ストレージプロバイダ（AWS, Rackspace, Google）&lt;/span&gt;
-  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;fog_directory&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'bucket-name'&lt;/span&gt; &lt;span class="c1"&gt;#バケット名&lt;/span&gt;
-  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;fog_region&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'bucket-region-name'&lt;/span&gt; &lt;span class="c1"&gt;#バケットの地域名（AWSの場合us-east-1, us-west-1, eu-west-1, ap-southeast-1）&lt;/span&gt;
-  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;aws_access_key_id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'super'&lt;/span&gt; &lt;span class="c1"&gt;#アクセスキー&lt;/span&gt;
-  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;aws_secret_access_key&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'secret'&lt;/span&gt; &lt;span class="c1"&gt;#シークレットキー&lt;/span&gt;
-  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;existing_remote_files&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'keep'&lt;/span&gt; &lt;span class="c1"&gt;#既存のリモートファイルを消すのかそのままなのか（keep, delete）&lt;/span&gt;
-  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;gzip_compression&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;false&lt;/span&gt; &lt;span class="c1"&gt;#gzip圧縮したもので置き換えるかどうか（true, false）&lt;/span&gt;
-  &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nf"&gt;after_build&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kp"&gt;true&lt;/span&gt; &lt;span class="c1"&gt;#ビルド後に自動でアップロードするかどうか（true, false）&lt;/span&gt;
-&lt;span class="k"&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;設定は完了したのでソースをビルドしてS3に反映させる。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;$ middleman build
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;完了したらS3に反映されているので確認する。
-S3 Management Cosoleのバケットのプロパティ「静的ウェブサイトホスティング」のエンドポイントがURLとなり、それで確認できる。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>小諸についてちょっと調べてみた</title>
-    <link rel="alternate" href="https://shigekitakeguchi.com/2015/08/26/1.html"/>
-    <id>https://shigekitakeguchi.com/2015/08/26/1.html</id>
-    <published>2015-08-26T00:00:00Z</published>
-    <updated>2015-09-05T18:13:49+09:00</updated>
-    <author>
-      <name>shigeki.takeguchi</name>
-    </author>
-    <content type="html">&lt;p&gt;小諸出身の人が近くにいたりして気になったので調べてみた。&lt;/p&gt;
-
-&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/20789113056/in/dateposted-public/" title="Untitled"&gt;&lt;img src="https://farm1.staticflickr.com/609/20789113056_1d7f3c46ca_z.jpg" width="640" height="480" alt="Untitled"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://komoro.ch/live"&gt;暮らす &amp;#8211; 小諸日和&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://komoro.ch/live" title="screencapture-komoro-ch-live-1441441149687"&gt;&lt;img src="https://farm6.staticflickr.com/5764/21157615565_5a0500d5aa_z.jpg" width="640" height="427" alt="screencapture-komoro-ch-live-1441441149687" class="image-border"&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;地方都市や人口が流出している地域へ行くとUターンなりIターンなりを&lt;br&gt;
-すすめるためにいろいろ活動をやっているらしい。&lt;br&gt;
-田舎物件を紹介するサイトや不動産屋さんなんかも頑張ってるのか&lt;br&gt;
-昔は都市部からの流入なんて想像もしなかったがそれなりにやらないと物件が捌けないのか&lt;br&gt;
-またインターネットというのが可視化できるようになったからかわからないけど&lt;br&gt;
-それなりに探す方法があるらしい。&lt;/p&gt;
-
-&lt;p&gt;別荘っぽい空き家がそこそこいい値段で紹介されている物件もあるようなので&lt;br&gt;
-住みやすくて人気の地域なのかもしれない。&lt;br&gt;
-しかしトイレや風呂にかなり手を加えてそれなりにリノベーションすれば&lt;br&gt;
-もっと都市部のひとやアジアの金持ちなリモートで仕事できるような人が興味を持つだろう。  &lt;/p&gt;
-
-&lt;p&gt;例えば熱帯、亜熱帯の雨期がある所の人は避暑にいいですよって思う。&lt;br&gt;
-そうなってくるとインターネットも含めて買い物のしやすさや空港からのアクセスも含めた&lt;br&gt;
-インフラが重要になってくる。近隣になる軽井沢にはやっぱ勝てない。&lt;/p&gt;
-
-&lt;p&gt;そういえば日本のブラジル街と呼ばれる大泉なんかはうなくやれたってことだな。&lt;br&gt;
-そこまで舵を切るには産業との関係もあったりするので難しいだろうなと。&lt;/p&gt;
 </content>
   </entry>
 </feed>
