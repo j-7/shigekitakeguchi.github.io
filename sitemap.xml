@@ -673,12 +673,6 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://shigekitakeguchi.com/2016/04/18/1.html</loc>
-    <lastmod>2016-04-19</lastmod>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>https://shigekitakeguchi.com/tags/log.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
@@ -919,30 +913,6 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://shigekitakeguchi.com/tags/空港.html</loc>
-    <lastmod>2015-09-05</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://shigekitakeguchi.com/tags/jetstar.html</loc>
-    <lastmod>2015-09-05</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://shigekitakeguchi.com/tags/旅行.html</loc>
-    <lastmod>2015-09-05</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://shigekitakeguchi.com/tags/神戸.html</loc>
-    <lastmod>2015-09-05</lastmod>
-    <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
     <loc>https://shigekitakeguchi.com/2016.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>1.0</priority>
@@ -952,12 +922,6 @@
     <loc>https://shigekitakeguchi.com/2016/04.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
-    <changefreq>daily</changefreq>
-  </url>
-  <url>
-    <loc>https://shigekitakeguchi.com/2016/04/18.html</loc>
-    <lastmod>2015-09-05</lastmod>
-    <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
