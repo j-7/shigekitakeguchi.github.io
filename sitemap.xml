@@ -709,6 +709,12 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://shigekitakeguchi.com/2016/05/27/2.html</loc>
+    <lastmod>2016-05-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://shigekitakeguchi.com/tags/log.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
@@ -1004,6 +1010,24 @@
   </url>
   <url>
     <loc>https://shigekitakeguchi.com/tags/three-js.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/tags/新潟.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/tags/長岡.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/tags/青島食堂.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
     <changefreq>daily</changefreq>
