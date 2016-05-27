@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible" />
     <title>shigeki.takeguchi.log</title>
+    <meta content="shigeki.takeguchi.log" property="og:title" />
+    <meta content="website" property="og:type" />
+    <meta content="http://shigekitakeguchi.com/" property="og:url" />
+    <meta content="http://shigekitakeguchi.com/images/shigeki_takeguchi.png" property="og:image" />
+    <meta content="shigeki.takeguchi.log" property="og:site_name" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport" />
     <meta content="食べること、地方都市、アプリ作るための技術などつらつらと書いていきます" name="description" />
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
@@ -24,6 +29,87 @@
       <div class="row">
         <div class="col-lg-9 col-md-9">
           <h1>
+            <a href="/2016/05/27/1.html">npmとwebpackで作るいい感じのthree.js開発環境 2016年5月の場合。</a>
+          </h1>
+          <p>
+            <small class="label label-default">JavaScript</small>
+            <small class="label label-default">webpack</small>
+            <small class="label label-default">npm</small>
+            <small class="label label-default">three.js</small>
+          </p>
+          <hr />
+          <p class="posted">
+            <span class="glyphicon glyphicon-time"></span> Posted on 2016-05-27
+          </p>
+          <hr />
+          <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/shigeki_takeguchi/26675269163/in/dateposted-public/" title="npm_webpack_threejs_sass"><img src="https://c4.staticflickr.com/8/7578/26675269163_408de6b9af_z.jpg" width="640" height="480" alt="npm_webpack_threejs_sass" class="image-border"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+          
+          <p><a href="https://github.com/shigekitakeguchi/npm-webpack-sass">npmとwebpackで作るいい感じのフロントエンド開発環境（React.js使わない）2016年5月の場合。</a><br>
+          これをベースにしてthree.jsの開発環境。<br>
+          以前はGruntやGulpやらで用意してたけどnpm+webpackへ移行。</p>
+          
+          <p><a href="http://threejs.org/">three.js - Javascript 3D library</a><br>
+          WebGLをあつかう時にWebGLままで記述するのはちょっとツライので何かしらのフレームワークを利用すると思うけど（Unityでも作れるらしい）その中でもthree.jsが今のところメ...</p>
+          <ul class="social-buttons">
+            <li class="hatena">
+              <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2016/05/27/1.html" title="このエントリーをはてなブックマークに追加"></a>
+            </li>
+            <li class="facebook">
+              <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2016/05/27/1.html" data-layout="box_count"></div>
+            </li>
+            <li class="google">
+              <div class="g-plusone" data-href="https://shigekitakeguchi.com/2016/05/27/1.html" data-size="tall"></div>
+            </li>
+            <li class="pocket">
+              <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2016/05/27/1.html"></a>
+            </li>
+            <li class="twitter">
+              <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
+            </li>
+          </ul>
+          <a class="btn btn-primary" href="/2016/05/27/1.html">もっと読む</a>
+          <hr /><h1>
+            <a href="/2016/05/26/1.html">npmとwebpackで作るいい感じのフロントエンド開発環境（React.js使わない）2016年5月の場合。</a>
+          </h1>
+          <p>
+            <small class="label label-default">JavaScript</small>
+            <small class="label label-default">webpack</small>
+            <small class="label label-default">npm</small>
+          </p>
+          <hr />
+          <p class="posted">
+            <span class="glyphicon glyphicon-time"></span> Posted on 2016-05-26
+          </p>
+          <hr />
+          <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/shigeki_takeguchi/26674282264/in/dateposted-public/" title="npm_webpack_sass"><img src="https://c1.staticflickr.com/8/7138/26674282264_c63915c662_z.jpg" width="640" height="480" alt="npm_webpack_sass" class="image-border"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+          
+          <p><a href="http://liginc.co.jp/web/js/other-js/143500">エンジニアがいい感じにフロントエンド開発を爆速化できる環境構築の手順</a></p>
+          
+          <p>LIGさんの記事。個人的にはこれよりもシンプルなものが欲しくてあれこれ試しました。
+          GulpもBowerも使いません。あとユニットテストもするほどの規模ではないプロジェクトを想定。　　</p>
+          
+          <p>webpackはJavaScriptのrequireを使いたくて利用。<br>
+          SassのコンパイルやらCSSをrequireするのやらはどうも違和感がぬぐえなくてnpm使ってます。<br>
+          しかしフロントエンドの開発環境も変遷が激しくちょっと大...</p>
+          <ul class="social-buttons">
+            <li class="hatena">
+              <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2016/05/26/1.html" title="このエントリーをはてなブックマークに追加"></a>
+            </li>
+            <li class="facebook">
+              <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2016/05/26/1.html" data-layout="box_count"></div>
+            </li>
+            <li class="google">
+              <div class="g-plusone" data-href="https://shigekitakeguchi.com/2016/05/26/1.html" data-size="tall"></div>
+            </li>
+            <li class="pocket">
+              <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2016/05/26/1.html"></a>
+            </li>
+            <li class="twitter">
+              <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
+            </li>
+          </ul>
+          <a class="btn btn-primary" href="/2016/05/26/1.html">もっと読む</a>
+          <hr /><h1>
             <a href="/2016/04/28/1.html">食べて応援する渋谷にある熊本のお店</a>
           </h1>
           <p>
@@ -288,46 +374,6 @@
           </ul>
           <a class="btn btn-primary" href="/2016/03/30/1.html">もっと読む</a>
           <hr /><h1>
-            <a href="/2016/03/29/1.html">東京、二郎インスパイア系をあれこれ食べた（１）。</a>
-          </h1>
-          <p>
-            <small class="label label-default">二郎インスパイア系</small>
-            <small class="label label-default">ラーメン</small>
-            <small class="label label-default">食べる</small>
-          </p>
-          <hr />
-          <p class="posted">
-            <span class="glyphicon glyphicon-time"></span> Posted on 2016-03-29
-          </p>
-          <hr />
-          <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/shigeki_takeguchi/26045790771/in/dateposted-public/" title="IMG_0575"><img src="https://farm2.staticflickr.com/1533/26045790771_889aeb7184_z.jpg" width="640" height="480" alt="IMG_0575"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
-          
-          <p>少し前から休みの日にひとりで食べる機会があればラーメンを食べ歩いていた。<br>
-          ラーメン二郎はならぶし好み的には味が少し濃いっていうので敬遠してたんだけど、<br>
-          渋谷でラーメンを食べようと探したら「凛」のポン酢ラーメンが気になって食べてから二郎じゃない二郎インスパイア系に凝りだした。<br>
-          食べログやまとめサイトで調べるとわかるけど東京の二郎インスパイア系ってけっこうな数がある。<br>
-          しかも、それぞれにあっさり系や盛りが違ったり「これは自分好みの二郎インスパイア系ってがあるんじゃないのか？」となった。</p>
-          
-          
-          <ul class="social-buttons">
-            <li class="hatena">
-              <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2016/03/29/1.html" title="このエントリーをはてなブックマークに追加"></a>
-            </li>
-            <li class="facebook">
-              <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2016/03/29/1.html" data-layout="box_count"></div>
-            </li>
-            <li class="google">
-              <div class="g-plusone" data-href="https://shigekitakeguchi.com/2016/03/29/1.html" data-size="tall"></div>
-            </li>
-            <li class="pocket">
-              <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2016/03/29/1.html"></a>
-            </li>
-            <li class="twitter">
-              <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
-            </li>
-          </ul>
-          <a class="btn btn-primary" href="/2016/03/29/1.html">もっと読む</a>
-          <hr /><h1>
             <a href="/2016/03/29/2.html">東京、二郎インスパイア系をあれこれ食べた（２）。</a>
           </h1>
           <p>
@@ -374,91 +420,45 @@
           </ul>
           <a class="btn btn-primary" href="/2016/03/29/2.html">もっと読む</a>
           <hr /><h1>
-            <a href="/2016/03/23/1.html">松山で食べたラーメンもうどんも甘かった話。</a>
+            <a href="/2016/03/29/1.html">東京、二郎インスパイア系をあれこれ食べた（１）。</a>
           </h1>
           <p>
-            <small class="label label-default">地方都市</small>
-            <small class="label label-default">松山</small>
+            <small class="label label-default">二郎インスパイア系</small>
             <small class="label label-default">ラーメン</small>
-            <small class="label label-default">うどん</small>
+            <small class="label label-default">食べる</small>
           </p>
           <hr />
           <p class="posted">
-            <span class="glyphicon glyphicon-time"></span> Posted on 2016-03-23
+            <span class="glyphicon glyphicon-time"></span> Posted on 2016-03-29
           </p>
           <hr />
-          <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/shigeki_takeguchi/3184448990/in/dateposted-public/" title="Suwa 2 Chome, 2009/01/10"><img src="https://farm4.staticflickr.com/3415/3184448990_8ff46cc729_o.jpg" width="640" height="480" alt="Suwa 2 Chome, 2009/01/10"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
+          <p><a data-flickr-embed="true" href="https://www.flickr.com/photos/shigeki_takeguchi/26045790771/in/dateposted-public/" title="IMG_0575"><img src="https://farm2.staticflickr.com/1533/26045790771_889aeb7184_z.jpg" width="640" height="480" alt="IMG_0575"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></p>
           
-          <p>地方都市へ旅行に行く楽しみといえば食べることと観光地を巡ることになる。<br>
-          まずは日本の県庁所在地の多くにお城があるのでそれを見に行くことにしている。<br>
-          神戸出身なんだけど神戸には江戸時代にお城がなかった。そういえば横浜にもない。<br>
-          幕末にアメリカからお前ら開港せいや！と言われて急いで作ったら想像以上に栄えたような都市だからだろう。</p>
+          <p>少し前から休みの日にひとりで食べる機会があればラーメンを食べ歩いていた。<br>
+          ラーメン二郎はならぶし好み的には味が少し濃いっていうので敬遠してたんだけど、<br>
+          渋谷でラーメンを食べようと探したら「凛」のポン酢ラーメンが気になって食べてから二郎じゃない二郎インスパイア系に凝りだした。<br>
+          食べログやまとめサイトで調べるとわかるけど東京の二郎インスパイア系ってけっこうな数がある。<br>
+          しかも、それぞれにあっさり系や盛りが違ったり「これは自分好みの二郎インスパイア系ってがあるんじゃないのか？」となった。</p>
           
-          <p>あまり知られてないかもしれないけど実は神戸にも城跡がある。<br>
-          戦国時代、織田信長に反旗を翻した荒木村重が築いた花隈城というのがあって、立派に見える石垣があるんだけ...</p>
+          
           <ul class="social-buttons">
             <li class="hatena">
-              <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2016/03/23/1.html" title="このエントリーをはてなブックマークに追加"></a>
+              <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2016/03/29/1.html" title="このエントリーをはてなブックマークに追加"></a>
             </li>
             <li class="facebook">
-              <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2016/03/23/1.html" data-layout="box_count"></div>
+              <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2016/03/29/1.html" data-layout="box_count"></div>
             </li>
             <li class="google">
-              <div class="g-plusone" data-href="https://shigekitakeguchi.com/2016/03/23/1.html" data-size="tall"></div>
+              <div class="g-plusone" data-href="https://shigekitakeguchi.com/2016/03/29/1.html" data-size="tall"></div>
             </li>
             <li class="pocket">
-              <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2016/03/23/1.html"></a>
+              <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2016/03/29/1.html"></a>
             </li>
             <li class="twitter">
               <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
             </li>
           </ul>
-          <a class="btn btn-primary" href="/2016/03/23/1.html">もっと読む</a>
-          <hr /><h1>
-            <a href="/2015/09/01/1.html">Middlemanで作った静的サイトをAmazon S3で公開してみる</a>
-          </h1>
-          <p>
-            <small class="label label-default">Middleman</small>
-            <small class="label label-default">Amazon Web Service</small>
-            <small class="label label-default">Amazon S3</small>
-            <small class="label label-default">AWS</small>
-          </p>
-          <hr />
-          <p class="posted">
-            <span class="glyphicon glyphicon-time"></span> Posted on 2015-09-01
-          </p>
-          <hr />
-          <p>ちょっと久しぶりになりますが技術のことを書く。</p>
-          
-          <h3>Amazon S3とは？</h3>
-          
-          <p><a href="http://aws.amazon.com/jp/">アマゾン ウェブ サービス</a></p>
-          
-          <p><a href="http://aws.amazon.com/jp/" title="Amazon Web Service"><img src="https://farm6.staticflickr.com/5617/21148105172_291c1cf641_z.jpg" width="640" height="506" alt="Amazon Web Service" class="image-border"></a></p>
-          
-          <p>ブログもちょっとしたサイトもほとんどMiddlemanを使って構築しているわけだけど、<br>
-          Github Pagesだけじゃなくアマゾン ウェブ サービス（Amazon Web Services）もべっりだったりする。</p>
-          
-          <p>以前に比べると日本語化もかなり進んでいたり無料利用枠があるのではじめるのにそこまでハードルは高くない。<br>
-          ただクレジットカード登録と電話でのPIN番号認証があるのでや...</p>
-          <ul class="social-buttons">
-            <li class="hatena">
-              <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2015/09/01/1.html" title="このエントリーをはてなブックマークに追加"></a>
-            </li>
-            <li class="facebook">
-              <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2015/09/01/1.html" data-layout="box_count"></div>
-            </li>
-            <li class="google">
-              <div class="g-plusone" data-href="https://shigekitakeguchi.com/2015/09/01/1.html" data-size="tall"></div>
-            </li>
-            <li class="pocket">
-              <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2015/09/01/1.html"></a>
-            </li>
-            <li class="twitter">
-              <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
-            </li>
-          </ul>
-          <a class="btn btn-primary" href="/2015/09/01/1.html">もっと読む</a>
+          <a class="btn btn-primary" href="/2016/03/29/1.html">もっと読む</a>
           <hr />
           <div class="well-sm">
             <ul class="pager">
@@ -484,6 +484,9 @@
               </li>
             </ul>
           </div>
+          <div class="well2">
+            <a href="http://px.a8.net/svt/ejp?a8mat=2NKLYC+3CV0KY+3H8C+67Z9T" target="_blank"><img alt="" border="0" height="250" src="http://www29.a8.net/svt/bgt?aid=160525092203&wid=001&eno=01&mid=s00000016230001045000&mc=1" width="300" /></a><img alt="" border="0" height="1" src="http://www19.a8.net/0.gif?a8mat=2NKLYC+3CV0KY+3H8C+67Z9T" width="1" />
+          </div>
           <div class="well">
             <ul class="list-unstyled">
               <li>
@@ -493,6 +496,21 @@
                 <span class="glyphicon glyphicon-new-window"></span><a href="http://watchmovi.es" target="_blank"> Watch Movies on iTunes</a>
               </li>
             </ul>
+          </div>
+          <div class="well profile">
+            <p class="image">
+              <img alt="shigeki.takeguchi" border="0" height="100" src="/images/profile.png" width="100" />
+            </p>
+            <p class="text">
+              渋谷の某ソーシャルゲームの会社でフロントエンドエンジニアとして働いてます。20世紀よりウェブ業界。気づいたらアラフィフ業界人。
+            </p>
+          </div>
+          <div class="well3">
+            <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!--aside_banner_2--><ins class="adsbygoogle" data-ad-client="ca-pub-9198003416420881" data-ad-format="auto" data-ad-slot="7805065970" style="display:block"></ins>
+            <script type="text/javascript">
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
           </div>
           <div class="well">
             <h4>
@@ -637,6 +655,18 @@
               <li>
                 <a href="/tags/渋谷.html">渋谷</a> (1)
               </li>
+              <li>
+                <a href="/tags/javascript.html">JavaScript</a> (2)
+              </li>
+              <li>
+                <a href="/tags/webpack.html">webpack</a> (2)
+              </li>
+              <li>
+                <a href="/tags/npm.html">npm</a> (2)
+              </li>
+              <li>
+                <a href="/tags/three-js.html">three.js</a> (1)
+              </li>
             </ul>
           </div>
           <div class="well">
@@ -645,7 +675,7 @@
             </h4>
             <ol>
               <li>
-                <a href="/2016.html">2016</a> (9)
+                <a href="/2016.html">2016</a> (11)
               </li>
               <li>
                 <a href="/2015.html">2015</a> (13)
@@ -661,13 +691,6 @@
               </li>
             </ol>
           </div>
-          <div class="banner">
-            <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!--aside_banner_2--><ins class="adsbygoogle" data-ad-client="ca-pub-9198003416420881" data-ad-format="auto" data-ad-slot="7805065970" style="display:block"></ins>
-            <script type="text/javascript">
-              (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-          </div>
         </div>
       </div>
       <aside>
@@ -675,6 +698,12 @@
           Recent Articles
         </h3>
         <ol>
+          <li>
+            <a href="/2016/05/27/1.html">npmとwebpackで作るいい感じのthree.js開発環境 2016年5月の場合。</a> <span>2016-05-27</span> 
+          </li>
+          <li>
+            <a href="/2016/05/26/1.html">npmとwebpackで作るいい感じのフロントエンド開発環境（React.js使わない）2016年5月の場合。</a> <span>2016-05-26</span> 
+          </li>
           <li>
             <a href="/2016/04/28/1.html">食べて応援する渋谷にある熊本のお店</a> <span>2016-04-28</span> 
           </li>
@@ -694,16 +723,10 @@
             <a href="/2016/03/30/1.html">東京、二郎インスパイア系をあれこれ食べた（３）。</a> <span>2016-03-30</span> 
           </li>
           <li>
-            <a href="/2016/03/29/1.html">東京、二郎インスパイア系をあれこれ食べた（１）。</a> <span>2016-03-29</span> 
-          </li>
-          <li>
             <a href="/2016/03/29/2.html">東京、二郎インスパイア系をあれこれ食べた（２）。</a> <span>2016-03-29</span> 
           </li>
           <li>
-            <a href="/2016/03/23/1.html">松山で食べたラーメンもうどんも甘かった話。</a> <span>2016-03-23</span> 
-          </li>
-          <li>
-            <a href="/2015/09/01/1.html">Middlemanで作った静的サイトをAmazon S3で公開してみる</a> <span>2015-09-01</span> 
+            <a href="/2016/03/29/1.html">東京、二郎インスパイア系をあれこれ食べた（１）。</a> <span>2016-03-29</span> 
           </li>
         </ol>
         <hr />
