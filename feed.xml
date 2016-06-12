@@ -5,35 +5,23 @@
   <id>https://shigekitakeguchi.com</id>
   <link href="https://shigekitakeguchi.com"/>
   <link href="https://shigekitakeguchi.com/feed.xml" rel="self"/>
-  <updated>2016-05-30T00:00:00Z</updated>
+  <updated>2016-05-31T00:00:00Z</updated>
   <author>
     <name>shigeki.takeguchi</name>
   </author>
   <entry>
-    <title>npmとwebpackで作るReact.js学習のためのいい感じのフロントエンド開発環境 2016年5月の場合。</title>
-    <link rel="alternate" href="https://shigekitakeguchi.com/2016/05/30/1.html"/>
-    <id>https://shigekitakeguchi.com/2016/05/30/1.html</id>
-    <published>2016-05-30T00:00:00Z</published>
-    <updated>2016-05-30T23:32:41+09:00</updated>
+    <title>npmとwebpackで作るいい感じのフロントエンド開発環境（React.js使わない）、sass-loaderを使う。2016年5月の場合。</title>
+    <link rel="alternate" href="https://shigekitakeguchi.com/2016/05/31/1.html"/>
+    <id>https://shigekitakeguchi.com/2016/05/31/1.html</id>
+    <published>2016-05-31T00:00:00Z</published>
+    <updated>2016-06-01T00:49:02+09:00</updated>
     <author>
       <name>shigeki.takeguchi</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;img src="/images/npm_webpack_reactjs_redux.png" class="image-border"&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/27295923691/in/dateposted-public/" title="npm_webpack_sass-loader"&gt;&lt;img src="https://c4.staticflickr.com/8/7571/27295923691_88b00f73b2_z.jpg" width="640" height="480" alt="npm_webpack_sass-loader" class="image-border"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://facebook.github.io/react/docs/tutorial-ja-JP.html"&gt;チュートリアル | React&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactのチュートリアルをはじめるとしたら公式が配布している環境を使うらしい。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/reactjs/react-tutorial"&gt;https://github.com/reactjs/react-tutorial&lt;/a&gt;&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install
-node server.js
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これでOKらしい。&lt;br&gt;
-でもせっかくなのでnpmとwebpackで環境作ってみました。&lt;br&gt;
-ついでなのでBabelでES2015の機能を取り入れた書き方ができるようにしています。  &lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://babeljs.io/"&gt;Babel · The compiler for writing next generation JavaScript&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;css-loader、style-loader、sass-loaderを使わないでSassをnpmでコマンドからコンパイルするものがシンプルでいいなと思ってましたがwebpackのloaderを使うものも作ってみた。&lt;br&gt;
+SassのコンパイルやらCSSをrequireしないと？と思ってたけどプラグインを使えばできた。&lt;/p&gt;
 
 &lt;h2&gt;必要なものあるかどうか確認&lt;/h2&gt;
 &lt;pre class="highlight plaintext"&gt;&lt;code&gt;node -v
@@ -55,30 +43,34 @@ node server.js
 &lt;p&gt;-gオプションはGlobalオプションのこと。&lt;/p&gt;
 
 &lt;h2&gt;ファイル・フォルダ構成&lt;/h2&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;git clone https://github.com/shigekitakeguchi/npm-webpack-reactjs.git
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;git clone https://github.com/shigekitakeguchi/npm-webpack-sass-loader.git
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;a href="https://github.com/shigekitakeguchi/npm-webpack-reactjs"&gt;https://github.com/shigekitakeguchi/npm-webpack-reactjs&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/shigekitakeguchi/npm-webpack-sass-loader"&gt;https://github.com/shigekitakeguchi/npm-webpack-sass-loader&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;GitHubから落として使ってください。&lt;br&gt;
 カスタマイズなりなんなりして。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;cd npm-webpack-reactjs
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;cd npm-webpack-sass
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;落としたフォルダ内に移動する。その前に&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;├── README.md
+&lt;p&gt;落としたフォルダ内に移動する。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;├── LICENSE
+├── README.md
 ├── app
-│   ├── index.html
-│   └── scripts
+│   ├── scripts
+│   └── styles
 ├── bs-config.json
 ├── package.json
 ├── src
-│   └── scripts
-│       └── index.js
+│   ├── scripts
+│   │   └── app.js
+│   └── scss
+│       ├── _normalize.css
+│       └── app.scss
 └── webpack.config.js
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;ファイル・フォルダ構成はこんな感じ。README.mdは不要。&lt;/p&gt;
+&lt;p&gt;ファイル・フォルダ構成はこんな感じ。README.mdやLICENSEは開発するには不要。&lt;/p&gt;
 &lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -86,17 +78,17 @@ node server.js
 
 &lt;h2&gt;package.json&lt;/h2&gt;
 &lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="nt"&gt;"name"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"npm-webpack-reactjs"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"name"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"npm + webpack + sass-loader"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
   &lt;/span&gt;&lt;span class="nt"&gt;"version"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"1.0.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
   &lt;/span&gt;&lt;span class="nt"&gt;"description"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
   &lt;/span&gt;&lt;span class="nt"&gt;"main"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"index.js"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
   &lt;/span&gt;&lt;span class="nt"&gt;"devDependencies"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="nt"&gt;"babel-core"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^6.9.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="nt"&gt;"babel-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^6.2.4"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="nt"&gt;"babel-preset-es2015"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^6.9.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="nt"&gt;"babel-preset-react"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^6.5.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
     &lt;/span&gt;&lt;span class="nt"&gt;"concurrently"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^2.1.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"css-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^0.23.1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"extract-text-webpack-plugin"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^1.0.1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
     &lt;/span&gt;&lt;span class="nt"&gt;"lite-server"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^2.2.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"sass-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^3.2.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"style-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^0.13.1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
     &lt;/span&gt;&lt;span class="nt"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^1.13.0"&lt;/span&gt;&lt;span class="w"&gt;
   &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
   &lt;/span&gt;&lt;span class="nt"&gt;"scripts"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
@@ -106,13 +98,7 @@ node server.js
   &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
   &lt;/span&gt;&lt;span class="nt"&gt;"keywords"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[],&lt;/span&gt;&lt;span class="w"&gt;
   &lt;/span&gt;&lt;span class="nt"&gt;"author"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"shigeki.takeguchi"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="nt"&gt;"license"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="nt"&gt;"dependencies"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="nt"&gt;"react"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^15.1.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="nt"&gt;"react-dom"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^15.1.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="nt"&gt;"react-redux"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^4.4.5"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="nt"&gt;"redux"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^3.5.2"&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"license"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"MIT"&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 
@@ -121,55 +107,6 @@ node server.js
 &lt;h3&gt;パッケージの説明&lt;/h3&gt;
 
 &lt;p&gt;落としてきたpackage.jsonからインストールすればいいんですがそれぞれのパッケージの説明を。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev babel-core
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/babel/babel/tree/master/packages/babel-core"&gt;https://github.com/babel/babel/tree/master/packages/babel-core&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;言わずもがな、Babelのコンパイラのコア。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev babel-loader
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/babel/babel-loader"&gt;https://github.com/babel/babel-loader&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;webpackでReact.jsをトランスパイルするのに必要。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev babel-preset-es2015
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/babel/babel/tree/master/packages/babel-preset-es2015"&gt;https://github.com/babel/babel/tree/master/packages/babel-preset-es2015&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;BabelでES2015を扱うためのプラグイン。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev babel-preset-react
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/babel/babel/tree/master/packages/babel-preset-react"&gt;https://github.com/babel/babel/tree/master/packages/babel-preset-react&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;BabelでReactを扱うためのプラグイン。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install -save react
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/facebook/react"&gt;https://github.com/facebook/react&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Reactですね。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install -save react-dom
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/facebook/react/tree/master/packages/react-dom"&gt;https://github.com/facebook/react/tree/master/packages/react-dom&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ReactでDOMを扱うためのものですね。Reactから分離された経緯があるとのこと。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install -save react-redux
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/reactjs/react-redux"&gt;https://github.com/reactjs/react-redux&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ReactでReduxを扱うためのパッケージ。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install -save redux
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/reactjs/redux"&gt;https://github.com/reactjs/redux&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Reduxですね。Reduxについては以下などをお読みいただけるとわかりよいかと。&lt;br&gt;
-&lt;a href="http://qiita.com/kiita312/items/b001839150ab04a6a427"&gt;Redux入門 1日目 Reduxとは(公式ドキュメント和訳)&lt;/a&gt;&lt;/p&gt;
 &lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev concurrently
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -183,6 +120,22 @@ node server.js
 
 &lt;p&gt;webpackにもwebpack dev serverというのがあるみたいだけどlite-serverのがシンプルで良さそうなので使ってみた。&lt;br&gt;
 ただし設定ファイルは必要でした。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev css-loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;webpack的な使い方であるJavaScriptファイルにCSSをロードしたりしないけどCSSを扱うなら必要らしいのでインストール。またCSSを最適化（minimize）はこのパッケージの機能を利用。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev style-loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こちらもCSSを扱うためにインストール。css-loaderとあわせて使うことが推奨されているみたい。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev sass-loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sassのコンパイルには必要らしいのでインストール。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev extract-text-webpack-plugin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;webpackは本来、JavaScirptのファイルの中にCSSを読みこんで使うようになっているけどこのプラグインを使うと読み込まずに使うことが可能になる（後述）。&lt;/p&gt;
 &lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev webpack
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -193,15 +146,15 @@ node server.js
 
 &lt;h2&gt;package.jsonの中のscriptsで何をしているか&lt;/h2&gt;
 &lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="s2"&gt;"scripts"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="nt"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"webpack -w"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="nt"&gt;"lite"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"lite-server"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="nt"&gt;"start"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"concurrently \"npm run lite\" \"npm run webpack\""&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="nt"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"webpack -w"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="nt"&gt;"lite"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"lite-server"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="nt"&gt;"start"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"concurrently \"npm run lite\" \"npm run webpack\""&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm start
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;このコマンドでlite-serverを立ち上げwebpackでwatchを行いJavaScriptの変更を監視するようにしている。&lt;/p&gt;
+&lt;p&gt;このコマンドでlite-serverを立ち上げwebpackでwatchを行う。  &lt;/p&gt;
 &lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="s2"&gt;"start"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"concurrently \"npm run lite\" \"npm run webpack\""&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 
@@ -221,37 +174,258 @@ node server.js
 
 &lt;p&gt;lite-serverを立ち上げている。bs-config.jsonに設定ないようを記述している（こちらも後ほど触れる）。&lt;/p&gt;
 
+&lt;h2&gt;bs-config.json&lt;/h2&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"injectChanges"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"true"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"files"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"./app/**/*.{html,htm,css,js}"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"watchOptions"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;"ignored"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"node_modules"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"server"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;"baseDir"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"./app"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;lite-serverの設定はドキュメントルートをappの直下にしたかったのと監視対象のファイル（html、css、js）が変更されたらリロードしてinjectChangesというBrowsersyncを動すため。&lt;/p&gt;
+
 &lt;h2&gt;webpack.config.json&lt;/h2&gt;
 &lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;webpack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;ExtractTextPlugin&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"extract-text-webpack-plugin"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-  &lt;span class="na"&gt;entry&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'./src/scripts/index.js'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[{&lt;/span&gt;
+  &lt;span class="na"&gt;entry&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;bundle&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'./src/scripts/app.js'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
   &lt;span class="na"&gt;output&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="na"&gt;path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;__dirname&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'/app/scripts'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
     &lt;span class="na"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'bundle.js'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
         &lt;span class="na"&gt;publicPath&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'/app/'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
   &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="na"&gt;plugins&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;webpack&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;optimize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;UglifyJsPlugin&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;},{&lt;/span&gt;
+  &lt;span class="na"&gt;entry&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'./src/scss/app.scss'&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="na"&gt;output&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;__dirname&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'/app/styles'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="na"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'style.css'&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
   &lt;span class="na"&gt;module&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="na"&gt;loaders&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
       &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="na"&gt;test&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/&lt;/span&gt;&lt;span class="se"&gt;\.&lt;/span&gt;&lt;span class="sr"&gt;js&lt;/span&gt;&lt;span class="se"&gt;[&lt;/span&gt;&lt;span class="sr"&gt;x&lt;/span&gt;&lt;span class="se"&gt;]?&lt;/span&gt;&lt;span class="sr"&gt;$/&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="na"&gt;exclude&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/node_modules/&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="na"&gt;loader&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'babel'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="na"&gt;query&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-          &lt;span class="na"&gt;presets&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'react'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'es2015'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-        &lt;span class="p"&gt;},&lt;/span&gt;
+        &lt;span class="na"&gt;test&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/&lt;/span&gt;&lt;span class="se"&gt;\.&lt;/span&gt;&lt;span class="sr"&gt;scss$/&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;loader&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ExtractTextPlugin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;extract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"style-loader"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"css-loader?minimize!sass-loader"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
       &lt;span class="p"&gt;}&lt;/span&gt;
     &lt;span class="p"&gt;]&lt;/span&gt;
   &lt;span class="p"&gt;},&lt;/span&gt;
   &lt;span class="na"&gt;plugins&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
-    &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;webpack&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;optimize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;UglifyJsPlugin&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;ExtractTextPlugin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"style.css"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
   &lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}];&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;webpackの設定はいたってシンプル。entryにもとファイル（複数ある場合は配列で持たせる）。outputに出力される設定を記述。今回はbundle.jsっていう一般的によく使われているらしい名称のまま。&lt;br&gt;
-moduleのなかのloadersでReactとES2015をコンパイル、トランスパイルするように設定している。
-素のままのファイルだともうファイルがでかくてあれなんでUglifyJsPluginで圧縮・最適化。&lt;/p&gt;
+&lt;p&gt;webpackの設定は複数のモジュール機能（この場合はJavaScriptとSass）なので以下のように配列で持たせるようになっている。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[{},{}]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ひとつのモジュールだとこんな感じ。オブジェクトがひとつだけでいい。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;entryにもとファイルJavaScriptは./src/scripts/app.js、CSS（Sass）は./src/scss/app.scssですね。それぞれ/app内のscriptsとstylesに出力している。&lt;br&gt;
+JavaScriptはwebpackのUglifyJsPluginで圧縮している。&lt;br&gt;
+CSS（Sass）の場合はExtractTextPluginで普通のCSSファイルに出力している。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nl"&gt;loaders&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="na"&gt;test&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/&lt;/span&gt;&lt;span class="se"&gt;\.&lt;/span&gt;&lt;span class="sr"&gt;scss$/&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="na"&gt;loader&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ExtractTextPlugin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;extract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"style-loader"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"css-loader!sass-loader"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;最適化（minimize）しない場合はこのように記述することでSassファイルがコンパイルされつつoutputで指定した場所とファイル名（/app/styles/style.css）で出力される。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nl"&gt;loaders&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="na"&gt;test&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/&lt;/span&gt;&lt;span class="se"&gt;\.&lt;/span&gt;&lt;span class="sr"&gt;scss$/&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="na"&gt;loader&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ExtractTextPlugin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;extract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"style-loader"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"css-loader?minimize!sass-loader"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;minimizeしたい場合はこのようにcss-loaderにminimizeオプションを引き数で渡す。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;まだwebpackをはじめて数日とかという状態なので間違えや指摘をいただけると助かります。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>npmとwebpackで作るReact.js学習のためのいい感じのフロントエンド開発環境 2016年5月の場合。</title>
+    <link rel="alternate" href="https://shigekitakeguchi.com/2016/05/30/1.html"/>
+    <id>https://shigekitakeguchi.com/2016/05/30/1.html</id>
+    <published>2016-05-30T00:00:00Z</published>
+    <updated>2016-06-01T00:49:02+09:00</updated>
+    <author>
+      <name>shigeki.takeguchi</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/26760021093/in/dateposted-public/" title="npm_webpack_reactjs_redux"&gt;&lt;img src="https://c6.staticflickr.com/8/7303/26760021093_af7775cd26_z.jpg" width="640" height="480" alt="npm_webpack_reactjs_redux" class="image-border"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;css-loader、style-loader、sass-loaderを使わないでSassをnpmでコマンドからコンパイルするものがシンプルでいいなと思ってましたがwebpackのloaderを使うものも作ってみた。
+SassのコンパイルやらCSSをrequireしないと？と思ってたけどプラグインを使えばできた。&lt;/p&gt;
+
+&lt;h2&gt;必要なものあるかどうか確認&lt;/h2&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;node -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;まずはお決まりのNode.js入ってるか確認。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;npm（Node.jsのパッケージマネージャー）も入ってるか確認。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;webpack -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;webpackも入っているか確認。&lt;br&gt;
+もし入ってなかったら&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install -g webpack
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;-gオプションはGlobalオプションのこと。&lt;/p&gt;
+
+&lt;h2&gt;ファイル・フォルダ構成&lt;/h2&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;git clone https://github.com/shigekitakeguchi/npm-webpack-sass-loader.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/shigekitakeguchi/npm-webpack-sass-loader"&gt;https://github.com/shigekitakeguchi/npm-webpack-sass-loader&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GitHubから落として使ってください。&lt;br&gt;
+カスタマイズなりなんなりして。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;cd npm-webpack-sass
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;落としたフォルダ内に移動する。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;├── LICENSE
+├── README.md
+├── app
+│   ├── scripts
+│   └── styles
+├── bs-config.json
+├── package.json
+├── src
+│   ├── scripts
+│   │   └── app.js
+│   └── scss
+│       ├── _normalize.css
+│       └── app.scss
+└── webpack.config.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ファイル・フォルダ構成はこんな感じ。README.mdやLICENSEは開発するには不要。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これで必要なパッケージがインストールされるはず。  &lt;/p&gt;
+
+&lt;h2&gt;package.json&lt;/h2&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"name"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"npm + webpack + sass-loader"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"version"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"1.0.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"description"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"main"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"index.js"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"devDependencies"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"concurrently"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^2.1.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"css-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^0.23.1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"extract-text-webpack-plugin"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^1.0.1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"lite-server"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^2.2.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"sass-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^3.2.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"style-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^0.13.1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^1.13.0"&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"scripts"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"webpack -w"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"lite"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"lite-server"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"start"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"concurrently \"npm run lite\" \"npm run webpack\""&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"keywords"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[],&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"author"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"shigeki.takeguchi"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"license"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"MIT"&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;中身はこんな感じ。&lt;/p&gt;
+
+&lt;h3&gt;パッケージの説明&lt;/h3&gt;
+
+&lt;p&gt;落としてきたpackage.jsonからインストールすればいいんですがそれぞれのパッケージの説明を。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev concurrently
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/kimmobrunfeldt/concurrently"&gt;https://github.com/kimmobrunfeldt/concurrently&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;concurrentlyは複数のコマンド実行できるようにするため。具体的に何をしているかは後ほど説明。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev lite-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/johnpapa/lite-server"&gt;https://github.com/johnpapa/lite-server&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;webpackにもwebpack dev serverというのがあるみたいだけどlite-serverのがシンプルで良さそうなので使ってみた。&lt;br&gt;
+ただし設定ファイルは必要でした。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev css-loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;webpack的な使い方であるJavaScriptファイルにCSSをロードしたりしないけどCSSを扱うなら必要らしいのでインストール。またCSSを最適化（minimize）はこのパッケージの機能を利用。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev style-loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こちらもCSSを扱うためにインストール。css-loaderとあわせて使うことが推奨されているみたい。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev sass-loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Sassのコンパイルには必要らしいのでインストール。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev extract-text-webpack-plugin
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;webpackは本来、JavaScirptのファイルの中にCSSを読みこんで使うようになっているけどこのプラグインを使うと読み込まずに使うことが可能になる（後述）。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev webpack
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/webpack/webpack"&gt;https://github.com/webpack/webpack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;webpack。もうすでに何をするツールなのか説明しがたいくらい機能がある。&lt;br&gt;
+静的なファイル（JavaScript系、CSS系、画像ファイル）の依存関係を解決するためのビルドツールってことなんだけど、ここでははJavaScriptだけを扱うようにしている。&lt;/p&gt;
+
+&lt;h2&gt;package.jsonの中のscriptsで何をしているか&lt;/h2&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="s2"&gt;"scripts"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="nt"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"webpack -w"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="nt"&gt;"lite"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"lite-server"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="nt"&gt;"start"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"concurrently \"npm run lite\" \"npm run webpack\""&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このコマンドでlite-serverを立ち上げwebpackでwatchを行う。  &lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="s2"&gt;"start"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"concurrently \"npm run lite\" \"npm run webpack\""&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;scriptsの中にあるstartがこれにあたる。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm run lite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm run webpack
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これらのコマンドはそれぞれ独立したコマンドですが、最初にちょっと触れたがconcurrentlyにダブルクオーテーションでくくってスペースで区切って引数で渡せば並行して実行することになる。便利。&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="s2"&gt;"webpack"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"webpack -w"&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これはwebpackのwatch（監視）を走らせている。こちらも後ほど触れるがwebpack.config.jsonで記述されたことをもとに監視している。&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="s2"&gt;"lite"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"lite-server"&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;lite-serverを立ち上げている。bs-config.jsonに設定ないようを記述している（こちらも後ほど触れる）。&lt;/p&gt;
 
 &lt;h2&gt;bs-config.json&lt;/h2&gt;
 &lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
@@ -264,33 +438,81 @@ moduleのなかのloadersでReactとES2015をコンパイル、トランスパ�
 
 &lt;p&gt;lite-serverの設定はドキュメントルートをappの直下にしたかったのと監視対象のファイル（html、css、js）が変更されたらリロードしてinjectChangesというBrowsersyncを動すため。&lt;/p&gt;
 
-&lt;h2&gt;/src/scripts/index.js&lt;/h2&gt;
-&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;React&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'react'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;ReactDOM&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'react-dom'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;h2&gt;webpack.config.json&lt;/h2&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;webpack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;ExtractTextPlugin&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"extract-text-webpack-plugin"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
 
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;CommentBox&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;React&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createClass&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
-  &lt;span class="na"&gt;render&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-      &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;div&lt;/span&gt; &lt;span class="nx"&gt;className&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"commentBox"&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="nx"&gt;Hello&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;world&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt; &lt;span class="nx"&gt;I&lt;/span&gt; &lt;span class="nx"&gt;am&lt;/span&gt; &lt;span class="nx"&gt;a&lt;/span&gt; &lt;span class="nx"&gt;CommentBox&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-      &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="sr"&gt;/div&lt;/span&gt;&lt;span class="err"&gt;&amp;gt;
-&lt;/span&gt;    &lt;span class="p"&gt;);&lt;/span&gt;
-  &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;});&lt;/span&gt;
-&lt;span class="nx"&gt;ReactDOM&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;render&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-  &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;CommentBox&lt;/span&gt; &lt;span class="o"&gt;/&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-  &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'content'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="p"&gt;);&lt;/span&gt;
-
+&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[{&lt;/span&gt;
+  &lt;span class="na"&gt;entry&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;bundle&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'./src/scripts/app.js'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="na"&gt;output&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;__dirname&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'/app/scripts'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="na"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'bundle.js'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;publicPath&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'/app/'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="na"&gt;plugins&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;webpack&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;optimize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;UglifyJsPlugin&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;},{&lt;/span&gt;
+  &lt;span class="na"&gt;entry&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;style&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'./src/scss/app.scss'&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="na"&gt;output&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;__dirname&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'/app/styles'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="na"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'style.css'&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="na"&gt;module&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;loaders&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+      &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;test&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/&lt;/span&gt;&lt;span class="se"&gt;\.&lt;/span&gt;&lt;span class="sr"&gt;scss$/&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;loader&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ExtractTextPlugin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;extract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"style-loader"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"css-loader?minimize!sass-loader"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="na"&gt;plugins&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;ExtractTextPlugin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"style.css"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;}];&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;ReactのチュートリアルにあるHello, world!です。&lt;br&gt;
-id、contentにCommentBox内で記述されている内容を出力しているごくごくシンプルなもの。&lt;/p&gt;
+&lt;p&gt;webpackの設定は複数のモジュール機能（この場合はJavaScriptとSass）なので以下のように配列で持たせるようになっている。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[{},{}]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ひとつのモジュールだとこんな感じ。オブジェクトがひとつだけでいい。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;entryにもとファイルJavaScriptは./src/scripts/app.js、CSS（Sass）は./src/scss/app.scssですね。それぞれ/app内のscriptsとstylesに出力している。&lt;br&gt;
+JavaScriptはwebpackのUglifyJsPluginで圧縮している。&lt;br&gt;
+CSS（Sass）の場合はExtractTextPluginで普通のCSSファイルに出力している。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nl"&gt;loaders&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="na"&gt;test&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/&lt;/span&gt;&lt;span class="se"&gt;\.&lt;/span&gt;&lt;span class="sr"&gt;scss$/&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="na"&gt;loader&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ExtractTextPlugin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;extract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"style-loader"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"css-loader!sass-loader"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;最適化（minimize）しない場合はこのように記述することでSassファイルがコンパイルされつつoutputで指定した場所とファイル名（/app/styles/style.css）で出力される。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nl"&gt;loaders&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="na"&gt;test&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/&lt;/span&gt;&lt;span class="se"&gt;\.&lt;/span&gt;&lt;span class="sr"&gt;scss$/&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+      &lt;span class="na"&gt;loader&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;ExtractTextPlugin&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;extract&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"style-loader"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"css-loader?minimize!sass-loader"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;minimizeしたい場合はこのようにcss-loaderにminimizeオプションを引き数で渡す。&lt;/p&gt;
 
 &lt;hr&gt;
 
-&lt;p&gt;個人的にはReactを勉強するために環境をさくっと用意したかったために作った。&lt;br&gt;
-なのでReactもまだよくわかってない。またwebpackをはじめて数日とかという状態なので間違えや指摘をいただけると助かります。&lt;/p&gt;
+&lt;p&gt;まだwebpackをはじめて数日とかという状態なので間違えや指摘をいただけると助かります。&lt;/p&gt;
 </content>
   </entry>
   <entry>
@@ -874,35 +1096,6 @@ SassのコンパイルやらCSSをrequireするのやらはどうも違和感が
 &lt;p&gt;もう１軒は渋谷というよりも神泉ですね。ちょっと遠いけど機会を作って行ってみようと思います。&lt;br&gt;
 ほんとうは熊本といえば、馬肉。馬刺しではなく馬肉のステーキが食べたかった。&lt;br&gt;
 東京で美味しい熊本産の馬肉ステーキのお店、探してます。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>Kindle本の紹介：ぼくらの仮説が世界をつくる</title>
-    <link rel="alternate" href="https://shigekitakeguchi.com/2016/04/27/1.html"/>
-    <id>https://shigekitakeguchi.com/2016/04/27/1.html</id>
-    <published>2016-04-27T00:00:00Z</published>
-    <updated>2016-04-28T00:53:56+09:00</updated>
-    <author>
-      <name>shigeki.takeguchi</name>
-    </author>
-    <content type="html">&lt;p&gt;「宇宙兄弟」も「ドラゴン桜」もどんな話かは知っているがマンガもそれを原作とした実写化も観たことないな。&lt;br&gt;
-ドラゴン桜のドラマは子どもたちが熱心に観ていたのをうっすら記憶しているぐらい。&lt;/p&gt;
-
-&lt;div class="amazon-wrapper"&gt;
-&lt;p class="amazon-image"&gt;
-&lt;a  href="http://www.amazon.co.jp/gp/product/B0191AIN6W/ref=as_li_ss_il?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B0191AIN6W&amp;linkCode=as2&amp;tag=uuuu-22"&gt;&lt;img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B0191AIN6W&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=uuuu-22" &gt;&lt;/a&gt;&lt;img src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&amp;l=as2&amp;o=9&amp;a=B0191AIN6W" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;
-&lt;/p&gt;
-
-&lt;p class="amazon-text"&gt;
-&lt;a  href="http://www.amazon.co.jp/gp/product/B0191AIN6W/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B0191AIN6W&amp;linkCode=as2&amp;tag=uuuu-22"&gt;ぼくらの仮説が世界をつくる&lt;/a&gt;&lt;img src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&amp;l=as2&amp;o=9&amp;a=B0191AIN6W" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;
-&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;仮設をまずたてて（その仮説たてることがまぁ普通は難しい気もする）それを実践していく。&lt;br&gt;
-それ自体はありふれたメソッドのような気もするけどその仮説の独自性と大胆さで他を抜きん出るマンガを世に送り出せているんだろうな。&lt;br&gt;
-とはいえ、それまでのマンガのあり方を変えてやろうといった作品ではないけどクオリティの高いマンガを出し、ちゃんと読みたい人へ届ける。&lt;br&gt;
-案外と難しいことをちゃんと狙ってやれる人なんだな。すげー。&lt;br&gt;
-そして何よりこの本も最後まで楽しく読めました。&lt;/p&gt;
 </content>
   </entry>
 </feed>
