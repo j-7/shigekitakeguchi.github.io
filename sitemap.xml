@@ -733,6 +733,18 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://shigekitakeguchi.com/2016/06/24/1.html</loc>
+    <lastmod>2016-06-25</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/2016/07/04/1.html</loc>
+    <lastmod>2016-07-05</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://shigekitakeguchi.com/tags/log.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
@@ -1081,15 +1093,45 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://shigekitakeguchi.com/tags/riot-js.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/tags/riot.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://shigekitakeguchi.com/2016.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://shigekitakeguchi.com/2016/07.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/2016/07/04.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.8</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://shigekitakeguchi.com/2016/06.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/2016/06/24.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
