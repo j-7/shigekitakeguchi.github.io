@@ -751,6 +751,12 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://shigekitakeguchi.com/2016/09/01/1.html</loc>
+    <lastmod>2016-09-02</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://shigekitakeguchi.com/tags/log.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
@@ -1117,9 +1123,45 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://shigekitakeguchi.com/tags/アジア.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/tags/台湾.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/tags/台北.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/tags/バニラ・エア.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://shigekitakeguchi.com/2016.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/2016/09.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/2016/09/01.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
