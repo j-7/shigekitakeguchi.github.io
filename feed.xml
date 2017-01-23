@@ -5,48 +5,10 @@
   <id>https://shigekitakeguchi.com</id>
   <link href="https://shigekitakeguchi.com"/>
   <link href="https://shigekitakeguchi.com/feed.xml" rel="self"/>
-  <updated>2017-01-23T00:00:00Z</updated>
+  <updated>2016-09-28T00:00:00Z</updated>
   <author>
     <name>shigeki.takeguchi</name>
   </author>
-  <entry>
-    <title>iPhone 7 Plus 128GB ジェットブラックの入手顛末と3ヶ月ほどの使用感。</title>
-    <link rel="alternate" href="https://shigekitakeguchi.com/2017/01/23/1.html"/>
-    <id>https://shigekitakeguchi.com/2017/01/23/1.html</id>
-    <published>2017-01-23T00:00:00Z</published>
-    <updated>2017-01-24T00:48:35+09:00</updated>
-    <author>
-      <name>shigeki.takeguchi</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img src="/images/photos/30572558802_c856cc549e_o.png" width="640" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;予約完了時刻は『2016/09/09 16:02:43』と書いたけどauオンラインショップから「本申し込みのご案内」がきたのが10月5日で入手できたのが予約から１ヶ月たった10月8日。
-iPhone3Gから毎年機種変更を繰り返して、この端末で9台目。いやはや、こんなにも端末を替えていくことになるとは当時はまったく想像していなかったな。&lt;br&gt;
-最初のころはもう四苦八苦して端末を予約して手に入れていたと思うけどここのところそこまで予約から待つことはなくなったなと思ってた。&lt;br&gt;
-けど今回はなかなか長く待ったと思う。&lt;br&gt;
-5.5インチが入手しにくいってのもあってまたジェットブラックというさらに入手しにくい色にしたのがやっぱりまずかった。&lt;/p&gt;
-
-&lt;p&gt;やっと入手して楽しみにしていたApple Payをさっそく設定した。&lt;br&gt;
-持っているクレジットカードがたまたま対応していたのでiD（アイディー）とQUICPay（クイックペイ）の両方を設定した。&lt;br&gt;
-これでコンビニやタクシー、たまに対応しているレストランで使ってる。まさに現金なし生活。&lt;br&gt;
-電車やバスはもともとビュー・スイカでFeliCaポート/パソリを持ってチャージして使いーの、オートチャージで使いーのしてたのでさっそくSuicaも設定。&lt;br&gt;
-家族でサイゼリア行くときとラーメンを食べるときくらいしか現金を持つことなんてなくなった。ラーメン屋の自販機をはやく電子マネー対応にして欲しい。&lt;/p&gt;
-
-&lt;p&gt;iPhone 7 Plusにしたのはカメラの性能を期待してたけどそこまで活用してなくて（実感が少ないだけ？）どちらかというと防水ってのも大きい。&lt;br&gt;
-今までだとHuluやAmazon Prime Videoを観るときはジップロックに入れてたけどその手間がなくなった。&lt;br&gt;
-うっかり湯船に落としてiPadなんて2回も水没させてしまったから。。。その心配がいらないってのがかなり気に入っている。&lt;br&gt;
-それによって動画を観る機会は確実に増えた。&lt;br&gt;
-風呂に入って濡れた手や画面は指紋認証がうまくいかなくて困るってはあるけど。  &lt;/p&gt;
-
-&lt;p&gt;iPhoneの売上が鈍化っていうニュースもある。&lt;br&gt;
-けど今回ほど機種変更して良かったと実感したことはなかったくらい便利になったと思う。&lt;br&gt;
-今までのiPhoneも自分の生活の多くを変えたけど今回も確実に変えた。&lt;br&gt;
-それによって行動が変わるプロダクトってのはいいプロダクトなんだと思う。&lt;/p&gt;
-
-&lt;p&gt;正直なところ次のiPhoneは自分の生活を変えるのか？と言われると難しくなっているよね、と思う。&lt;br&gt;
-Appleは外観が素敵になることよりも生活や行動を変えることに注力して欲しい。&lt;/p&gt;
-</content>
-  </entry>
   <entry>
     <title>iPad Pro9.7インチとApple Pencilの手書き入力は革新的。</title>
     <link rel="alternate" href="https://shigekitakeguchi.com/2016/09/28/1.html"/>
@@ -312,6 +274,344 @@ Plusにしたのは筐体が大きくなって片手で操作できなくなる�
 まさに本を読んで寝ていたら台湾は台湾桃園国際空港に着陸したって感じでした。&lt;br&gt;
 しかし着いた空港は夜中ってこともあって食料を買うことも何もできずとにかくホテルに早く着きたくて、そこからタクシーでホテルへ。
 家を出てから15時間でやっと着いたって感じでした。&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>npmとwebpackで作るVue.js、学習のためのいい感じのフロントエンド開発環境 2016年8月の場合。</title>
+    <link rel="alternate" href="https://shigekitakeguchi.com/2016/08/10/1.html"/>
+    <id>https://shigekitakeguchi.com/2016/08/10/1.html</id>
+    <published>2016-08-10T00:00:00Z</published>
+    <updated>2016-08-11T03:13:24+09:00</updated>
+    <author>
+      <name>shigeki.takeguchi</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/28864376076/in/dateposted-public/" title="npm+webpack+vuejs"&gt;&lt;img src="https://c5.staticflickr.com/9/8822/28864376076_5e9a4253ba_z.jpg" width="640" height="480" alt="npm+webpack+vuejs" class="image-border"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://jp.vuejs.org/"&gt;Vue.js&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Vue.jsは日本語のドキュメントも整備されていて情報も多いので助かりますね。&lt;br&gt;
+でそのVue.js + webpackでいい感じの環境を作る必要があって用意してみました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Vue.js&lt;/li&gt;
+&lt;li&gt;webpack&lt;/li&gt;
+&lt;li&gt;vue-router（あったほうが良さそうなので使います）&lt;/li&gt;
+&lt;li&gt;Babel（これもあったほうが良さそう的なので使います）&lt;/li&gt;
+&lt;li&gt;サーバーとのHTTP通信はjQueryを使います（元々プロジェクトに入っていたのでさらに追加するよりもいいだろうという判断です）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;必要なものあるかどうか確認&lt;/h2&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;node -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;まずはお決まりのNode.js入ってるか確認。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;npm（Node.jsのパッケージマネージャー）も入ってるか確認。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;webpack -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;webpackも入っているか確認。&lt;br&gt;
+もし入ってなかったら&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install -g webpack
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;-gオプションはGlobalオプションのこと。&lt;/p&gt;
+
+&lt;h2&gt;ファイル・フォルダ構成&lt;/h2&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;git clone https://github.com/shigekitakeguchi/npm-webpack-vuejs.git
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/shigekitakeguchi/npm-webpack-vuejs"&gt;https://github.com/shigekitakeguchi/npm-webpack-vuejs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;GitHubから落として使ってください。&lt;br&gt;
+カスタマイズなりなんなりして。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;cd npm-webpack-vuejs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;落としたフォルダ内に移動する。&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;├── LICENSE
+├── README.md
+├── app
+│   ├── index.html
+│   └── scripts
+│       └── bundle.js
+├── bs-config.json
+├── package.json
+├── src
+│   ├── components
+│   │   └── app.vue
+│   └── scripts
+│       └── index.js
+└── webpack.config.js
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ファイル・フォルダ構成はこんな感じ。&lt;br&gt;
+LICENSEやREADME.mdはプロジェクトには直接はいらないファイルですね。今回は、わかりよいようにコンポーネントを使ったサンプルを入れてます。&lt;br&gt;
+「.vue」という珍しい拡張子のファイルがVue.jsのコンポーネントですね。説明はのちほど。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これで必要なパッケージがインストールされるはず。&lt;/p&gt;
+
+&lt;h2&gt;package.json&lt;/h2&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"name"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"npm-webpack-vuejs"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"version"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"1.0.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"description"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"main"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"index.js"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"scripts"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"webpack -w"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"lite"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"lite-server"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"start"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"concurrently \"npm run lite\" \"npm run webpack\""&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"keywords"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[],&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"author"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"shigeki.takeguchi"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"license"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"MIT"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"devDependencies"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"babel"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^6.5.2"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"babel-core"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^6.13.2"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"babel-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^6.2.4"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"babel-plugin-transform-runtime"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^6.12.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"babel-preset-es2015"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^6.13.2"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"concurrently"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^2.2.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"css-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^0.23.1"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"lite-server"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^2.2.2"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"vue-html-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^1.2.3"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"vue-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^8.5.3"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"vue-style-loader"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^1.0.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^1.13.1"&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"dependencies"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"jquery"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^3.1.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"vue"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^1.0.26"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"vue-router"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"^0.7.13"&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;中身はこんな感じ。
+けっこういろいろはいってますね。&lt;/p&gt;
+
+&lt;h3&gt;パッケージの説明&lt;/h3&gt;
+
+&lt;p&gt;落としてきたpackage.jsonからインストールすればいいんですがそれぞれのパッケージの説明を。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev babel
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;はい、Babelです。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev babel-core
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/babel/babel/tree/master/packages/babel-core"&gt;https://github.com/babel/babel/tree/master/packages/babel-core&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;言わずもがな、Babelのコンパイラのコア。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev babel-loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/babel/babel-loader"&gt;https://github.com/babel/babel-loader&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;webpackでES2015構文で書いたファイルをトランスパイルするのに必要。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev babel-plugin-transform-runtime
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;未対応なブラウザでも動くように変換するやるらしいですね。&lt;br&gt;
+&lt;a href="http://qiita.com/inuscript/items/d2a9d5d4daedaacff924"&gt;babel-polyfillとbabel-runtimeの使い分けに迷ったので調べた&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev babel-preset-es2015
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;BabelでES2015を使うときに必要なやつです。&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;npm install --save-dev vue-loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;webpackでVue.jsを扱うようにするやつです。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev concurrently
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/kimmobrunfeldt/concurrently"&gt;https://github.com/kimmobrunfeldt/concurrently&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;concurrentlyは複数のコマンド実行できるようにするため。具体的に何をしているかは後ほど説明。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev lite-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/johnpapa/lite-server"&gt;https://github.com/johnpapa/lite-server&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;webpackにもwebpack dev serverというのがあるみたいだけどlite-serverのがシンプルで良さそうなので使ってみた。&lt;br&gt;
+ただし設定ファイルは必要でした。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install --save-dev webpack
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/webpack/webpack"&gt;https://github.com/webpack/webpack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;webpackですね。&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;npm install --save vue
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Vue.jsです。HTMLでscriptタグで読み込むのではなくrequireで読み込めるようにするためですね。
+&lt;code&gt;bash
+npm install --save jquery
+&lt;/code&gt;
+同じくjqueryもwebpack.ProvidePluginで設定して利用できるようにします。&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;npm install --save vue-router
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;vue-router.jsもrequireで読み込めるようにします。&lt;/p&gt;
+
+&lt;h2&gt;package.jsonの中のscriptsで何をしているか&lt;/h2&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="s2"&gt;"scripts"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"webpack -w"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"lite"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"lite-server"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"start"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"concurrently \"npm run lite\" \"npm run webpack\""&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm start
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このコマンドでlite-serverを立ち上げwebpackでwatchを行いJavaScriptの変更を監視するようにしている。&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="s2"&gt;"start"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"concurrently \"npm run lite\" \"npm run webpack\""&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;scriptsの中にあるstartがこれにあたる。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm run lite
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm run webpack
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これらのコマンドはそれぞれ独立したコマンドですが、最初にちょっと触れたがconcurrentlyにダブルクオーテーションでくくってスペースで区切って引数で渡せば並行して実行することになる。便利。&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="s2"&gt;"webpack"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"webpack -w"&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これはwebpackのwatch（監視）を走らせている。こちらも後ほど触れるがwebpack.config.jsonで記述されたことをもとに監視している。&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="s2"&gt;"lite"&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"lite-server"&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;lite-serverを立ち上げている。bs-config.jsonに設定ないようを記述している（こちらも後ほど触れる）。&lt;/p&gt;
+
+&lt;h2&gt;webpack.config.json&lt;/h2&gt;
+
+&lt;p&gt;webpackの設定です。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;webpack&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"webpack"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="nx"&gt;module&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="na"&gt;entry&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'./src/scripts/index.js'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="na"&gt;output&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;path&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;__dirname&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;'/app/scripts'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="na"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'bundle.js'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="na"&gt;publicPath&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'/app/'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="na"&gt;module&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="na"&gt;loaders&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+      &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="na"&gt;test&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sr"&gt;/&lt;/span&gt;&lt;span class="se"&gt;\.&lt;/span&gt;&lt;span class="sr"&gt;vue$/&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="na"&gt;loader&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'vue'&lt;/span&gt;
+      &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;]&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="na"&gt;plugins&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;webpack&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ProvidePlugin&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+      &lt;span class="na"&gt;$&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'jquery'&lt;/span&gt;
+    &lt;span class="p"&gt;}),&lt;/span&gt;
+    &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;webpack&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;optimize&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;UglifyJsPlugin&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;
+  &lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;entryにもとファイル（複数ある場合は配列で持たせる）。outputに出力される設定を記述。今回はbundle.jsっていう一般的によく使われているらしい名称のまま。&lt;br&gt;
+けっこうシンプルですね。
+依存するパッケージがいろいろあってエラーが出てインストールする感じでした。うーん。&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;npm install --save-dev css-loader
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;npm install --save-dev vue-style-loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このふたつのパッケージは「.vueファイル」（コンポーネント化したファイル）でCSSを記述するのでそのために必要ってことですね。&lt;/p&gt;
+&lt;pre class="highlight shell"&gt;&lt;code&gt;npm install --save-dev vue-html-loader
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これも「.vueファイル」（コンポーネント化したファイル）でHTMLを記述するのでそのために必要ってことです。&lt;/p&gt;
+
+&lt;h2&gt;bs-config.json&lt;/h2&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"injectChanges"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"true"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"files"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"./app/**/*.{html,htm,css,js}"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"watchOptions"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;"ignored"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"node_modules"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"server"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;"baseDir"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"./app"&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;lite-serverの設定はドキュメントルートをappの直下にしたかったのと監視対象のファイル（html、css、js）が変更されたらリロードしてinjectChangesというBrowsersyncを動すため。&lt;/p&gt;
+
+&lt;h2&gt;サンプルのソースコード&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://qiita.com/m0a/items/34df129d6d8991ebbf86"&gt;Vue.jsを使った大規模開発に必要なもの&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;このページを参考にHello Worldしました。&lt;/p&gt;
+&lt;pre class="highlight html"&gt;&lt;code&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;charset=&lt;/span&gt;&lt;span class="s"&gt;"utf-8"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;npm Webpack Vue.js&lt;span class="nt"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;"app"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;router-view&amp;gt;&amp;lt;/router-view&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;script &lt;/span&gt;&lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;"/scripts/bundle.js"&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;app/index.htmlです。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;&amp;lt;style&amp;gt;
+  .red {
+    color: #f00;
+  }
+&amp;lt;/style&amp;gt;
+
+&amp;lt;template&amp;gt;
+  &amp;lt;h1 class="red"&amp;gt;{{msg}}&amp;lt;/h1&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+  module.exports = {
+    data: function() {
+      return {
+        msg: 'Hello world!'
+      }
+    }
+  }
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;src/app.vueです。styleとhtmlとscriptsがひとつになってるのでキモい人にはキモいかもですが考え方を変えればわかりやすいですね。好みの別れるところでしょうが。。。&lt;/p&gt;
+
+&lt;h3&gt;language-vue-component&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/CYBAI/language-vue-component"&gt;CYBAI/language-vue-component&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;あとAtomでvueのコンポーネントをシンタックスハイライトしてくれるパッケージです。&lt;/p&gt;
+&lt;pre class="highlight javascript"&gt;&lt;code&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;Vue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'vue'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;VueRouter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'vue-router'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;Vue&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;VueRouter&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;appComponent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;Vue&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;extend&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'../components/app.vue'&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;App&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;Vue&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;extend&lt;/span&gt;&lt;span class="p"&gt;({});&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;router&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nx"&gt;VueRouter&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+&lt;span class="nx"&gt;router&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+  &lt;span class="s1"&gt;'/'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nl"&gt;component&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;appComponent&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;})&lt;/span&gt;
+
+&lt;span class="nx"&gt;router&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;App&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'#app'&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;routerを使ってコンポーネントapp.vueを呼び出します。
+成功すると赤い文字で「Hello world!」と表示されます。&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Vue.jsは軽量で扱いやすいMVVMフレームワークですね。&lt;br&gt;
+Riot.jsの方が新しくてここのところ注目されているらしいですがVue.jsは日本語ドキュメントが充実していて情報も豊富なので入門しやすいのが特徴ですね。&lt;/p&gt;
 </content>
   </entry>
 </feed>
