@@ -781,6 +781,12 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://shigekitakeguchi.com/2017/01/23/1.html</loc>
+    <lastmod>2017-01-24</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://shigekitakeguchi.com/tags/log.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
@@ -1210,6 +1216,36 @@
     <loc>https://shigekitakeguchi.com/tags/anker.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/tags/apple-pay.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/tags/モバイルsuica.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/2017.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>1.0</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/2017/01.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/2017/01/23.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
