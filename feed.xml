@@ -14,24 +14,26 @@
     <link rel="alternate" href="https://shigekitakeguchi.com/2017/02/10/1.html"/>
     <id>https://shigekitakeguchi.com/2017/02/10/1.html</id>
     <published>2017-02-10T00:00:00Z</published>
-    <updated>2017-02-11T01:05:28+09:00</updated>
+    <updated>2017-02-11T01:24:04+09:00</updated>
     <author>
       <name>shigeki.takeguchi</name>
     </author>
     <content type="html">&lt;h2&gt;数ページのサイトとはいえテンプレ化はしたい、includeを使うと共通要素を外部ファイル化できて効率いいよね。&lt;/h2&gt;
 
+&lt;p&gt;サンプルとしてファイルは以下におてます。&lt;br&gt;
+&lt;a href="https://github.com/shigekitakeguchi/yarn-webpack-ejs"&gt;https://github.com/shigekitakeguchi/yarn-webpack-ejs&lt;/a&gt;&lt;/p&gt;
+
 &lt;p&gt;ちょっとした、例えばブランドサイトとかキャンペーンサイト、小規模な企業や組織、お店のサイトというと構成によっては1ページってこともあるけど数ページから20ページくらいの規模になると思う。&lt;br&gt;
 いやいやもっとあるよってことになるかもしれないけど今回紹介しようと思うやり方は数ページから20ページくらいの規模のものが便利なんじゃないかな。&lt;br&gt;
-それ以上のサイトになるともうちょっと本格的な静的サイトジェネレーターとかを検討したほうが良いと思う。  &lt;/p&gt;
+それ以上のサイトになるともうちょっと本格的な静的サイトジェネレーターとかを検討したほうが良いと思う。&lt;br&gt;
+数ページとはいえヘッダーやフッター、あとmeta要素やナビゲーション、細かいところでいうとGoogle Analitycsの記述ってサイト全体で共通するものを手作業、ベタ書きでやるってちょっと変更とかあるとツラい。ひと昔前だったらサーバー側でssiなんてものもあった。&lt;br&gt;
+サーバー管理している人にセキュリティ的懸念があるよと言われながら設定を依頼したりローカルで開発する時はMAMPとか使っているとhttpd.confを変更してでも本番の環境でうまく動かなかったり、そもそも今だったらS3とかもちろんssi使えない。&lt;br&gt;
+じゃあどうするかというとmiddlemanだの静的サイトジェネレーターの出番なんだけどmiddlemanでやるとなるともうすべてmiddlemanにおまかせしないとだめだったりする。&lt;br&gt;
+それならってことでwebpackでincludeつかえるようなパッケージないかなと探したら思ったよりもなくて調べるとhtml-webpack-pluginってのとejs-render-loaderを組み合わせるとできそうだってことでやってみました。  &lt;/p&gt;
 
-&lt;p&gt;数ページとはいえヘッダーやフッター、あとmeta要素やナビゲーション、細かいところでいうとGoogle Analitycsの記述ってサイト全体で共通するものを手作業、ベタ書きでやるってちょっと変更とかあるとツラい。ひと昔前だったらサーバー側でssiなんてものもあった。
-サーバー管理している人にセキュリティ的懸念があるよと言われながら設定を依頼したりローカルで開発する時はMAMPとか使っているとhttpd.confを変更してでも本番の環境でうまく動かなかったり、そもそも今だったらS3とかもちろんssi使えない。
-じゃあどうするかというとmiddlemanだの静的サイトジェネレーターの出番なんだけどmiddlemanでやるとなるともうすべてmiddlemanにおまかせしないとだめだったりする。&lt;/p&gt;
+&lt;p&gt;テンプレートエンジンに何を使うかなんだけど経験的なものだけなんだけどejsでだいたいがおさまるかなというのがある。&lt;/p&gt;
 
-&lt;p&gt;それならってことでwebpackでincludeつかえるようなパッケージないかなと探したら思ったよりもなくて調べるとhtml-webpack-pluginってのとejs-render-loaderを組み合わせるとできそうだってことでやってみました。&lt;/p&gt;
-
-&lt;p&gt;テンプレートエンジンに何を使うかなんだけど経験的なものだけなんだけどejsでだいたいがおさまるかなというのがある。
-&lt;a href="https://github.com/mde/ejs"&gt;EJS Embedded JavaScript templates (https://github.com/mde/ejs)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/mde/ejs"&gt;EJS Embedded JavaScript templates (https://github.com/mde/ejs)&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;プログラム的な要素ががっしり使ってHTMLを出力するってことになるとカッコがない、閉じ要素がないってことでJadeの方が見通しが良かったりするんだけど今回はejsです。
 Node.jsのフレームワークであるexpressを利用したことない人にはejs馴染みないと思いますが扱いやすいテンプレートエンジンだと思います。&lt;/p&gt;
