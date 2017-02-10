@@ -5,10 +5,98 @@
   <id>https://shigekitakeguchi.com</id>
   <link href="https://shigekitakeguchi.com"/>
   <link href="https://shigekitakeguchi.com/feed.xml" rel="self"/>
-  <updated>2017-02-05T00:00:00Z</updated>
+  <updated>2017-02-09T00:00:00Z</updated>
   <author>
     <name>shigeki.takeguchi</name>
   </author>
+  <entry>
+    <title>npmがわりとゆるふわ過ぎたのでYarnに移行するか検討するためにいろいろやってみた</title>
+    <link rel="alternate" href="https://shigekitakeguchi.com/2017/02/09/1.html"/>
+    <id>https://shigekitakeguchi.com/2017/02/09/1.html</id>
+    <published>2017-02-09T00:00:00Z</published>
+    <updated>2017-02-09T22:53:48+09:00</updated>
+    <author>
+      <name>shigeki.takeguchi</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a title="Yarn" href="https://yarnpkg.com/,"&gt;https://yarnpkg.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Facebookが作ったというnpmとの互換パッケージマネージャ&lt;/h2&gt;
+
+&lt;p&gt;Node.js系のパッケージマネージャーといえばnpmです。いろいろありますがかなり便利なのでずっと使ってました。&lt;br&gt;
+ただnpmで管理していたパッケージの機能がローカルでは動くけど、どうも本番で動いてないんじゃない？的なことがあって&lt;br&gt;
+どうやらそのパッケージのバージョンの違いで動いてない的なことが起こっているんじゃないか疑惑があってnpmってそういえば、&lt;br&gt;
+バージョンとかけっこうゆるふわというか多少のバージョンの違いとか気にしなくていいってところがいいんだけど、それって何かあったときにやば過ぎじゃないの？って気になった。&lt;br&gt;
+今まで遭遇しなかっただけでバージョンの違いでこんなやらかしがあるのか。。。&lt;br&gt;
+じゃあ対策ないの？どうしようかってことでYarnを検討してます。&lt;/p&gt;
+
+&lt;p&gt;このYarnですがnpmにはないyarn.lockというファイルが生成されまして、これがまぁRubyのgemなんかだとGemfile.lockというのと同じか似ている感じだと思ってます。&lt;br&gt;
+Gemfile.lockは開発環境と運用環境で同じgemをインストールするために使うらしいんですがそれと同じような仕組みになっているという認識。&lt;br&gt;
+実際には導入してませんが今のところいい感じで使えてます。npmよりもさくさく動くってところもいい。&lt;/p&gt;
+
+&lt;h2&gt;Yarnのインストール&lt;/h2&gt;
+
+&lt;p&gt;インストールはbrewからやるとまあ簡単ですわな。
+これはMacの場合ね。ちなみに会社も家のマシンも最近立て続けにmacOS Sierraにしました。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;brew update
+brew install yarn
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;念のためにバージョンの確認です。インストールうまくいってたらバージョンでます。
+これ書いているときは0.19.1ですね。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;yarn --version
+0.19.1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2&gt;Yarnの初期プロジェクト作成的な&lt;/h2&gt;
+
+&lt;p&gt;で適当にプロジェクトフォルダにうつって&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;yarn init -y
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これでnpmでもお世話になっていたpackage.jsonできます。&lt;/p&gt;
+
+&lt;p&gt;ちなみに&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm --version
+3.3.12
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;でnpmでinitしたときにできたpackage.jsonはこれです。&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"name"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"hoge"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"version"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"1.0.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"description"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"main"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"index.js"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"scripts"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+    &lt;/span&gt;&lt;span class="nt"&gt;"test"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"echo \"Error: no test specified\" &amp;amp;&amp;amp; exit 1"&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"keywords"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[],&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"author"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"license"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"ISC"&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こちらはyarnのinitの場合はこれです。&lt;/p&gt;
+&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"name"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"01"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"version"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"1.0.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"main"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"index.js"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"repository"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{},&lt;/span&gt;&lt;span class="w"&gt;
+  &lt;/span&gt;&lt;span class="nt"&gt;"license"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"MIT"&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ちょっとシンプルになってます。&lt;/p&gt;
+
+&lt;h2&gt;npmとの違い&lt;/h2&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install jquery --save
+yarn add jquery
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install autoprefixer --save-dev
+yarn add autoprefixer --dev
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+  </entry>
   <entry>
     <title>npmがわりとゆるふわ過ぎたのでYarnに移行するか検討するためにいろいろやってみた</title>
     <link rel="alternate" href="https://shigekitakeguchi.com/2017/02/05/1.html"/>
@@ -542,58 +630,6 @@ iPhone3Gから毎年機種変更を繰り返して、この端末で9台目。�
 
 &lt;p&gt;正直なところ次のiPhoneは自分の生活を変えるのか？と言われると難しくなっているよね、と思う。&lt;br&gt;
 Appleは外観が素敵になることよりも生活や行動を変えることに注力して欲しい。&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>iPad Pro9.7インチとApple Pencilの手書き入力は革新的。</title>
-    <link rel="alternate" href="https://shigekitakeguchi.com/2016/09/28/1.html"/>
-    <id>https://shigekitakeguchi.com/2016/09/28/1.html</id>
-    <published>2016-09-28T00:00:00Z</published>
-    <updated>2016-09-30T00:32:13+09:00</updated>
-    <author>
-      <name>shigeki.takeguchi</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;img src="/images/og.jpg" width="640" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;iPad Pro9.7インチとApple Pencilを購入した。&lt;br&gt;
-iPhone 7 Plus 128GB ジェットブラックの入荷連絡がまったくないけどそれなりに穏やかに待つ気になっているのはこのiPad Pro9.7インチとApple Pencilで新しガジェット欲求とでも言うんだろうか「新しいガジェットを使って何か新しい体験をしてみたいぞ」という心情をある程度満たされているからかもしれない。&lt;/p&gt;
-
-&lt;p&gt;iPad歴は初代から→iPad 2→iPad Retina→iPad mini Retina（2）→iPad mini Retina（3）とここのところはiPad mini。iPad miniにしてからは大きさ的には持ち運べるし片手で持ってもまぁ本を読むくらいはできるってことで気に入っていた。&lt;br&gt;
-でも今までのiPadへの唯一の不満は手書き入力。メモやアイデアスケッチやらはやっぱり手書きがいいってのがあって、ノートにペンで書いたりしてたんだけどやっぱりデジタル化したいってことになったら写真を撮って取り込むことになるんだけどなんか二度手間だよなと。だったらiPadに直接書くのが理想だなってことで入力するためのスタイラスペンもいろいろ買った。ペンでやらないとうまく書けないのは皆さんも感じてることだと思う。そう指先でメモやスケッチってのは精度が荒すぎて難しい。そう思って安いスタイラスペンからWacomのBluetooth®で接続して使用するものまで試してみたんだけどでどれも今ひとつこれだ感が持てなくて使わなくなった。&lt;br&gt;
-なんていうデバイスか忘れたけどペンに装着して紙ノートに描く・書くと転送されるのがあるけどそれもやっぱり違うなあと。&lt;/p&gt;
-
-&lt;p&gt;でiPad ProとApple Pencilは発売当初は気になってたんだけど「まぁ今までのスタイラスペンのちょっと連携が良くなったくらいだろうな」くらいに考えていて正直舐めてました。なので店頭で触ってみるってこともしてなかった。&lt;/p&gt;
-
-&lt;p&gt;先月Adobe MAX 2016のセッションで、そのセッションの目的はAdobeのiPadアプリいいでしょってものだったんだけど登壇者がiPad ProとApple PencilでAdobe製品を使うと最強ですよ、電車の中でも仕事できますよって目の前で実演していて「え？iPad ProとApple Pencilってそんなに最高なの？」ってなったわけですよ。でさっそくその帰りに銀座のアップルストアに行ってiPad ProとApple Pencilを触りまくった。今までのスタイラスペンとは比べ物にならないくらいの書きやすさでもうこれは買うしかないってことで次の日にはdocomoで今まで使っていたiPad miniを機種変してiPad Proにしました。&lt;/p&gt;
-
-&lt;p&gt;１ヶ月くらい使ってみたんだけど紙のノートとペンは持たなくてもよくなった。もちろんまだまだ紙とペンの方がいいところはあるんだけどまぁ実用レベルになったなという感じです。
-アイデアスケッチ、メモ、イラストなんかもぜんぜん問題ないです。主にAdobe Sketchを使ってますがアップル製のメモが一番精度は良いです。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="/images/adobe_sketch.png" width="640" alt=""&gt;&lt;/p&gt;
-
-&lt;p&gt;これがちなみにAdobe SketchにApple Pencilで描いた犬のスケッチ。&lt;/p&gt;
-
-&lt;div class="amazon-wrapper"&gt;
-  &lt;p class="amazon-image"&gt;
-    &lt;a href="https://www.amazon.co.jp/gp/product/B01EFCLQR4/ref=as_li_ss_il?ie=UTF8&amp;psc=1&amp;linkCode=li2&amp;tag=uuuu-22&amp;linkId=77f20155c32363c6176e9e2449965230" target="_blank"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B01EFCLQR4&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=uuuu-22" &gt;&lt;/a&gt;&lt;img src="https://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&amp;l=li2&amp;o=9&amp;a=B01EFCLQR4" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;
-  &lt;/p&gt;
-  &lt;p class="amazon-text"&gt;
-    &lt;a href="https://www.amazon.co.jp/gp/product/B01EFCLQR4/ref=as_li_ss_tl?ie=UTF8&amp;psc=1&amp;linkCode=ll1&amp;tag=uuuu-22&amp;linkId=0d26cf6921d9de10560b1405737781ef"&gt;Anker iPad Pro 9.7用 ウルトラスリム フォリオケース 【オートスリープ機能対応スマートカバー / 18ヶ月保証】&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;iPadのケースはアップル純正のとかいろいろ試してみたけど最近はAnkerのこのケースが質感といい硬さといい使いやすくて丈夫なので使ってます。&lt;/p&gt;
-
-&lt;div class="amazon-wrapper"&gt;
-  &lt;p class="amazon-image"&gt;
-    &lt;a href="https://www.amazon.co.jp/gp/product/B00FMJEOO2/ref=as_li_ss_il?ie=UTF8&amp;psc=1&amp;linkCode=li2&amp;tag=uuuu-22&amp;linkId=0cef56aa7dba96659366c4cd1b4aa0f8" target="_blank"&gt;&lt;img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00FMJEOO2&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=uuuu-22" &gt;&lt;/a&gt;&lt;img src="https://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&amp;l=li2&amp;o=9&amp;a=B00FMJEOO2" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /&gt;
-  &lt;/p&gt;
-  &lt;p class="amazon-text"&gt;
-    &lt;a href="https://www.amazon.co.jp/gp/product/B00FMJEOO2/ref=as_li_ss_tl?ie=UTF8&amp;psc=1&amp;linkCode=ll1&amp;tag=uuuu-22&amp;linkId=67e0bbdc5f2e508b29ac6527907ad9d2"&gt;パイロット ペンシース付き手帳バンド ブラック&lt;/a&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Apple Pencilをどうやってなくしたりしないようにいっしょに携帯するかってのがけっこう難しくてこちらのペンケース使ってます。&lt;/p&gt;
 </content>
   </entry>
 </feed>
