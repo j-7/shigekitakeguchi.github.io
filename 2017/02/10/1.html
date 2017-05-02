@@ -22,6 +22,9 @@
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">shigeki.takeguchi.log</a>
+          <p class="navbar-reading">
+            アラフィフおじさんの技術日記
+          </p>
         </div>
       </div>
     </nav>
@@ -65,25 +68,19 @@ Node.jsのフレームワークであるexpressを利用したことない人に
 <h2>初期設定</h2>
 <pre class="highlight plaintext"><code>node -v
 </code></pre>
-
 <p>まずはお決まりのNode.js入ってるか確認。</p>
 <pre class="highlight plaintext"><code>yarn -v
 </code></pre>
-
 <p>Yarn（もしくはnpm）も入ってるか確認。個人的には完全にYarnに移行しました。</p>
 <pre class="highlight plaintext"><code>webpack -v
 </code></pre>
-
 <p>webpackも入っているか確認。どうも2.1なのか2.0からなのかextract-text-webpack-pluginが使えないような  不具合があるようで1.1系を使ってます。</p>
 <pre class="highlight plaintext"><code>webpack --version
 </code></pre>
-
 <p>もし入ってなかったら今回はバージョン指定してインストールします。</p>
 <pre class="highlight plaintext"><code>yarn add global webpack@1.14.0
+</code></pre><pre class="highlight plaintext"><code>npm install -g webpack@1.14.0
 </code></pre>
-<pre class="highlight plaintext"><code>npm install -g webpack@1.14.0
-</code></pre>
-
 <p>以下yarnはnpmに置き換えて実行してもらえれば問題なしです。</p>
 
 <h2>どんなパッケージを使ってるか（package.json）</h2>
@@ -91,28 +88,27 @@ Node.jsのフレームワークであるexpressを利用したことない人に
 <p>node-sassはグローバルで入っているはずなので不要かと思ったのですがエラーはかれたのでインストールしてます。scssをロードしてcssにコンパイルしてってのもいれてます。
 もしpost-css的なものがいいとかautoprefixerいれたいとかあれば置き換えてもらえたらと思います。webpack使ってもろもろすると複雑になりがちなのでわかりやすいように最低限な感じです。</p>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn-webpack-ejs"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.js"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"repository"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
-  </span><span class="nt">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack -w --config webpack.config.js"</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn-webpack-ejs"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.js"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"repository"</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span><span class="w">
+  </span><span class="s2">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack -w --config webpack.config.js"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"browser-sync-webpack-plugin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.1.4"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"css-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.26.1"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"ejs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.5.5"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"ejs-render-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"extract-text-webpack-plugin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0.1"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"html-webpack-plugin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.28.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"node-sass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^4.5.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"sass-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^4.1.1"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"style-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.13.1"</span><span class="w">
+  </span><span class="s2">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"browser-sync-webpack-plugin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.1.4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"css-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.26.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ejs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.5.5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ejs-render-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"extract-text-webpack-plugin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"html-webpack-plugin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.28.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"node-sass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^4.5.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sass-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^4.1.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"style-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.13.1"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-
 <h2>ファイル・フォルダ構成</h2>
 
 <p>まぁこんな感じの構成になってます。</p>
@@ -136,7 +132,6 @@ Node.jsのフレームワークであるexpressを利用したことない人に
 ├── webpack.config.js
 └── yarn.lock
 </code></pre>
-
 <p>normalize.scssはわかりやすいように入れているだけです。
 yarnなのでyarn.lockというファイルが入ってます。
 appの直下がサーバーのドキュメントルートになります。</p>
@@ -158,7 +153,6 @@ appの直下がサーバーのドキュメントルートになります。</p>
 <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </code></pre>
-
 <h2>webpack.config.js</h2>
 
 <p>webpackの設定ファイルです。
@@ -216,10 +210,9 @@ browser-sync-webpack-pluginはbrowsersync（開いているブラウザすべて
   <span class="p">]</span>
 <span class="p">}];</span>
 </code></pre>
-
 <p>今回ejsにインクルードしてHTMLをレンダリングするためにejs-render-loaderというパッケージを使っています。
 HtmlWebpackPluginでtemplateとして扱うindex.ejsにこのように指定します。</p>
-<pre class="highlight javascript"><code><span class="nx">plugins</span><span class="err">:</span> <span class="p">[</span>
+<pre class="highlight javascript"><code><span class="nx">plugins</span><span class="p">:</span> <span class="p">[</span>
   <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">(),</span>
   <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
     <span class="na">filename</span><span class="p">:</span> <span class="s1">'../index.html'</span><span class="p">,</span>
@@ -227,11 +220,10 @@ HtmlWebpackPluginでtemplateとして扱うindex.ejsにこのように指定し�
   <span class="p">})</span>
 <span class="p">]</span>
 </code></pre>
-
 <p>複数のページへ共通要素をインクルードすれば効率的にHTMLを管理できると思います。
 例えばabout.html（index.htmlとは内容の違うHTML）を作る場合は以下のような感じで指定します。
 about.ejsを用意してindex.ejsと同じように共通要素をインクルード指定しpluginsで生成するHTMLのファイル名、元となるejsを指定します。</p>
-<pre class="highlight javascript"><code><span class="nx">plugins</span><span class="err">:</span> <span class="p">[</span>
+<pre class="highlight javascript"><code><span class="nx">plugins</span><span class="p">:</span> <span class="p">[</span>
   <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">(),</span>
   <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
     <span class="na">filename</span><span class="p">:</span> <span class="s1">'../index.html'</span><span class="p">,</span>
@@ -243,7 +235,6 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
   <span class="p">})</span>
 <span class="p">]</span>
 </code></pre>
-
           <ul class="social-buttons">
                       <li class="hatena">
                         <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2017/02/10/1.html" title="このエントリーをはてなブックマークに追加"></a>
@@ -275,7 +266,15 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
               <img alt="shigeki.takeguchi" border="0" height="80" src="/images/profile.png" width="80" />
             </p>
             <p class="text">
-              渋谷の某ソーシャルゲームの会社でフロントエンドエンジニアとして働いてます。20世紀よりウェブ業界。気づいたらアラフィフ業界人。
+              渋谷の某ソーシャルゲームの会社でフロントエンドエンジニアとして働いてます。20世紀よりウェブ業界。気づいたらアラフィフ業界人です。<br>まだまだ現場で粘り強く作る側でいたいと思います。
+            </p>
+          </div>
+          <div class="amazon-wrapper">
+            <p class="amazon-image">
+              <a href="https://www.amazon.co.jp/dp/4861009634/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=uuuu-22&linkId=585041f0ffd39b522c9a3fc9dade3da8" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4861009634&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=uuuu-22" /><img alt="" border="0" height="1" src="https://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=li2&o=9&a=4861009634" style="border:none !important; margin:0px !important;" width="1" /></a>
+            </p>
+            <p class="amazon-text">
+              <a href="https://www.amazon.co.jp/dp/4861009634/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=uuuu-22&linkId=40cc0a2b87e78d10a3305b3244e6cb08" target="_blank">[普及版]ジェネラティブ・アート―Processingによる実践ガイド</a><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=4873117704" style="border:none !important; margin:0px !important;" width="1" />
             </p>
           </div>
           <div class="amazon-wrapper">
@@ -324,7 +323,7 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
             </h4>
             <ol>
               <li>
-                <a href="/2017.html">2017</a> (6)
+                <a href="/2017.html">2017</a> (8)
               </li>
               <li>
                 <a href="/2016.html">2016</a> (23)
@@ -358,6 +357,12 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
         </h3>
         <ol>
           <li>
+            <a href="/2017/05/01/1.html">Reactの学び方（2017年ゴールデンウィーク）、Reactってけっきょく何なのか？</a> <span>2017-05-01</span> 
+          </li>
+          <li>
+            <a href="/2017/02/24/1.html">Storyboardを使用しないでアプリを準備する（Swift3）。</a> <span>2017-02-24</span> 
+          </li>
+          <li>
             <a href="/2017/02/10/1.html">webpackでejsを使い、共通要素をインクルードして効率的にやりたいよね。</a> <span>2017-02-10</span> 
           </li>
           <li>
@@ -380,12 +385,6 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
           </li>
           <li>
             <a href="/2016/09/27/1.html">iPhone 7 Plus 128GB ジェットブラックをauの機種変更で予約した件。</a> <span>2016-09-27</span> 
-          </li>
-          <li>
-            <a href="/2016/09/05/1.html">台北でマンゴーかき氷を食べまくった。（台湾、4泊5日の旅を格安航空バニラエアで安く行ってみた。）</a> <span>2016-09-05</span> 
-          </li>
-          <li>
-            <a href="/2016/09/02/1.html">台北で小籠包を食べまくった。（台湾、4泊5日の旅を格安航空バニラエアで安く行ってみた。）</a> <span>2016-09-02</span> 
           </li>
         </ol>
         <hr />
@@ -417,10 +416,19 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
             <span><a href="/tags/apple-pencil.html">Apple Pencil</a> (1)</span> 
           </li>
           <li>
+            <span><a href="/tags/babel.html">Babel</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/browsersync.html">BrowserSync</a> (1)</span> 
+          </li>
+          <li>
             <span><a href="/tags/css.html">CSS</a> (2)</span> 
           </li>
           <li>
             <span><a href="/tags/cocoapods.html">CocoaPods</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/es2015.html">ES2015</a> (1)</span> 
           </li>
           <li>
             <span><a href="/tags/github-pages.html">GitHub Pages</a> (4)</span> 
@@ -441,7 +449,7 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
             <span><a href="/tags/node-js.html">Node.js</a> (2)</span> 
           </li>
           <li>
-            <span><a href="/tags/react.html">React</a> (1)</span> 
+            <span><a href="/tags/react.html">React</a> (2)</span> 
           </li>
           <li>
             <span><a href="/tags/redux.html">Redux</a> (1)</span> 
@@ -454,6 +462,9 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
           </li>
           <li>
             <span><a href="/tags/sass.html">Sass</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/swift3.html">Swift3</a> (1)</span> 
           </li>
           <li>
             <span><a href="/tags/vue-js.html">Vue.js</a> (1)</span> 
@@ -481,6 +492,9 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
           </li>
           <li>
             <span><a href="/tags/htmlcss.html">htmlcss</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ios.html">iOS</a> (1)</span> 
           </li>
           <li>
             <span><a href="/tags/ipad-pro.html">iPad Pro</a> (1)</span> 
@@ -522,7 +536,7 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
             <span><a href="/tags/spritesmith.html">spritesmith</a> (2)</span> 
           </li>
           <li>
-            <span><a href="/tags/swift.html">swift</a> (2)</span> 
+            <span><a href="/tags/swift.html">swift</a> (3)</span> 
           </li>
           <li>
             <span><a href="/tags/three-js.html">three.js</a> (1)</span> 
@@ -540,10 +554,10 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
             <span><a href="/tags/web-designing.html">web-designing</a> (1)</span> 
           </li>
           <li>
-            <span><a href="/tags/webpack.html">webpack</a> (10)</span> 
+            <span><a href="/tags/webpack.html">webpack</a> (11)</span> 
           </li>
           <li>
-            <span><a href="/tags/xcode.html">xcode</a> (10)</span> 
+            <span><a href="/tags/xcode.html">xcode</a> (11)</span> 
           </li>
           <li>
             <span><a href="/tags/うどん.html">うどん</a> (1)</span> 
@@ -674,6 +688,7 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
+        js.async = true;
         js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=180084798795106";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));

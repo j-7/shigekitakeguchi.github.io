@@ -22,6 +22,9 @@
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">shigeki.takeguchi.log</a>
+          <p class="navbar-reading">
+            アラフィフおじさんの技術日記
+          </p>
         </div>
       </div>
     </nav>
@@ -56,7 +59,6 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
   <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>「font-awesome.css」っていうCSS内の@font-face内のフォントファイルへのパスを書き換えること。上記のような記述がコメントの後にあるので自分の環境にあわせて書き換える。<a href="http://zoomone.net" target="_blank">zoomone.net</a>の場合はドキュメントルートに「/fontawesome/」というディレクトリを作ってその中に「font」ディレクトリを作ってフォントファイルを置いたので以下のように書き換えた。必要なのはフォントデータの形式って（.eot、.woff、.ttf、.svg）これだけあるってのが驚き。<br></p>
 <pre class="highlight css"><code><span class="k">@font-face</span> <span class="p">{</span>
   <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'FontAwesome'</span><span class="p">;</span>
@@ -69,15 +71,12 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
   <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
   <span class="nl">font-style</span><span class="p">:</span> <span class="nb">normal</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre>
-<pre class="highlight html"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/fontawesome/css/font-awesome.css"</span> <span class="na">media=</span><span class="s">"screen"</span> <span class="nt">/&gt;</span>
+</code></pre><pre class="highlight html"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"/fontawesome/css/font-awesome.css"</span> <span class="na">media=</span><span class="s">"screen"</span> <span class="nt">/&gt;</span>
 <span class="c">&lt;!--[if IE 7]&gt;&lt;link rel="stylesheet" href="/fontawesome/css/font-awesome-ie7.css"&gt;&lt;![endif]--&gt;</span>
 </code></pre>
-
 <p>「font-awesome.css」とIE 7対策のための「font-awesome-ie7.css」は「/fontawesome/」内の「css」っていうディレクトリに置いたのでHTMLから読み込むためにパスを記述する。</p>
 <pre class="highlight html"><code><span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-facebook-sign"</span><span class="nt">&gt;&lt;/i&gt;</span> Facebook
 </code></pre>
-
 <p>Facebookのアイコンを表示する場合は文字の前にこうやって記述するだけでアイコンが表示される。めでたしめでたし。</p>
 
 <p>メリット、デメリットはあると思うけどなかなかいいんでないかと思う。仕事で使う機会があるかどうかってなると自分でデザインしてコーディングまですると使うかもしれない。ちゃんと仕様の説明をして使った方がいいと思うので特に依頼してこないと使わないだろうと思う。</p>
@@ -119,7 +118,15 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
               <img alt="shigeki.takeguchi" border="0" height="80" src="/images/profile.png" width="80" />
             </p>
             <p class="text">
-              渋谷の某ソーシャルゲームの会社でフロントエンドエンジニアとして働いてます。20世紀よりウェブ業界。気づいたらアラフィフ業界人。
+              渋谷の某ソーシャルゲームの会社でフロントエンドエンジニアとして働いてます。20世紀よりウェブ業界。気づいたらアラフィフ業界人です。<br>まだまだ現場で粘り強く作る側でいたいと思います。
+            </p>
+          </div>
+          <div class="amazon-wrapper">
+            <p class="amazon-image">
+              <a href="https://www.amazon.co.jp/dp/4861009634/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=uuuu-22&linkId=585041f0ffd39b522c9a3fc9dade3da8" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4861009634&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=uuuu-22" /><img alt="" border="0" height="1" src="https://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=li2&o=9&a=4861009634" style="border:none !important; margin:0px !important;" width="1" /></a>
+            </p>
+            <p class="amazon-text">
+              <a href="https://www.amazon.co.jp/dp/4861009634/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=uuuu-22&linkId=40cc0a2b87e78d10a3305b3244e6cb08" target="_blank">[普及版]ジェネラティブ・アート―Processingによる実践ガイド</a><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=4873117704" style="border:none !important; margin:0px !important;" width="1" />
             </p>
           </div>
           <div class="amazon-wrapper">
@@ -168,7 +175,7 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
             </h4>
             <ol>
               <li>
-                <a href="/2017.html">2017</a> (6)
+                <a href="/2017.html">2017</a> (8)
               </li>
               <li>
                 <a href="/2016.html">2016</a> (23)
@@ -202,6 +209,12 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
         </h3>
         <ol>
           <li>
+            <a href="/2017/05/01/1.html">Reactの学び方（2017年ゴールデンウィーク）、Reactってけっきょく何なのか？</a> <span>2017-05-01</span> 
+          </li>
+          <li>
+            <a href="/2017/02/24/1.html">Storyboardを使用しないでアプリを準備する（Swift3）。</a> <span>2017-02-24</span> 
+          </li>
+          <li>
             <a href="/2017/02/10/1.html">webpackでejsを使い、共通要素をインクルードして効率的にやりたいよね。</a> <span>2017-02-10</span> 
           </li>
           <li>
@@ -224,12 +237,6 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
           </li>
           <li>
             <a href="/2016/09/27/1.html">iPhone 7 Plus 128GB ジェットブラックをauの機種変更で予約した件。</a> <span>2016-09-27</span> 
-          </li>
-          <li>
-            <a href="/2016/09/05/1.html">台北でマンゴーかき氷を食べまくった。（台湾、4泊5日の旅を格安航空バニラエアで安く行ってみた。）</a> <span>2016-09-05</span> 
-          </li>
-          <li>
-            <a href="/2016/09/02/1.html">台北で小籠包を食べまくった。（台湾、4泊5日の旅を格安航空バニラエアで安く行ってみた。）</a> <span>2016-09-02</span> 
           </li>
         </ol>
         <hr />
@@ -261,10 +268,19 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
             <span><a href="/tags/apple-pencil.html">Apple Pencil</a> (1)</span> 
           </li>
           <li>
+            <span><a href="/tags/babel.html">Babel</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/browsersync.html">BrowserSync</a> (1)</span> 
+          </li>
+          <li>
             <span><a href="/tags/css.html">CSS</a> (2)</span> 
           </li>
           <li>
             <span><a href="/tags/cocoapods.html">CocoaPods</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/es2015.html">ES2015</a> (1)</span> 
           </li>
           <li>
             <span><a href="/tags/github-pages.html">GitHub Pages</a> (4)</span> 
@@ -285,7 +301,7 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
             <span><a href="/tags/node-js.html">Node.js</a> (2)</span> 
           </li>
           <li>
-            <span><a href="/tags/react.html">React</a> (1)</span> 
+            <span><a href="/tags/react.html">React</a> (2)</span> 
           </li>
           <li>
             <span><a href="/tags/redux.html">Redux</a> (1)</span> 
@@ -298,6 +314,9 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
           </li>
           <li>
             <span><a href="/tags/sass.html">Sass</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/swift3.html">Swift3</a> (1)</span> 
           </li>
           <li>
             <span><a href="/tags/vue-js.html">Vue.js</a> (1)</span> 
@@ -325,6 +344,9 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
           </li>
           <li>
             <span><a href="/tags/htmlcss.html">htmlcss</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ios.html">iOS</a> (1)</span> 
           </li>
           <li>
             <span><a href="/tags/ipad-pro.html">iPad Pro</a> (1)</span> 
@@ -366,7 +388,7 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
             <span><a href="/tags/spritesmith.html">spritesmith</a> (2)</span> 
           </li>
           <li>
-            <span><a href="/tags/swift.html">swift</a> (2)</span> 
+            <span><a href="/tags/swift.html">swift</a> (3)</span> 
           </li>
           <li>
             <span><a href="/tags/three-js.html">three.js</a> (1)</span> 
@@ -384,10 +406,10 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
             <span><a href="/tags/web-designing.html">web-designing</a> (1)</span> 
           </li>
           <li>
-            <span><a href="/tags/webpack.html">webpack</a> (10)</span> 
+            <span><a href="/tags/webpack.html">webpack</a> (11)</span> 
           </li>
           <li>
-            <span><a href="/tags/xcode.html">xcode</a> (10)</span> 
+            <span><a href="/tags/xcode.html">xcode</a> (11)</span> 
           </li>
           <li>
             <span><a href="/tags/うどん.html">うどん</a> (1)</span> 
@@ -518,6 +540,7 @@ Facebook、Twitter、Email、Blogなどの先頭にあるアイコンがそれ�
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
+        js.async = true;
         js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=180084798795106";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));

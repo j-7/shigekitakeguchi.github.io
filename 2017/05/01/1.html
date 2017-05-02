@@ -1,0 +1,782 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge;chrome=1" http-equiv="X-UA-Compatible" />
+    <title>Reactの学び方（2017年ゴールデンウィーク）、Reactってけっきょく何なのか？ | shigeki.takeguchi.log</title>
+    <meta content="shigeki.takeguchi.log" property="og:title" />
+    <meta content="website" property="og:type" />
+    <meta content="http://shigekitakeguchi.com/" property="og:url" />
+    <meta content="http://shigekitakeguchi.com/images/shigeki_takeguchi.png" property="og:image" />
+    <meta content="shigeki.takeguchi.log" property="og:site_name" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" name="viewport" />
+    <meta content="2017年ゴールデンウィークはReactを学ぼう。Reactとは何かを知るための開発環境（2017年5月）" name="description" />
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <meta content="1PeiHaq_mDiuRL5xVm8MudEecmLupcJyJUBGIvqUbVs" name="google-site-verification" />
+    <!--[if lt IE 9]><script src="../../../js/ie8.js" type="text/javascript"></script><![endif]--><link href="../../../css/all.css" media="screen" rel="stylesheet" type="text/css" /><script type="text/javascript">
+      (function(d,e,j,h,f,c,b){d.GoogleAnalyticsObject=f;d[f]=d[f]||function(){(d[f].q=d[f].q||[]).push(arguments)},d[f].l=1*new Date();c=e.createElement(j),b=e.getElementsByTagName(j)[0];c.async=1;c.src=h;b.parentNode.insertBefore(c,b)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-21820122-1", location.hostname);ga("send","pageview");
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">shigeki.takeguchi.log</a>
+          <p class="navbar-reading">
+            アラフィフおじさんの技術日記
+          </p>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 col-md-9">
+          <h1>
+            Reactの学び方（2017年ゴールデンウィーク）、Reactってけっきょく何なのか？
+          </h1>
+          <small class="label label-default">React</small>
+          <small class="label label-default">ES2015</small>
+          <small class="label label-default">webpack</small>
+          <small class="label label-default">BrowserSync</small>
+          <small class="label label-default">Babel</small>
+          <hr />
+          <p>
+            <span class="glyphicon glyphicon-time"></span> Posted on 2017-05-01
+          </p>
+          <hr /><h2>最初に</h2>
+
+<p>ちょっと時間に余裕が出てきたのでReactの知識をアップデートするかってことで学び直してます。<br>
+以前やった学んだ時はReactを実践投入することはなかったので今回は実践で投入してサービスとして使えるところまで持っていこうと思ってます。  </p>
+
+<p><a href="http://postd.cc/learn-raw-react-no-jsx-flux-es6-webpack/">生のReactを知ろう – JSX、Flux、ES6、Webpackを使わず…</a></p>
+
+<p>極端なところだけど生というか素のReactってのは何なのかを知ろうとしたらこういうアプローチがいいと思う。<br>
+React系は細かくモジュールに分割して必要なものを必要な時に必要なだけって感じで考えられていてReactはまぁViewを作るだけになっている。<br>
+けどまぁさすがにwebpackでBrowsersyncとES2015での記述をコンパイルだけでもと思って作ってみました。</p>
+
+<p>今までv1で動けばいいかってことでやってきましたが、とうとうNode.jsも最新（v7.9.0）にしてwebpackもv2で動くようにconfigも書きました。</p>
+
+<ul>
+<li><a href="https://webpack.js.org/guides/migrating/">Migrating from v1 to v2</a></li>
+<li><a href="https://babeljs.io/">Babel · The compiler for writing next generation JavaScript</a></li>
+</ul>
+
+<h2>必要なものあるかどうか確認</h2>
+<pre class="highlight plaintext"><code>node -v
+</code></pre>
+<p>まずはお決まりのNode.js入ってるか確認。</p>
+<pre class="highlight plaintext"><code>yarn --version
+</code></pre>
+<p>npmでもいいんですがyarn（Node.jsのパッケージマネージャー）が入ってるか確認。
+<a href="https://yarnpkg.com/">Yarn</a></p>
+<pre class="highlight plaintext"><code>webpack -v
+</code></pre>
+<p>webpackも入っているか確認。<br>
+もし入ってなかったら</p>
+<pre class="highlight plaintext"><code>npm install -g webpack
+</code></pre>
+<p>-gオプションはGlobalオプション。</p>
+
+<h2>ファイル・フォルダ構成</h2>
+<pre class="highlight plaintext"><code>git clone https://github.com/shigekitakeguchi/yarn-webpack-react-simple.git
+</code></pre>
+<p><a href="https://github.com/shigekitakeguchi/yarn-webpack-react-simple">https://github.com/shigekitakeguchi/yarn-webpack-react-simple</a></p>
+
+<p>GitHubから落として使ってください。<br>
+カスタマイズなりなんなりして。</p>
+<pre class="highlight plaintext"><code>cd npm-webpack-riotjs
+</code></pre>
+<p>落としたフォルダ内に移動する。</p>
+<pre class="highlight shell"><code>├── README.md
+├── app
+│   ├── index.html
+│   └── scripts
+│       └── bundle.js
+├── package.json
+├── src
+│   └── scripts
+│       └── app.js
+├── webpack.config.js
+└── yarn.lock
+</code></pre>
+<p>ファイル・フォルダ構成はこんな感じ。<br>
+README.mdは不要。app.jsに書けばいいだけです。</p>
+<pre class="highlight shell"><code>yarn install
+</code></pre>
+<p>これで必要なパッケージがインストールされるはず。  </p>
+
+<h2>package.json</h2>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yarn-webpack-react-simple"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.js"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack -w --config webpack.config.js"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"babel-core"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.24.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"babel-loader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^7.0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"babel-preset-es2015"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.24.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"babel-preset-react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.24.1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"browser-sync-webpack-plugin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.1.4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.4.1"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"react"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^15.5.4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"react-dom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^15.5.4"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>中身はこんな感じ。</p>
+
+<h3>パッケージの説明</h3>
+
+<p>落としてきたpackage.jsonからインストールすればいいんですがそれぞれのパッケージの説明を。</p>
+<pre class="highlight plaintext"><code>yarn add --dev babel-core
+</code></pre>
+<p><a href="https://github.com/babel/babel/tree/master/packages/babel-core">https://github.com/babel/babel/tree/master/packages/babel-core</a></p>
+
+<p>言わずもがな、Babelのコンパイラのコア。</p>
+<pre class="highlight plaintext"><code>yarn add --dev babel-loader
+</code></pre>
+<p><a href="https://github.com/babel/babel-loader">https://github.com/babel/babel-loader</a></p>
+
+<p>webpackでES2015構文で書いたファイルをトランスパイルするのに必要。</p>
+<pre class="highlight plaintext"><code>yarn add --dev babel-preset-es2015
+</code></pre>
+<p><a href="https://github.com/babel/babel/tree/master/packages/babel-preset-es2015">https://github.com/babel/babel/tree/master/packages/babel-preset-es2015</a></p>
+
+<p>ES2015を扱うためのプラグイン。</p>
+<pre class="highlight plaintext"><code>yarn add --dev babel-preset-react
+</code></pre>
+<p><a href="https://github.com/babel/babel/tree/master/packages/babel-preset-react">https://github.com/babel/babel/tree/master/packages/babel-preset-react</a></p>
+
+<p>Reactのためのプラグインですね。</p>
+<pre class="highlight plaintext"><code>yarn add --dev browser-sync
+</code></pre>
+<p><a href="https://github.com/browsersync/browser-sync">https://github.com/browsersync/browser-sync</a></p>
+
+<p>もう面倒過ぎて手動でブラウザをリロードさせるなんてできないですね。<br>
+しかもwebpack-dev-serverも不要になります。</p>
+<pre class="highlight plaintext"><code>yarn add --dev browser-sync-webpack-plugin
+</code></pre>
+<p><a href="https://github.com/Va1/browser-sync-webpack-plugin">https://github.com/Va1/browser-sync-webpack-plugin</a></p>
+
+<p>webpackでBrowserSyncするためのプラグインです。</p>
+<pre class="highlight plaintext"><code>yarn add --dev webpack
+</code></pre>
+<p><a href="https://github.com/webpack/webpack">https://github.com/webpack/webpack</a></p>
+
+<p>Reactのインストール
+<code>
+yarn add react
+</code>
+ReactDOMもインストール</p>
+<pre class="highlight plaintext"><code>yarn add react-dom
+</code></pre>
+<h2>package.jsonの中のscriptsで何をしているか</h2>
+<pre class="highlight json"><code><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack -w --config webpack.config.js"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span></code></pre><pre class="highlight plaintext"><code>yarn start
+</code></pre>
+<p>このコマンドでローカルサーバーを立ち上げwebpackでwatchを行いJavaScriptの変更を監視しコンパイルがはじまります。以前よりもシンプルになってます。それだけwebpackへの依存が増えたってことでもありますね。</p>
+
+<h2>webpack.config.json</h2>
+
+<p>こちらの方はまだES2015へ移行できてないです。<br>
+部分的にはv2には対応させましたがとりあえずは動くのでそのまま。<br>
+そのうちES2015的な書き方へ移行させたい。</p>
+<pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">webpack</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"webpack"</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">BrowserSyncPlugin</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'browser-sync-webpack-plugin'</span><span class="p">);</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">entry</span><span class="p">:</span> <span class="s1">'./src/scripts/app.js'</span><span class="p">,</span>
+  <span class="na">output</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">path</span><span class="p">:</span> <span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">'/app/scripts'</span><span class="p">,</span>
+    <span class="na">filename</span><span class="p">:</span> <span class="s1">'bundle.js'</span><span class="p">,</span>
+        <span class="na">publicPath</span><span class="p">:</span> <span class="s1">'/app/'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="na">module</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">rules</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="na">test</span><span class="p">:</span> <span class="sr">/</span><span class="se">\.</span><span class="sr">js</span><span class="se">[</span><span class="sr">x</span><span class="se">]?</span><span class="sr">$/</span><span class="p">,</span>
+        <span class="na">exclude</span><span class="p">:</span> <span class="sr">/node_modules/</span><span class="p">,</span>
+        <span class="na">loader</span><span class="p">:</span> <span class="s1">'babel-loader'</span><span class="p">,</span>
+        <span class="na">query</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">presets</span><span class="p">:</span> <span class="p">[</span><span class="s1">'react'</span><span class="p">,</span> <span class="s1">'es2015'</span><span class="p">],</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="na">resolve</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">extensions</span><span class="p">:</span> <span class="p">[</span><span class="s1">'.js'</span><span class="p">,</span> <span class="s1">'.jsx'</span><span class="p">]</span>
+  <span class="p">},</span>
+  <span class="na">plugins</span><span class="p">:</span> <span class="p">[</span>
+    <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">optimize</span><span class="p">.</span><span class="nx">UglifyJsPlugin</span><span class="p">({</span>
+      <span class="na">compress</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">warnings</span><span class="p">:</span> <span class="kc">true</span>
+      <span class="p">}</span>
+    <span class="p">}),</span>
+    <span class="k">new</span> <span class="nx">BrowserSyncPlugin</span><span class="p">(</span>
+                      <span class="p">{</span>
+                        <span class="na">host</span><span class="p">:</span> <span class="s1">'localhost'</span><span class="p">,</span>
+                        <span class="na">port</span><span class="p">:</span> <span class="mi">8080</span><span class="p">,</span>
+                        <span class="na">server</span><span class="p">:</span> <span class="p">{</span> <span class="na">baseDir</span><span class="p">:</span> <span class="p">[</span><span class="s1">'app'</span><span class="p">]</span> <span class="p">}</span>
+                      <span class="p">}</span>
+                    <span class="p">)</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+
+</code></pre>
+<p>webpack（v2）にして書き直したところです。<br>
+これはv1でやっていた時の書き方。</p>
+<pre class="highlight plaintext"><code>module: {
+  loaders: [
+    {
+      test: /\.js[x]?$/,
+      exclude: /node_modules/,
+      loader: 'babel',
+      query: {
+        presets: ['react', 'es2015'],
+      }
+    }
+  ]
+},
+</code></pre>
+<p>部分的に書き直すだけで動くようになるみたいですね。<br>
+loadersをrulesへ変更しloader: &lsquo;babel&#39;をloader: &#39;babel-loader&#39;にしました。</p>
+<pre class="highlight plaintext"><code>module: {
+  rules: [
+    {
+      test: /\.js[x]?$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+      query: {
+        presets: ['react', 'es2015'],
+      }
+    }
+  ]
+},
+</code></pre>
+<h2>サンプルのソースコード</h2>
+
+<p><a href="http://postd.cc/learn-raw-react-no-jsx-flux-es6-webpack/">生のReactを知ろう – JSX、Flux、ES6、Webpackを使わず…</a>  </p>
+
+<p>こちらで掲載されているコードを参考までに記述しておきます。</p>
+
+<h3>/app/index.html</h3>
+<pre class="highlight html"><code><span class="cp">&lt;!doctype html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;title&gt;</span>yarn-webpack-react-simple<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"react-app"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/scripts/bundle.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+<h3>/src/scripts/index.js</h3>
+<pre class="highlight javascript"><code><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">'react'</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s1">'react-dom'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">rootElement</span> <span class="o">=</span>
+  <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'div'</span><span class="p">,</span> <span class="p">{},</span>
+    <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'h1'</span><span class="p">,</span> <span class="p">{},</span> <span class="s2">"Contacts"</span><span class="p">),</span>
+    <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'ul'</span><span class="p">,</span> <span class="p">{},</span>
+      <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'li'</span><span class="p">,</span> <span class="p">{},</span>
+        <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'h2'</span><span class="p">,</span> <span class="p">{},</span> <span class="s2">"James Nelson"</span><span class="p">),</span>
+        <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span> <span class="p">{</span><span class="na">href</span><span class="p">:</span> <span class="s1">'mailto:james@jamesknelson.com'</span><span class="p">},</span> <span class="s1">'james@jamesknelson.com'</span><span class="p">)</span>
+      <span class="p">),</span>
+      <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'li'</span><span class="p">,</span> <span class="p">{},</span>
+        <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'h2'</span><span class="p">,</span> <span class="p">{},</span> <span class="s2">"Joe Citizen"</span><span class="p">),</span>
+        <span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'a'</span><span class="p">,</span> <span class="p">{</span><span class="na">href</span><span class="p">:</span> <span class="s1">'mailto:joe@example.com'</span><span class="p">},</span> <span class="s1">'joe@example.com'</span><span class="p">)</span>
+      <span class="p">)</span>
+    <span class="p">)</span>
+  <span class="p">)</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="nx">rootElement</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'react-app'</span><span class="p">))</span>
+</code></pre>
+<blockquote>
+<p>基本的に、ReactはHTMLをJavaScriptでレンダリングするツールです。</p>
+</blockquote>
+
+<p>これがよくわかるサンプルだと思います。</p>
+
+<h2>少しずつReactの学習を進めていけるようなコンテンツをあげていきます。</h2>
+
+<p>今回はシンプルにReactの機能とは何かを学べる環境を作りましたがReduxやReact Routerを少しずつでもいいので学んでいける環境をあげていきます。</p>
+
+          <ul class="social-buttons">
+                      <li class="hatena">
+                        <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2017/05/01/1.html" title="このエントリーをはてなブックマークに追加"></a>
+                      </li>
+                      <li class="facebook">
+                        <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2017/05/01/1.html" data-layout="box_count"></div>
+                      </li>
+                      <li class="google">
+                        <div class="g-plusone" data-href="https://shigekitakeguchi.com/2017/05/01/1.html" data-size="tall"></div>
+                      </li>
+                      <li class="pocket">
+                        <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2017/05/01/1.html"></a>
+                      </li>
+                      <li class="twitter">
+                        <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
+                      </li>
+                    </ul>
+        </div>
+        <div class="col-lg-3 col-md-3">
+          <div class="well3">
+            <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!--aside_banner_2--><ins class="adsbygoogle" data-ad-client="ca-pub-9198003416420881" data-ad-format="auto" data-ad-slot="7805065970" style="display:block"></ins>
+            <script type="text/javascript">
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+          <div class="well profile">
+            <p class="image">
+              <img alt="shigeki.takeguchi" border="0" height="80" src="/images/profile.png" width="80" />
+            </p>
+            <p class="text">
+              渋谷の某ソーシャルゲームの会社でフロントエンドエンジニアとして働いてます。20世紀よりウェブ業界。気づいたらアラフィフ業界人です。<br>まだまだ現場で粘り強く作る側でいたいと思います。
+            </p>
+          </div>
+          <div class="amazon-wrapper">
+            <p class="amazon-image">
+              <a href="https://www.amazon.co.jp/dp/4861009634/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=uuuu-22&linkId=585041f0ffd39b522c9a3fc9dade3da8" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4861009634&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=uuuu-22" /><img alt="" border="0" height="1" src="https://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=li2&o=9&a=4861009634" style="border:none !important; margin:0px !important;" width="1" /></a>
+            </p>
+            <p class="amazon-text">
+              <a href="https://www.amazon.co.jp/dp/4861009634/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=uuuu-22&linkId=40cc0a2b87e78d10a3305b3244e6cb08" target="_blank">[普及版]ジェネラティブ・アート―Processingによる実践ガイド</a><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=4873117704" style="border:none !important; margin:0px !important;" width="1" />
+            </p>
+          </div>
+          <div class="amazon-wrapper">
+            <p class="amazon-image">
+              <a href="http://www.amazon.co.jp/gp/product/4873117704/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=4873117704&linkCode=as2&tag=uuuu-22" target="_blank"><img border="0" class="amazon-product-image" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4873117704&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=uuuu-22" /><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=4873117704" style="border:none !important; margin:0px !important;" width="1" /></a>
+            </p>
+            <p class="amazon-text">
+              <a href="http://www.amazon.co.jp/gp/product/4873117704/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4873117704&linkCode=as2&tag=uuuu-22" target="_blank">初めてのThree.js 第2版</a><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=4873117704" style="border:none !important; margin:0px !important;" width="1" />
+            </p>
+          </div>
+          <div class="amazon-wrapper">
+            <p class="amazon-image">
+              <a href="https://www.amazon.co.jp/dp/4861008697/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=uuuu-22&linkId=8a37f0557440f8701d74fa16767650e1" target="_blank"><img border="0" class="amazon-product-image" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4861008697&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=uuuu-22" /><img alt="" border="0" height="1" src="https://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=li2&o=9&a=4861008697" style="border:none !important; margin:0px !important;" width="1" /></a>
+            </p>
+            <p class="amazon-text">
+              <a href="https://www.amazon.co.jp/dp/4861008697/ref=as_li_ss_il?ie=UTF8&linkCode=li3&tag=uuuu-22&linkId=bf6310f986b1b8a5a6b088002b7e40b1" target="_blank">Beyond Interaction[改訂第2版] -クリエイティブ・コーディングのためのopenFrameworks実践ガイド</a><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=4861008697" style="border:none !important; margin:0px !important;" width="1" />
+            </p>
+          </div>
+          <div class="amazon-wrapper">
+            <p class="amazon-image">
+              <a href="http://www.amazon.co.jp/gp/product/486100800X/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=486100800X&linkCode=as2&tag=uuuu-22" target="_blank"><img border="0" class="amazon-product-image" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=486100800X&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=uuuu-22" /><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=486100800X" style="border:none !important; margin:0px !important;" width="1" /></a>
+            </p>
+            <p class="amazon-text">
+              <a href="http://www.amazon.co.jp/gp/product/486100800X/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=486100800X&linkCode=as2&tag=uuuu-22" target="_blank">vvvvook -プロトタイピングのためのビジュアルプログラミング入門</a><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=486100800X" style="border:none !important; margin:0px !important;" width="1" />
+            </p>
+          </div>
+          <div class="amazon-wrapper">
+            <p class="amazon-image">
+              <a href="http://www.amazon.co.jp/gp/product/4873115280/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=4873115280&linkCode=as2&tag=uuuu-22"></a><img border="0" class="amazon-product-image" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4873115280&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=uuuu-22" /><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=4873115280" style="border:none !important; margin:0px !important;" width="1" />
+            </p>
+            <p class="amazon-text">
+              <a href="http://www.amazon.co.jp/gp/product/4873115280/ref=as_li_ss_tl?ie=UTF8&camp=247&creative=7399&creativeASIN=4873115280&linkCode=as2&tag=uuuu-22">JavaScriptグラフィックス ―ゲーム・スマートフォン・ウェブで使う最新テクニック</a><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=4873115280" style="border:none !important; margin:0px !important;" width="1" />
+            </p>
+          </div>
+          <a class="well banner" href="http://www.watchmovi.es/jp" target="_blank">
+            <p class="image">
+              <img alt="shigeki.takeguchi" border="0" height="80" src="/images/watchmovi_es_logo.png" width="80" />
+            </p>
+            <p class="text">
+              Watch Moviesは、いつでもどこでも映画を楽しみたい人のためのサービスです。
+            </p>
+          </a>
+          <div class="well">
+            <h4>
+              By year
+            </h4>
+            <ol>
+              <li>
+                <a href="/2017.html">2017</a> (8)
+              </li>
+              <li>
+                <a href="/2016.html">2016</a> (23)
+              </li>
+              <li>
+                <a href="/2015.html">2015</a> (13)
+              </li>
+              <li>
+                <a href="/2013.html">2013</a> (15)
+              </li>
+              <li>
+                <a href="/2012.html">2012</a> (21)
+              </li>
+              <li>
+                <a href="/2011.html">2011</a> (34)
+              </li>
+            </ol>
+          </div>
+          <div class="well3">
+            <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!--aside_banner_2--><ins class="adsbygoogle" data-ad-client="ca-pub-9198003416420881" data-ad-format="auto" data-ad-slot="8078620377" style="display:block"></ins>
+            <script type="text/javascript">
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+      </div>
+      <aside>
+        <h3>
+          Recent Articles
+        </h3>
+        <ol>
+          <li>
+            <a href="/2017/05/01/1.html">Reactの学び方（2017年ゴールデンウィーク）、Reactってけっきょく何なのか？</a> <span>2017-05-01</span> 
+          </li>
+          <li>
+            <a href="/2017/02/24/1.html">Storyboardを使用しないでアプリを準備する（Swift3）。</a> <span>2017-02-24</span> 
+          </li>
+          <li>
+            <a href="/2017/02/10/1.html">webpackでejsを使い、共通要素をインクルードして効率的にやりたいよね。</a> <span>2017-02-10</span> 
+          </li>
+          <li>
+            <a href="/2017/02/05/1.html">npmがわりとゆるふわ過ぎたのでYarnに移行するか検討するためにいろいろやってみた</a> <span>2017-02-05</span> 
+          </li>
+          <li>
+            <a href="/2017/01/31/1.html">webpack+spritesmithでページの高速化、複数のスプライト画像とRetina対応について</a> <span>2017-01-31</span> 
+          </li>
+          <li>
+            <a href="/2017/01/30/1.html">webpack+spritesmithでページの高速化</a> <span>2017-01-30</span> 
+          </li>
+          <li>
+            <a href="/2017/01/27/1.html">iPhone 7 Plusのケースで迷った件。</a> <span>2017-01-27</span> 
+          </li>
+          <li>
+            <a href="/2017/01/22/1.html">iPhone 7 Plus 128GB ジェットブラックの入手顛末と3ヶ月ほどの使用感。</a> <span>2017-01-22</span> 
+          </li>
+          <li>
+            <a href="/2016/09/28/1.html">iPad Pro9.7インチとApple Pencilの手書き入力は革新的。</a> <span>2016-09-28</span> 
+          </li>
+          <li>
+            <a href="/2016/09/27/1.html">iPhone 7 Plus 128GB ジェットブラックをauの機種変更で予約した件。</a> <span>2016-09-27</span> 
+          </li>
+        </ol>
+        <hr />
+      </aside>
+      <aside>
+        <h4>
+          Tags
+        </h4>
+        <ul class="list-unstyled">
+          <li>
+            <span><a href="/tags/5-5インチ.html">5.5インチ</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/aws.html">AWS</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/amazon-s3.html">Amazon S3</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/amazon-web-service.html">Amazon Web Service</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/anker.html">Anker</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/apple-pay.html">Apple Pay</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/apple-pencil.html">Apple Pencil</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/babel.html">Babel</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/browsersync.html">BrowserSync</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/css.html">CSS</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/cocoapods.html">CocoaPods</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/es2015.html">ES2015</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/github-pages.html">GitHub Pages</a> (4)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/icons.html">Icons</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/javascript.html">JavaScript</a> (7)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/jetstar.html">Jetstar</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/middleman.html">Middleman</a> (5)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/node-js.html">Node.js</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/react.html">React</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/redux.html">Redux</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/riot.html">Riot</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/riot-js.html">Riot.js</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/sass.html">Sass</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/swift3.html">Swift3</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/vue-js.html">Vue.js</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/yarn.html">Yarn</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/about-programing.html">about-programing</a> (3)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ad.html">ad</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/book.html">book</a> (7)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/cocoa-touch.html">cocoa-touch</a> (10)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ebook.html">ebook</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ejs.html">ejs</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/htmlcss.html">htmlcss</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ios.html">iOS</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ipad-pro.html">iPad Pro</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/iphone-7-plus.html">iPhone 7 Plus</a> (3)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/iphoneケース.html">iPhoneケース</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ios-app.html">ios-app</a> (14)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/javascript.html">javascript</a> (3)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/jquery.html">jquery</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/kindle.html">kindle</a> (6)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/log.html">log</a> (36)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/npm.html">npm</a> (9)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/objective-c.html">objective-c</a> (11)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/okayama.html">okayama</a> (7)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/p5-js.html">p5.js</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/spritesmith.html">spritesmith</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/swift.html">swift</a> (3)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/three-js.html">three.js</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/tohoku.html">tohoku</a> (3)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/travel.html">travel</a> (13)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/user-interface.html">user-interface</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/web-designing.html">web-designing</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/webpack.html">webpack</a> (11)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/xcode.html">xcode</a> (11)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/うどん.html">うどん</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/アジア.html">アジア</a> (3)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ジェットブラック.html">ジェットブラック</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/バニラ・エア.html">バニラ・エア</a> (3)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/フロントエンドエンジニア.html">フロントエンドエンジニア</a> (3)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/フロントエンド系技術.html">フロントエンド系技術</a> (4)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/マンゴーかき氷.html">マンゴーかき氷</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/モバイルsuica.html">モバイルSuica</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ラーメン.html">ラーメン</a> (6)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/二郎インスパイア系.html">二郎インスパイア系</a> (4)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/台北.html">台北</a> (3)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/台湾.html">台湾</a> (3)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/地方都市.html">地方都市</a> (7)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/小籠包.html">小籠包</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/岡山.html">岡山</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/戸倉上山田温泉.html">戸倉上山田温泉</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/新橋.html">新橋</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/新潟.html">新潟</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/旅行.html">旅行</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/暮らす.html">暮らす</a> (5)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/松山.html">松山</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/渋谷.html">渋谷</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/温泉.html">温泉</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/温泉街.html">温泉街</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/熊本.html">熊本</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/生活.html">生活</a> (5)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/神戸.html">神戸</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/空港.html">空港</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/長岡.html">長岡</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/青島食堂.html">青島食堂</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/食べる.html">食べる</a> (4)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/餃子.html">餃子</a> (1)</span> 
+          </li>
+        </ul>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'shigekitakeguchilog';
+          (function() {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0]
+            || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>
+          <p>
+            <Please>enable JavaScript to view the</Please><a>href: "http://disqus.com/?ref_noscript" comments powered by Disqus.</a>
+          </p>
+        </noscript>
+      </aside>
+      <hr>
+        <p class="text-center">
+          &copy; 2012 shigeki.takeguchi
+        </p>
+      </hr>
+    </div>
+    <script src="../../../js/all.js" type="text/javascript"></script>
+    <script async="async" charset="utf-8" src="https://b.st-hatena.com/js/bookmark_button.js" type="text/javascript"></script>
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=180084798795106";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script async="" defer="" src="https://apis.google.com/js/platform.js">
+      {lang: 'ja'}
+    </script>
+    <script type="text/javascript">
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    </script>
+    <script type="text/javascript">
+      !function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");
+    </script>
+  </body>
+</html>

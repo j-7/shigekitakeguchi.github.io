@@ -22,6 +22,9 @@
       <div class="container">
         <div class="navbar-header">
           <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="/">shigeki.takeguchi.log</a>
+          <p class="navbar-reading">
+            アラフィフおじさんの技術日記
+          </p>
         </div>
       </div>
     </nav>
@@ -52,33 +55,27 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
 <h2>必要なものあるかどうか確認</h2>
 <pre class="highlight plaintext"><code>node -v
 </code></pre>
-
 <p>まずはお決まりのNode.js入ってるか確認。</p>
 <pre class="highlight plaintext"><code>npm -v
 </code></pre>
-
 <p>npm（Node.jsのパッケージマネージャー）も入ってるか確認。</p>
 <pre class="highlight plaintext"><code>webpack -v
 </code></pre>
-
 <p>webpackも入っているか確認。<br>
 もし入ってなかったら</p>
 <pre class="highlight plaintext"><code>npm install -g webpack
 </code></pre>
-
 <p>-gオプションはGlobalオプションのこと。</p>
 
 <h2>ファイル・フォルダ構成</h2>
 <pre class="highlight plaintext"><code>git clone https://github.com/shigekitakeguchi/npm-webpack-threejs-sass.git
 </code></pre>
-
 <p><a href="https://github.com/shigekitakeguchi/npm-webpack-threejs-sass">https://github.com/shigekitakeguchi/npm-webpack-threejs-sass</a></p>
 
 <p>GitHubから落として使ってください。<br>
 カスタマイズなりなんなりして。</p>
 <pre class="highlight plaintext"><code>cd npm-webpack-sass
 </code></pre>
-
 <p>落としたフォルダ内に移動する。</p>
 <pre class="highlight plaintext"><code>├── README.md
 ├── app
@@ -95,44 +92,41 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
 │       └── style.scss
 └── webpack.config.js
 </code></pre>
-
 <p>ファイル・フォルダ構成はこんな感じ。README.mdは不要。<br>
 /src/scss/にnormalize.cssを含めた。resetがお好きならresetを。このあたりは好みで。<br>
 /app/index.htmlを含めてる。内容は適宜変更ください。</p>
 <pre class="highlight plaintext"><code>npm install
 </code></pre>
-
 <p>これで必要なパッケージがインストールされるはず。</p>
 
 <h2>package.json</h2>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm-webpack-threejs-sass"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.js"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"three"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.76.1"</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npm-webpack-threejs-sass"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"main"</span><span class="p">:</span><span class="w"> </span><span class="s2">"index.js"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"three"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^0.76.1"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"concurrently"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.1.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"lite-server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.2.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"node-sass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.7.0"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"nodemon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.9.2"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.13.0"</span><span class="w">
+  </span><span class="s2">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"concurrently"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lite-server"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.2.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"node-sass"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^3.7.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nodemon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.9.2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.13.0"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack -w"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"lite"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lite-server"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"build-css"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node-sass ./src/scss/style.scss ./app/styles/style.css --output-style compressed"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"watch-css"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nodemon -e scss -x \"npm run build-css\""</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concurrently \"npm run lite\" \"npm run webpack\" \"npm run watch-css\""</span><span class="w">
+  </span><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack -w"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lite"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lite-server"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"build-css"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node-sass ./src/scss/style.scss ./app/styles/style.css --output-style compressed"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"watch-css"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nodemon -e scss -x </span><span class="se">\"</span><span class="s2">npm run build-css</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concurrently </span><span class="se">\"</span><span class="s2">npm run lite</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">npm run webpack</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">npm run watch-css</span><span class="se">\"</span><span class="s2">"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-  </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shigeki.takeguchi"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="w">
+  </span><span class="s2">"keywords"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shigeki.takeguchi"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MIT"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-
 <p>中身はこんな感じ。</p>
 
 <h3>パッケージの説明</h3>
@@ -140,79 +134,64 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
 <p>落としてきたpackage.jsonからインストールすればいいんですがそれぞれのパッケージの説明を。</p>
 <pre class="highlight plaintext"><code>npm install --save three
 </code></pre>
-
 <p><a href="https://github.com/mrdoob/three.js">https://github.com/mrdoob/three.js</a></p>
 
 <p>言わずもがななthree.js。requireしたいのでnpmしましょう。</p>
 <pre class="highlight plaintext"><code>npm install --save-dev concurrently
 </code></pre>
-
 <p><a href="https://github.com/kimmobrunfeldt/concurrently">https://github.com/kimmobrunfeldt/concurrently</a></p>
 
 <p>concurrentlyは複数のコマンド実行できるようにするため。具体的に何をしているかは後ほど説明。</p>
 <pre class="highlight plaintext"><code>npm install --save-dev lite-server
 </code></pre>
-
 <p><a href="https://github.com/johnpapa/lite-server">https://github.com/johnpapa/lite-server</a></p>
 
 <p>webpackにもwebpack dev serverというのがあるみたいだけどlite-serverのがシンプルで良さそうなので使ってみた。<br>
 ただし設定ファイルは必要でした。</p>
 <pre class="highlight plaintext"><code>npm install --save-dev node-sass
 </code></pre>
-
 <p><a href="https://github.com/sass/node-sass">https://github.com/sass/node-sass</a></p>
 
 <p>node-sassでSassのコンパイル。全体的にNode.jsなのでSassのコンパイルだけRubyでなくてもいいだろうということで導入。</p>
 <pre class="highlight plaintext"><code>npm install --save-dev nodemon
 </code></pre>
-
 <p><a href="https://github.com/remy/nodemon">https://github.com/remy/nodemon</a></p>
 
 <p>scssを監視してコマンドを実行する。具体的に何をしているかは後ほど説明。</p>
 <pre class="highlight plaintext"><code>npm install --save-dev webpack
 </code></pre>
-
 <p><a href="https://github.com/webpack/webpack">https://github.com/webpack/webpack</a></p>
 
 <p>webpack。もうすでに何をするツールなのか説明しがたいくらい機能がある。<br>
 静的なファイル（JavaScript系、CSS系、画像ファイル）の依存関係を解決するためのビルドツールってことなんだけど、ここでははJavaScriptだけを扱うようにしている。</p>
 
 <h2>package.jsonの中のscriptsで何をしているか</h2>
-<pre class="highlight json"><code><span class="s2">"scripts"</span><span class="err">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-  </span><span class="nt">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack -w"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"lite"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lite-server"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"build-css"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node-sass ./src/scss/app.scss ./app/styles/app.css --output-style compressed"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"watch-css"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nodemon -e scss -x \"npm run build-css\""</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concurrently \"npm run lite\" \"npm run webpack\" \"npm run watch-css\""</span><span class="w">
-</span><span class="p">}</span><span class="err">,</span><span class="w">
-</span></code></pre>
-<pre class="highlight plaintext"><code>npm start
+<pre class="highlight json"><code><span class="s2">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack -w"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"lite"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lite-server"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"build-css"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node-sass ./src/scss/app.scss ./app/styles/app.css --output-style compressed"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"watch-css"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nodemon -e scss -x </span><span class="se">\"</span><span class="s2">npm run build-css</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concurrently </span><span class="se">\"</span><span class="s2">npm run lite</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">npm run webpack</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">npm run watch-css</span><span class="se">\"</span><span class="s2">"</span><span class="w">
+</span><span class="p">},</span><span class="w">
+</span></code></pre><pre class="highlight plaintext"><code>npm start
 </code></pre>
-
 <p>このコマンドでlite-serverを立ち上げwebpackでwatchを行いcssの変更を監視するようにしている。  </p>
-<pre class="highlight json"><code><span class="s2">"start"</span><span class="err">:</span><span class="w"> </span><span class="s2">"concurrently \"npm run lite\" \"npm run webpack\" \"npm run watch-css\""</span><span class="w">
+<pre class="highlight json"><code><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concurrently </span><span class="se">\"</span><span class="s2">npm run lite</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">npm run webpack</span><span class="se">\"</span><span class="s2"> </span><span class="se">\"</span><span class="s2">npm run watch-css</span><span class="se">\"</span><span class="s2">"</span><span class="w">
 </span></code></pre>
-
 <p>scriptsの中にあるstartがこれにあたる。</p>
 <pre class="highlight plaintext"><code>npm run lite
+</code></pre><pre class="highlight plaintext"><code>npm run webpack
+</code></pre><pre class="highlight plaintext"><code>npm run watch-css
 </code></pre>
-<pre class="highlight plaintext"><code>npm run webpack
-</code></pre>
-<pre class="highlight plaintext"><code>npm run watch-css
-</code></pre>
-
 <p>これらのコマンドはそれぞれ独立したコマンドですが、最初にちょっと触れたがconcurrentlyにダブルクオーテーションでくくってスペースで区切って引数で渡せば並行して実行することになる。便利。</p>
-<pre class="highlight json"><code><span class="s2">"webpack"</span><span class="err">:</span><span class="w"> </span><span class="s2">"webpack -w"</span><span class="err">,</span><span class="w">
+<pre class="highlight json"><code><span class="s2">"webpack"</span><span class="p">:</span><span class="w"> </span><span class="s2">"webpack -w"</span><span class="p">,</span><span class="w">
 </span></code></pre>
-
 <p>これはwebpackのwatch（監視）を走らせている。こちらも後ほど触れるがwebpack.config.jsonで記述されたことをもとに監視している。</p>
-<pre class="highlight json"><code><span class="s2">"lite"</span><span class="err">:</span><span class="w"> </span><span class="s2">"lite-server"</span><span class="err">,</span><span class="w">
+<pre class="highlight json"><code><span class="s2">"lite"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lite-server"</span><span class="p">,</span><span class="w">
 </span></code></pre>
-
 <p>lite-serverを立ち上げている。bs-config.jsonに設定ないようを記述している（こちらも後ほど触れる）。</p>
-<pre class="highlight json"><code><span class="s2">"build-css"</span><span class="err">:</span><span class="w"> </span><span class="s2">"node-sass ./src/scss/app.scss ./app/styles/app.css --output-style compressed"</span><span class="err">,</span><span class="w">
+<pre class="highlight json"><code><span class="s2">"build-css"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node-sass ./src/scss/app.scss ./app/styles/app.css --output-style compressed"</span><span class="p">,</span><span class="w">
 </span></code></pre>
-
 <p>Sass（Scss）をnode-sassを使ってコンパイルしている。  </p>
 
 <ul>
@@ -222,9 +201,8 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
 </ul>
 
 <p><a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style">Sass Documentation(output_style)</a></p>
-<pre class="highlight json"><code><span class="s2">"watch-css"</span><span class="err">:</span><span class="w"> </span><span class="s2">"nodemon -e scss -x \"npm run build-css\""</span><span class="err">,</span><span class="w">
+<pre class="highlight json"><code><span class="s2">"watch-css"</span><span class="p">:</span><span class="w"> </span><span class="s2">"nodemon -e scss -x </span><span class="se">\"</span><span class="s2">npm run build-css</span><span class="se">\"</span><span class="s2">"</span><span class="p">,</span><span class="w">
 </span></code></pre>
-
 <p>nodemonを使ってscssファイルを監視し、変更があれば「npm run build-css」を走らせるという設定。<br>
 「-e scss」ってのがscssを監視するというオプション。-xは「npm run build-css」を実行するためのオプションになる。</p>
 
@@ -243,19 +221,17 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
   <span class="p">]</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>webpackの設定はいたってシンプル。entryにもとファイル（複数ある場合は配列で持たせる）。outputに出力される設定を記述。今回はbundle.jsっていう一般的によく使われているらしい名称のまま。<br>
 素のままのファイルだともうファイルがでかくてあれなんでUglifyJsPluginで圧縮・最適化。</p>
 
 <h2>bs-config.json</h2>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
-  </span><span class="nt">"injectChanges"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./app/**/*.{html,htm,css,js}"</span><span class="p">],</span><span class="w">
-  </span><span class="nt">"watchOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"ignored"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node_modules"</span><span class="w"> </span><span class="p">},</span><span class="w">
-  </span><span class="nt">"server"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"baseDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./app"</span><span class="w"> </span><span class="p">}</span><span class="w">
+  </span><span class="s2">"injectChanges"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"./app/**/*.{html,htm,css,js}"</span><span class="p">],</span><span class="w">
+  </span><span class="s2">"watchOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"ignored"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node_modules"</span><span class="w"> </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"server"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">"baseDir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./app"</span><span class="w"> </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-
 <p>lite-serverの設定はドキュメントルートをappの直下にしたかったのと監視対象のファイル（html、css、js）が変更されたらリロードしてinjectChangesというBrowsersyncを動すため。</p>
 
 <h2>three.jsを使っての記述</h2>
@@ -300,14 +276,12 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
   <span class="p">}</span>
 <span class="p">})();</span>
 </code></pre>
-
 <p><a href="https://github.com/mrdoob/three.js">https://github.com/mrdoob/three.js</a></p>
 
 <p>このページのサンプルを記述するとしたらこんな感じになる。<br>
 即時関数でくくるのは好みの問題。なくてももちろん動きます。</p>
 <pre class="highlight javascript"><code><span class="kd">var</span> <span class="nx">THREE</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'three'</span><span class="p">);</span>
 </code></pre>
-
 <p>こうやってrequireすることの他はとくに設定は不要。</p>
 
 <hr>
@@ -345,7 +319,15 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
               <img alt="shigeki.takeguchi" border="0" height="80" src="/images/profile.png" width="80" />
             </p>
             <p class="text">
-              渋谷の某ソーシャルゲームの会社でフロントエンドエンジニアとして働いてます。20世紀よりウェブ業界。気づいたらアラフィフ業界人。
+              渋谷の某ソーシャルゲームの会社でフロントエンドエンジニアとして働いてます。20世紀よりウェブ業界。気づいたらアラフィフ業界人です。<br>まだまだ現場で粘り強く作る側でいたいと思います。
+            </p>
+          </div>
+          <div class="amazon-wrapper">
+            <p class="amazon-image">
+              <a href="https://www.amazon.co.jp/dp/4861009634/ref=as_li_ss_il?ie=UTF8&linkCode=li2&tag=uuuu-22&linkId=585041f0ffd39b522c9a3fc9dade3da8" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4861009634&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=uuuu-22" /><img alt="" border="0" height="1" src="https://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=li2&o=9&a=4861009634" style="border:none !important; margin:0px !important;" width="1" /></a>
+            </p>
+            <p class="amazon-text">
+              <a href="https://www.amazon.co.jp/dp/4861009634/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=uuuu-22&linkId=40cc0a2b87e78d10a3305b3244e6cb08" target="_blank">[普及版]ジェネラティブ・アート―Processingによる実践ガイド</a><img alt="" border="0" height="1" src="http://ir-jp.amazon-adsystem.com/e/ir?t=uuuu-22&l=as2&o=9&a=4873117704" style="border:none !important; margin:0px !important;" width="1" />
             </p>
           </div>
           <div class="amazon-wrapper">
@@ -394,7 +376,7 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
             </h4>
             <ol>
               <li>
-                <a href="/2017.html">2017</a> (6)
+                <a href="/2017.html">2017</a> (8)
               </li>
               <li>
                 <a href="/2016.html">2016</a> (23)
@@ -428,6 +410,12 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
         </h3>
         <ol>
           <li>
+            <a href="/2017/05/01/1.html">Reactの学び方（2017年ゴールデンウィーク）、Reactってけっきょく何なのか？</a> <span>2017-05-01</span> 
+          </li>
+          <li>
+            <a href="/2017/02/24/1.html">Storyboardを使用しないでアプリを準備する（Swift3）。</a> <span>2017-02-24</span> 
+          </li>
+          <li>
             <a href="/2017/02/10/1.html">webpackでejsを使い、共通要素をインクルードして効率的にやりたいよね。</a> <span>2017-02-10</span> 
           </li>
           <li>
@@ -450,12 +438,6 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
           </li>
           <li>
             <a href="/2016/09/27/1.html">iPhone 7 Plus 128GB ジェットブラックをauの機種変更で予約した件。</a> <span>2016-09-27</span> 
-          </li>
-          <li>
-            <a href="/2016/09/05/1.html">台北でマンゴーかき氷を食べまくった。（台湾、4泊5日の旅を格安航空バニラエアで安く行ってみた。）</a> <span>2016-09-05</span> 
-          </li>
-          <li>
-            <a href="/2016/09/02/1.html">台北で小籠包を食べまくった。（台湾、4泊5日の旅を格安航空バニラエアで安く行ってみた。）</a> <span>2016-09-02</span> 
           </li>
         </ol>
         <hr />
@@ -487,10 +469,19 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
             <span><a href="/tags/apple-pencil.html">Apple Pencil</a> (1)</span> 
           </li>
           <li>
+            <span><a href="/tags/babel.html">Babel</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/browsersync.html">BrowserSync</a> (1)</span> 
+          </li>
+          <li>
             <span><a href="/tags/css.html">CSS</a> (2)</span> 
           </li>
           <li>
             <span><a href="/tags/cocoapods.html">CocoaPods</a> (1)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/es2015.html">ES2015</a> (1)</span> 
           </li>
           <li>
             <span><a href="/tags/github-pages.html">GitHub Pages</a> (4)</span> 
@@ -511,7 +502,7 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
             <span><a href="/tags/node-js.html">Node.js</a> (2)</span> 
           </li>
           <li>
-            <span><a href="/tags/react.html">React</a> (1)</span> 
+            <span><a href="/tags/react.html">React</a> (2)</span> 
           </li>
           <li>
             <span><a href="/tags/redux.html">Redux</a> (1)</span> 
@@ -524,6 +515,9 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
           </li>
           <li>
             <span><a href="/tags/sass.html">Sass</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/swift3.html">Swift3</a> (1)</span> 
           </li>
           <li>
             <span><a href="/tags/vue-js.html">Vue.js</a> (1)</span> 
@@ -551,6 +545,9 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
           </li>
           <li>
             <span><a href="/tags/htmlcss.html">htmlcss</a> (2)</span> 
+          </li>
+          <li>
+            <span><a href="/tags/ios.html">iOS</a> (1)</span> 
           </li>
           <li>
             <span><a href="/tags/ipad-pro.html">iPad Pro</a> (1)</span> 
@@ -592,7 +589,7 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
             <span><a href="/tags/spritesmith.html">spritesmith</a> (2)</span> 
           </li>
           <li>
-            <span><a href="/tags/swift.html">swift</a> (2)</span> 
+            <span><a href="/tags/swift.html">swift</a> (3)</span> 
           </li>
           <li>
             <span><a href="/tags/three-js.html">three.js</a> (1)</span> 
@@ -610,10 +607,10 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
             <span><a href="/tags/web-designing.html">web-designing</a> (1)</span> 
           </li>
           <li>
-            <span><a href="/tags/webpack.html">webpack</a> (10)</span> 
+            <span><a href="/tags/webpack.html">webpack</a> (11)</span> 
           </li>
           <li>
-            <span><a href="/tags/xcode.html">xcode</a> (10)</span> 
+            <span><a href="/tags/xcode.html">xcode</a> (11)</span> 
           </li>
           <li>
             <span><a href="/tags/うどん.html">うどん</a> (1)</span> 
@@ -744,6 +741,7 @@ WebGLをあつかう時にWebGLままで記述するのはちょっとツライ�
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
+        js.async = true;
         js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=180084798795106";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
