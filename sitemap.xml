@@ -835,6 +835,12 @@
     <changefreq>daily</changefreq>
   </url>
   <url>
+    <loc>https://shigekitakeguchi.com/2017/05/16/1.html</loc>
+    <lastmod>2017-05-16</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
     <loc>https://shigekitakeguchi.com/tags/log.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
@@ -1372,6 +1378,12 @@
     <loc>https://shigekitakeguchi.com/2017/05.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.9</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/2017/05/16.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.8</priority>
     <changefreq>daily</changefreq>
   </url>
   <url>
@@ -2324,6 +2336,12 @@
   </url>
   <url>
     <loc>https://shigekitakeguchi.com/tags/travel/page/2.html</loc>
+    <lastmod>2015-09-05</lastmod>
+    <priority>0.7</priority>
+    <changefreq>daily</changefreq>
+  </url>
+  <url>
+    <loc>https://shigekitakeguchi.com/tags/webpack/page/2.html</loc>
     <lastmod>2015-09-05</lastmod>
     <priority>0.7</priority>
     <changefreq>daily</changefreq>
