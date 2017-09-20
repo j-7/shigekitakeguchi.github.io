@@ -31,6 +31,54 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9 col-md-9"><h1>
+  <a href="/2013/01/04/cocoapodsxcode.html">CocoaPodsを使ったXcodeプロジェクトの作り方（３）</a>
+</h1>
+<p>
+  <small class="label label-default">about-programing</small>
+  <small class="label label-default">cocoa-touch</small>
+  <small class="label label-default">ios-app</small>
+  <small class="label label-default">objective-c</small>
+  <small class="label label-default">xcode</small>
+</p>
+<hr />
+<p class="posted">
+  <span class="glyphicon glyphicon-time"></span> Posted on 2013-01-04
+</p>
+<hr />
+<p>３回目ですね。前回からの続きです。<br>
+アプリの方のプロジェクトを開いていき「Frameworks」内に「libPods.a」という静的ライブラリが赤字で表示されています。<br>
+赤字になっているということは参照として定義されてるけどファイルが「ない」ということです。</p>
+
+<p><img src="http://farm9.staticflickr.com/8213/8340695197_94a186e587_o.png" alt=""></p>
+
+<p>今回はこの「libPods.a」という静的ライブラリのファイルをビルドして作ります。</p>
+
+<p><img src="http://farm9.staticflickr.com/8500/8349673938_2d232b3862.jpg" alt=""></p>
+
+<p>Xcodeの「Preferences…」を開きます（メニューバーの「Xcode」からいけます）。</p>
+
+<p><img src="http://farm9.staticflickr.com/8215/8340721573_29256da6ce.jpg" alt=""></p>
+
+<p>次にツールバーの「Locations...</p><a class="btn btn-primary" href="/2013/01/04/cocoapodsxcode.html">もっと読む</a>
+<hr />
+<ul class="social-buttons">
+  <li class="hatena">
+    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2013/01/04/cocoapodsxcode.html" title="このエントリーをはてなブックマークに追加"></a>
+  </li>
+  <li class="facebook">
+    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2013/01/04/cocoapodsxcode.html" data-layout="box_count"></div>
+  </li>
+  <li class="google">
+    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2013/01/04/cocoapodsxcode.html" data-size="tall"></div>
+  </li>
+  <li class="pocket">
+    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2013/01/04/cocoapodsxcode.html"></a>
+  </li>
+  <li class="twitter">
+    <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
+  </li>
+</ul>
+<hr /><h1>
   <a href="/2013/01/03/cocoapodsxcode.html">CocoaPodsを使ったXcodeプロジェクトの作り方（２）</a>
 </h1>
 <p>
@@ -430,44 +478,6 @@ iPhoneとは少し違うところがあります。</p>
     <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
   </li>
 </ul>
-<hr /><h1>
-  <a href="/2012/11/14/xcode.html">デザイナー・ノンプログラマーのためのXcode入門。（２）設定編</a>
-</h1>
-<p>
-  <small class="label label-default">cocoa-touch</small>
-  <small class="label label-default">ios-app</small>
-  <small class="label label-default">objective-c</small>
-  <small class="label label-default">xcode</small>
-</p>
-<hr />
-<p class="posted">
-  <span class="glyphicon glyphicon-time"></span> Posted on 2012-11-14
-</p>
-<hr />
-<p>今回はXcodeを起動して仕様に沿ったプロジェクト（Project）の作るところまでを説明していきます。</p>
-
-<p>アプリケーションフォルダにXcodeがインストールされていると思います。インストールに成功していたらですね。<br>
-起動したらこんな画面が出ます。ま、英語です。右側の枠内は最近使ったプロジェクトのリストが出ます。<br>
-左側の上から「新規でXcode projectを作る」「レポジトリに接続する」「Xcodeの使い方を学ぶ」「アップルの開発者ポータルに行く」ですね。<br>
-もちろん「新規でXcode project...</p><a class="btn btn-primary" href="/2012/11/14/xcode.html">もっと読む</a>
-<hr />
-<ul class="social-buttons">
-  <li class="hatena">
-    <a class="hatena-bookmark-button" data-hatena-bookmark-lang="ja" data-hatena-bookmark-layout="vertical-balloon" href="http://b.hatena.ne.jp/entry/https://shigekitakeguchi.com/2012/11/14/xcode.html" title="このエントリーをはてなブックマークに追加"></a>
-  </li>
-  <li class="facebook">
-    <div class="fb-share-button" data-href="https://shigekitakeguchi.com/2012/11/14/xcode.html" data-layout="box_count"></div>
-  </li>
-  <li class="google">
-    <div class="g-plusone" data-href="https://shigekitakeguchi.com/2012/11/14/xcode.html" data-size="tall"></div>
-  </li>
-  <li class="pocket">
-    <a class="pocket-btn" data-lang="en" data-pocket-count="vertical" data-pocket-label="pocket" data-save-url="https://shigekitakeguchi.com/2012/11/14/xcode.html"></a>
-  </li>
-  <li class="twitter">
-    <a class="twitter-share-button" data-via="shigektakeguchi" href="https://twitter.com/share"></a>
-  </li>
-</ul>
 <hr />
 <div class="well-sm">
   <ul class="pager">
@@ -552,7 +562,7 @@ iPhoneとは少し違うところがあります。</p>
             </h4>
             <ol>
               <li>
-                <a href="/2017.html">2017</a> (10)
+                <a href="/2017.html">2017</a> (11)
               </li>
               <li>
                 <a href="/2016.html">2016</a> (23)
@@ -586,6 +596,9 @@ iPhoneとは少し違うところがあります。</p>
         </h3>
         <ol>
           <li>
+            <a href="/2017/09/20/1.html">生まれ育った街、神戸は長田区丸山から鵯越を歩く（１）。</a> <span>2017-09-20</span> 
+          </li>
+          <li>
             <a href="/2017/05/16/1.html">文章の先頭や末尾にアイコン画像をつけるってやつをSwiftで比較的簡単にやってみる</a> <span>2017-05-16</span> 
           </li>
           <li>
@@ -611,9 +624,6 @@ iPhoneとは少し違うところがあります。</p>
           </li>
           <li>
             <a href="/2017/01/27/1.html">iPhone 7 Plusのケースで迷った件。</a> <span>2017-01-27</span> 
-          </li>
-          <li>
-            <a href="/2017/01/22/1.html">iPhone 7 Plus 128GB ジェットブラックの入手顛末と3ヶ月ほどの使用感。</a> <span>2017-01-22</span> 
           </li>
         </ol>
         <hr />
@@ -837,6 +847,9 @@ iPhoneとは少し違うところがあります。</p>
             <span><a href="/tags/岡山.html">岡山</a> (1)</span> 
           </li>
           <li>
+            <span><a href="/tags/思い出.html">思い出</a> (1)</span> 
+          </li>
+          <li>
             <span><a href="/tags/戸倉上山田温泉.html">戸倉上山田温泉</a> (1)</span> 
           </li>
           <li>
@@ -855,6 +868,9 @@ iPhoneとは少し違うところがあります。</p>
             <span><a href="/tags/松山.html">松山</a> (1)</span> 
           </li>
           <li>
+            <span><a href="/tags/歩く.html">歩く</a> (1)</span> 
+          </li>
+          <li>
             <span><a href="/tags/渋谷.html">渋谷</a> (1)</span> 
           </li>
           <li>
@@ -870,7 +886,7 @@ iPhoneとは少し違うところがあります。</p>
             <span><a href="/tags/生活.html">生活</a> (5)</span> 
           </li>
           <li>
-            <span><a href="/tags/神戸.html">神戸</a> (1)</span> 
+            <span><a href="/tags/神戸.html">神戸</a> (2)</span> 
           </li>
           <li>
             <span><a href="/tags/空港.html">空港</a> (1)</span> 

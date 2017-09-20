@@ -5,10 +5,44 @@
   <id>https://shigekitakeguchi.com</id>
   <link href="https://shigekitakeguchi.com"/>
   <link href="https://shigekitakeguchi.com/feed.xml" rel="self"/>
-  <updated>2017-05-16T00:00:00Z</updated>
+  <updated>2017-09-20T00:00:00Z</updated>
   <author>
     <name>shigeki.takeguchi</name>
   </author>
+  <entry>
+    <title>生まれ育った街、神戸は長田区丸山から鵯越を歩く（１）。</title>
+    <link rel="alternate" href="https://shigekitakeguchi.com/2017/09/20/1.html"/>
+    <id>https://shigekitakeguchi.com/2017/09/20/1.html</id>
+    <published>2017-09-20T00:00:00Z</published>
+    <updated>2017-09-20T23:20:55+09:00</updated>
+    <author>
+      <name>shigeki.takeguchi</name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/37136305116/in/dateposted-public/" title="IMG_1104"&gt;&lt;img src="https://farm5.staticflickr.com/4388/37136305116_ecd24b7487_z.jpg" width="640" height="480" alt="IMG_1104"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;30年ぶりくらいに生まれ育った街を歩いた。&lt;br&gt;
+神戸は長田区の一番北にある丸山地区というところなんだけど18歳まで住んでいて東京はもうすぐ15年だけど同じ街に10年住むってことはなくて、今でもなんだかんだと一番長く住んだ街になる。&lt;br&gt;
+で街って書いているはいるけどこれが街と呼べるようなものなのかはなはだ心もとないくらいの家と生協と個人商店しかないような小ささだったりする。&lt;br&gt;
+長田が典型的な下町な感じだとすると方向だけは長田から北の山側にあって山の手なんだけど、土地的に山というか谷にあるだけでほぼ下町な雰囲気だったりする。&lt;br&gt;
+また不思議なことに阪神淡路大震災で長田の街が大きく変わらないといけなかったのに比べてそこまで震災の影響が大きくなかったので昭和感がかなり残っている。&lt;br&gt;
+小学生だった当時、40年前は友だちんちに行くとそこの母親やおばあちゃんが靴の内職をしていることがあったり、近所の玄関から家の中をのぞくと作りかけの靴がいっぱいならべられていたりした。&lt;br&gt;
+今はどうなのかわからないけど、あまり柄のよくない同級生もたくさんいてかなり殺伐とした地域と言われたりもした。現に中学生時代は学校で血を見ない日はなかったとなかば都市伝説的な感じだったように記憶している。
+また中学を卒業すると働きはじめる同級生も少なからずいたり、あまり柄のよくない高校へ進学したけどすぐに退学してしまったりもした。&lt;/p&gt;
+
+&lt;p&gt;30年ぶりにそんないろんなことを思い出しながら街をふうふう言いながら歩いた。
+神戸の山の手というと聞こえはいいかもしれないがようは坂の街で東京のようなまっ平らな街とは違って起伏だらけである。
+15年もそんなまっ平らな土地しか移動しない生活をしていると坂がきつい。よく子どものころはこんなところを歩きまわっていたなと思う。
+でまあほぼ坂だけの街なんだけど坂にするのが無理ってなると残された選択肢は階段なんだけど高齢化したら無理だろうというような階段も多い。&lt;/p&gt;
+
+&lt;p&gt;&lt;a data-flickr-embed="true"  href="https://www.flickr.com/photos/shigeki_takeguchi/37153963572/in/dateposted-public/" title="IMG_1106"&gt;&lt;img src="https://farm5.staticflickr.com/4419/37153963572_e921503ded_z.jpg" width="640" height="480" alt="IMG_1106"&gt;&lt;/a&gt;&lt;script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;写真は40年前からほぼ変わってなくて逆に驚いた階段。子どもごころにだいたいで作った階段だなと思ってたけどまさかそのまま今も使われているとは思わなかった。&lt;br&gt;
+この階段だけでなく街のいたるところ、いやほとんどが子どもの時に這いずり回るよう身体全体で記憶していたディテールがそのままって感じ。&lt;br&gt;
+こんなに変わらなくて大丈夫かな？と思うけど、それはやっぱり全体から細部までがどんどん変わる東京にいるとそう思うだけなんだろうかとも思ってしまう。&lt;/p&gt;
+
+&lt;p&gt;つづく。&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>文章の先頭や末尾にアイコン画像をつけるってやつをSwiftで比較的簡単にやってみる</title>
     <link rel="alternate" href="https://shigekitakeguchi.com/2017/05/16/1.html"/>
@@ -768,86 +802,6 @@ about.ejsを用意してindex.ejsと同じように共通要素をインクル�
     &lt;span class="na"&gt;template&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;  &lt;span class="s1"&gt;'ejs-render-loader!./src/about.ejs'&lt;/span&gt;
   &lt;span class="p"&gt;})&lt;/span&gt;
 &lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;</content>
-  </entry>
-  <entry>
-    <title>npmがわりとゆるふわ過ぎたのでYarnに移行するか検討するためにいろいろやってみた</title>
-    <link rel="alternate" href="https://shigekitakeguchi.com/2017/02/05/1.html"/>
-    <id>https://shigekitakeguchi.com/2017/02/05/1.html</id>
-    <published>2017-02-05T00:00:00Z</published>
-    <updated>2017-02-06T00:53:31+09:00</updated>
-    <author>
-      <name>shigeki.takeguchi</name>
-    </author>
-    <content type="html">&lt;p&gt;&lt;a title="Yarn" href="https://yarnpkg.com/,"&gt;https://yarnpkg.com/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2&gt;Facebookが作ったというnpmとの互換パッケージマネージャ&lt;/h2&gt;
-
-&lt;p&gt;Node.js系のパッケージマネージャーといえばnpmです。いろいろありますがかなり便利なのでずっと使ってました。&lt;br&gt;
-ただnpmで管理していたパッケージの機能がローカルでは動くけど、どうも本番で動いてないんじゃない？的なことがあって&lt;br&gt;
-どうやらそのパッケージのバージョンの違いで動いてない的なことが起こっているんじゃないか疑惑があってnpmってそういえば、&lt;br&gt;
-バージョンとかけっこうゆるふわというか多少のバージョンの違いとか気にしなくていいってところがいいんだけど、それって何かあったときにやば過ぎじゃないの？って気になった。&lt;br&gt;
-今まで遭遇しなかっただけでバージョンの違いでこんなやらかしがあるのか。。。&lt;br&gt;
-じゃあ対策ないの？どうしようかってことでYarnを検討してます。&lt;/p&gt;
-
-&lt;p&gt;このYarnですがnpmにはないyarn.lockというファイルが生成されまして、これがまぁRubyのgemなんかだとGemfile.lockというのと同じか似ている感じだと思ってます。&lt;br&gt;
-Gemfile.lockは開発環境と運用環境で同じgemをインストールするために使うらしいんですがそれと同じような仕組みになっているという認識。&lt;br&gt;
-実際には導入してませんが今のところいい感じで使えてます。npmよりもさくさく動くってところもいい。&lt;/p&gt;
-
-&lt;h2&gt;Yarnのインストール&lt;/h2&gt;
-
-&lt;p&gt;インストールはbrewからやるとまあ簡単ですわな。
-これはMacの場合ね。ちなみに会社も家のマシンも最近立て続けにmacOS Sierraにしました。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;brew update
-brew install yarn
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;念のためにバージョンの確認です。インストールうまくいってたらバージョンでます。
-これ書いているときは0.19.1ですね。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;yarn --version
-0.19.1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Yarnの初期プロジェクト作成的な&lt;/h2&gt;
-
-&lt;p&gt;で適当にプロジェクトフォルダにうつって&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;yarn init -y
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;これでnpmでもお世話になっていたpackage.jsonできます。&lt;/p&gt;
-
-&lt;p&gt;ちなみに&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm --version
-3.3.12
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;でnpmでinitしたときにできたpackage.jsonはこれです。&lt;/p&gt;
-&lt;pre class="highlight json"&gt;&lt;code&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;"name"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"hoge"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;"version"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"1.0.0"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;"description"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;"main"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"index.js"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;"scripts"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
-    &lt;/span&gt;&lt;span class="s2"&gt;"test"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"echo &lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt;Error: no test specified&lt;/span&gt;&lt;span class="se"&gt;\"&lt;/span&gt;&lt;span class="s2"&gt; &amp;amp;&amp;amp; exit 1"&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;"keywords"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[],&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;"author"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;
-  &lt;/span&gt;&lt;span class="s2"&gt;"license"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;"ISC"&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;こちらはyarnのinitの場合はこれです。&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;{
-  "name": "01",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": {},
-  "license": "MIT"
-}
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;ちょっとシンプルになってます。&lt;/p&gt;
-
-&lt;h2&gt;npmとの違い&lt;/h2&gt;
-&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install jquery --save
-yarn add jquery
-&lt;/code&gt;&lt;/pre&gt;&lt;pre class="highlight plaintext"&gt;&lt;code&gt;npm install autoprefixer --save-dev
-yarn add autoprefixer --dev
 &lt;/code&gt;&lt;/pre&gt;</content>
   </entry>
 </feed>
